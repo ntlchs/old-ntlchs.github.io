@@ -26,6 +26,7 @@ main {
   justify-content: flex-start;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 header {
