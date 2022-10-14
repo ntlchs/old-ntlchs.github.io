@@ -109,7 +109,7 @@ footer {
 
 #backToTop {
   position: absolute;
-  top: 2%;
+  top: 2vh;
   left: 50%;
   border: none;
 }
@@ -121,5 +121,9 @@ footer {
 }
 
 #backToTop:hover {
+  background-color: #f195ae;
+}
+
+a:hover {
   background-color: #f195ae;
 }
