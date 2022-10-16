@@ -108,10 +108,16 @@ footer {
 }
 
 #backToTop {
-  position: absolute;
-  top: 2vh;
-  left: 50%;
   border: none;
+}
+
+#backToTopContainer {
+  top: 1vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: none;
 }
 
 .projectButton,
