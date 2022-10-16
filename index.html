@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Natalia Chies</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  </head>
 
-  <body>
-    <button id="backToTop"><a href="#welcome_area">Back to top</a></button>
-    <main id="scroll_area">
-      <header class="screen">
-        <div id="welcome_area">
-          <div id="presentation_area">
-            <h1>Welcome to My Portfolio!</h1>
-            <p>Hi, I`m Natalia Chies.</p>
-          </div>
-          <img
-            id="header_img"
-            src="assets/kitten.png"
-            alt="3d model of a cat."
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Natalia Chies</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <button id="backToTop" class="hidden"><a href="#welcome_area">Back to top</a></button>
+  <main id="scroll_area">
+    <header id=firstScreen class="screen">
+      <div id="welcome_area">
+        <div id="presentation_area">
+          <h1>Welcome to My Portfolio!</h1>
+          <p>Hi, I`m Natalia Chies.</p>
         </div>
-        <nav>
-          <a href="#googleClone" class="projectButton">Google Clone</a>
-          <a href="#javaScript" class="projectButton">JavaScript</a>
-          <a href="#rlStats" class="projectButton">RLStats to CSV</a>
-          <a href="#test_1" class="projectButton">Test 1</a>
-        </nav>
-      </header>
-      <section id="projects">
-        <div class="project screen" id="googleClone">
-          <h1>Google Clone</h1>
-          <p>HTML and CSS</p>
+        <img id="header_img" src="assets/kitten.png" alt="3d model of a cat." />
+      </div>
+      <nav>
+        <a href="#googleClone" class="projectButton">Google Clone</a>
+        <a href="#javaScript" class="projectButton">JavaScript</a>
+        <a href="#rlStats" class="projectButton">RLStats to CSV</a>
+        <a href="#test_1" class="projectButton">Test 1</a>
+      </nav>
+    </header>
+    <section id="projects">
+      <div class="project screen" id="googleClone">
+        <h1>Google Clone</h1>
+        <p>HTML and CSS</p>
+        <div class="demo" id="googleCloneDemo">
+
         </div>
-        <div class="project screen" id="javaScript">
-          <h1>JavaScript</h1>
-          <p>Javascript</p>
-        </div>
-        <div class="project screen" id="rlStats">
-          <h1>RLStats to CSV</h1>
-          <p>Python script</p>
-        </div>
-        <div class="project screen" id="test_1">
-          <h1>Test 1</h1>
-          <p>Test</p>
-        </div>
-      </section>
-    </main>
-    <footer id="footer">
-      Copyright Natália Chies 2022
-      <a href="https://github.com/ntlchs" target="_blank">GitHub</a>
-    </footer>
-    <script src="index.js"></script>
-  </body>
+      </div>
+      <div class="project screen" id="javaScript">
+        <h1>JavaScript</h1>
+        <p>Javascript</p>
+      </div>
+      <div class="project screen" id="rlStats">
+        <h1>RLStats to CSV</h1>
+        <p>Python script</p>
+      </div>
+      <div class="project screen" id="test_1">
+        <h1>Test 1</h1>
+        <p>Test</p>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    Copyright Natália Chies 2022
+    <a href="https://github.com/ntlchs" target="_blank">GitHub</a>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
 </html>
