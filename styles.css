@@ -30,21 +30,19 @@ main {
 }
 
 header {
-  background-color: #f195ae;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
+/* 
 #welcome_area img {
   max-width: 30%;
   object-fit: contain;
   position: absolute;
   left: 60%;
-}
+} */
 
 #welcome_area {
-  background-color: #f195ae;
   display: flex;
   justify-content: center;
   padding: 50px;
@@ -61,7 +59,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 5px solid black;
+  border: 5px solid rgb(155, 155, 155, 0.2);
 }
 
 nav {
