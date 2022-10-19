@@ -1,9 +1,11 @@
+var nextColor;
+
 const backToTop = document.getElementById("backToTop");
 const scrollArea = document.getElementById("scroll_area");
 const windowSizeY = document.getElementById("firstScreen");
 const elementOffset = windowSizeY.offsetHeight;
 const presentationCard = document.getElementById("presentation_area");
-var nextColor;
+const project = document.getElementsByClassName("project");
 
 scrollArea.onscroll = () => {
   if (scrollArea.scrollTop >= elementOffset) {
@@ -26,7 +28,7 @@ function loadNextColor() {
 }
 
 function setColor() {
-  presentationCard.style.borderColor = nextColor;
+  presentationCard.style.backgroundColor = nextColor;
 }
 
 presentationCard.onclick = () => {
@@ -35,3 +37,11 @@ presentationCard.onclick = () => {
 };
 
 loadNextColor();
+
+setInterval(loadNextColor, 1000);
+
+function projectColor() {
+  for (var i = 0; i < project.length; i++) {
+    project[i].style.backgroundColor = nextColor;
+  }
+}

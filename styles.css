@@ -18,6 +18,13 @@ body {
   padding: 0;
 }
 
+.projectButton,
+#backToTop,
+main,
+footer {
+  font-family: Baloo, sans-serif;
+}
+
 main {
   background-color: white;
   height: 93vh;
@@ -51,15 +58,14 @@ header {
 
 #welcome_area h1 {
   font-size: 40px;
-  color: black;
 }
 
 #presentation_area {
-  padding: 20px;
+  margin: 5%;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 5px solid rgb(155, 155, 155, 0.2);
 }
 
 nav {
@@ -67,6 +73,17 @@ nav {
   padding: 0 10px;
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav > a,
+main,
+footer {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+nav > a:hover {
+  background-color: #f195ae;
 }
 
 .projectButton {
@@ -85,25 +102,14 @@ footer {
   align-items: center;
 }
 
-.projectButton,
-#backToTop,
-main,
-footer {
-  font-family: Baloo, sans-serif;
-}
-
 .screen {
   min-height: 90vh;
   scroll-snap-align: start;
   padding: 20px;
 }
 
-#googleClone {
-  background-color: #fdf6fa;
-}
-
-#javaScript {
-  background-color: #fdaed8;
+#firstScreen {
+  background: white;
 }
 
 #backToTop {
@@ -127,11 +133,7 @@ footer {
 }
 
 #backToTop:hover {
-  background-color: #f195ae;
-}
-
-a:hover {
-  background-color: #f195ae;
+  background-color: rgba(128, 125, 187, 0.8);
 }
 
 .hidden {
