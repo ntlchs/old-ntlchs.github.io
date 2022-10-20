@@ -139,3 +139,9 @@ footer {
 .hidden {
   display: none;
 }
+
+#pong {
+  display: block;
+  min-height: 70vh;
+  max-height: 75vh;
+}
