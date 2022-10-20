@@ -20,27 +20,40 @@ var s = function (c) {
   var maxY = canvasH - 2 * barH - p;
   var maxX = canvasW - p;
 
+  let gameStarted;
+
   var canvasW = (c.setup = function () {
     c.createCanvas(pong.clientWidth, pong.clientHeight);
   });
+
+  c.mousePressed = function () {
+    gameStarted = true;
+  };
 
   c.draw = function () {
     var barX = c.mouseX - barW / 2;
 
     c.background(0);
     c.fill(255);
-    c.ellipse(ballX, ballY, 2 * r, 2 * r);
     c.rect(barX, barY, barW, barH);
+
+    c.ellipse(ballX, ballY, 2 * r, 2 * r);
+
+    if (!gameStarted) {
+      return;
+    }
 
     ballX += speedX;
     ballY += speedY;
 
+    const ballCrossedRight = ballX > maxX - r;
+    const ballCrossedLeft = ballX < r + p;
     // moves ball
-    if (ballX > maxX - r || ballX < r + p) {
+    if (ballCrossedRight || ballCrossedLeft) {
       speedX = -speedX;
     }
     if (
-      (ballY > maxY && ballX >= barX && ballX <= barX + barW) ||
+      (ballY > maxY && ballX >= barX && ballX <= barX + barW && speedY > 0) ||
       ballY < r + p
     ) {
       speedY = -speedY;
