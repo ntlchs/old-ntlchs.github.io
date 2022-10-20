@@ -3,65 +3,54 @@ const pong = document.getElementById("pong");
 var s = function (c) {
   var canvasW = pong.clientWidth;
   var canvasH = pong.clientHeight;
-  var padding = 5;
+  var p = 5; //padding
 
-  let barWidth = 180;
-  let barHeight = 30;
+  let barW = 180;
+  let barH = 30;
 
-  let ballRadius = 25;
+  let r = 25; // ball radius
   var ballX = canvasW / 2;
   var ballY = canvasH / 2;
 
-  let speedX = 5;
-  let speedY = 5;
+  let speedX = 3;
+  let speedY = 3;
 
-  var barY = canvasH - barHeight - padding;
+  var barY = canvasH - barH - p;
 
-  var minY = padding + ballRadius;
-  var maxY = canvasH - 2 * barHeight;
-
-  var minX = pong.clientLeft + padding;
-  var maxX = canvasW - padding;
+  var maxY = canvasH - 2 * barH - p;
+  var maxX = canvasW - p;
 
   var canvasW = (c.setup = function () {
     c.createCanvas(pong.clientWidth, pong.clientHeight);
   });
 
   c.draw = function () {
-    var barX = c.mouseX;
+    var barX = c.mouseX - barW / 2;
 
     c.background(0);
     c.fill(255);
-    c.ellipse(ballX, ballY, 2 * ballRadius, 2 * ballRadius);
-    c.rect(barX, barY, barWidth, barHeight);
+    c.ellipse(ballX, ballY, 2 * r, 2 * r);
+    c.rect(barX, barY, barW, barH);
 
     ballX += speedX;
     ballY += speedY;
 
-    if (ballX > maxX || ballX < ballRadius + padding) {
+    // moves ball
+    if (ballX > maxX - r || ballX < r + p) {
       speedX = -speedX;
     }
-    if (ballY > maxY || ballY < ballRadius + padding) {
+    if (
+      (ballY > maxY && ballX >= barX && ballX <= barX + barW) ||
+      ballY < r + p
+    ) {
       speedY = -speedY;
-    }
-
-    // sets ball limits so ball doesn't overpass canvas vertically
-    // if (ballY == maxY) {
-    //   ballY -= speed;
-    // } else if (ballY == minY) {
-    //   ballY += speed;
-    // } else {
-    //   ballY += 1;
-    // }
-    // sets bar limits so bar doesn't overpass canvas horizontally
-    if (c.mouseX < minX) {
-      barX = minX;
-    } else if (c.mouseX + barWidth > maxX) {
-      barX = maxX;
+    } else if (ballY > canvasH + r) {
+      ballY = canvasH / 2;
     }
   };
 };
 
 var myp5 = new p5(s, "pong");
 
+// website goes directly into game
 pong.scrollIntoView();
