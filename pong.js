@@ -1,30 +1,31 @@
 const pong = document.getElementById("pong");
 
+pong.addEventListener("scroll", (e) => {
+  e.preventDefault();
+  return false;
+});
+
 var s = function (c) {
-  var canvasW = pong.clientWidth;
-  var canvasH = pong.clientHeight;
-  var p = 5; //padding
+  var w = pong.clientWidth;
+  var h = pong.clientHeight;
+  var p = 2; //padding
 
   let barW = 180;
   let barH = 30;
+  var barY = h - p - barH;
 
-  let r = 25; // ball radius
-  var ballX = canvasW / 2;
-  var ballY = canvasH / 2;
+  var ballX = w / 2;
+  var ballY = h / 2;
+  let r = 20; // ball radius
 
-  let speedX = 3;
-  let speedY = 3;
-
-  var barY = canvasH - barH - p;
-
-  var maxY = canvasH - 2 * barH - p;
-  var maxX = canvasW - p;
+  let speedX = -2;
+  let speedY = 5;
 
   let gameStarted;
 
-  var canvasW = (c.setup = function () {
+  c.setup = function () {
     c.createCanvas(pong.clientWidth, pong.clientHeight);
-  });
+  };
 
   c.mousePressed = function () {
     gameStarted = true;
@@ -43,22 +44,27 @@ var s = function (c) {
       return;
     }
 
+    // moves ball
     ballX += speedX;
     ballY += speedY;
 
-    const ballCrossedRight = ballX > maxX - r;
-    const ballCrossedLeft = ballX < r + p;
-    // moves ball
+    const ballCrossedRight = ballX > w - r;
+    const ballCrossedLeft = ballX < r;
+    const ballCrossedUp = ballY < r;
+    const ballInBarY = ballY > h - p - r - barH;
+
     if (ballCrossedRight || ballCrossedLeft) {
       speedX = -speedX;
     }
-    if (
-      (ballY > maxY && ballX >= barX && ballX <= barX + barW && speedY > 0) ||
-      ballY < r + p
-    ) {
+
+    if (ballInBarY && ballX >= barX && ballX <= barX + barW && speedY > 0) {
       speedY = -speedY;
-    } else if (ballY > canvasH + r) {
-      ballY = canvasH / 2;
+    }
+
+    if (ballCrossedUp && speedY < 0) {
+      speedY = -speedY;
+    } else if (ballY > h + r && speedY > 0) {
+      ballY = -r;
     }
   };
 };
