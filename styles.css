@@ -83,7 +83,7 @@ footer {
 }
 
 nav > a:hover {
-  background-color: #f195ae;
+  background-color: none;
 }
 
 .projectButton {
@@ -105,7 +105,7 @@ footer {
 .screen {
   min-height: 90vh;
   scroll-snap-align: start;
-  padding: 20px;
+  padding: 1vw;
 }
 
 #firstScreen {
@@ -141,7 +141,8 @@ footer {
 }
 
 #pong {
-  display: block;
-  min-height: 75vh;
-  max-height: 80vh;
+  min-width: 70vw;
+  max-width: 70vw;
+  min-height: 70vh;
+  margin: auto;
 }
