@@ -10,15 +10,15 @@ var s = function (c) {
   var h = pong.clientHeight;
   var p = 2; //padding
 
-  let barW = 180;
-  let barH = 30;
+  let barW = 150;
+  let barH = 15;
   var barY = h - p - barH;
 
   var ballX = w / 2;
   var ballY = h / 2;
-  let r = 20; // ball radius
+  let r = 10; // ball radius
 
-  let speedX = -2;
+  let speedX = 3;
   let speedY = 5;
 
   let gameStarted;
@@ -32,15 +32,25 @@ var s = function (c) {
   };
 
   c.draw = function () {
-    var barX = c.mouseX - barW / 2;
+    var bottomBarY = c.mouseX - barW / 2;
+    var topBarX = ballX - barW / 2;
 
     c.background(0);
     c.fill(255);
-    c.rect(barX, barY, barW, barH);
+
+    c.rect(bottomBarY, barY, barW, barH);
+
+    c.rect(topBarX, p, barW, barH);
 
     c.ellipse(ballX, ballY, 2 * r, 2 * r);
 
+    for (i = 0; i < w; i += 20) {
+      c.stroke(255);
+      c.line(i, h / 2, i + 10, h / 2);
+    }
+
     if (!gameStarted) {
+      c.text("CLICK TO START", 20, 50);
       return;
     }
 
@@ -50,21 +60,26 @@ var s = function (c) {
 
     const ballCrossedRight = ballX > w - r;
     const ballCrossedLeft = ballX < r;
-    const ballCrossedUp = ballY < r;
-    const ballInBarY = ballY > h - p - r - barH;
+    const ballInTopBar = ballY < r + p + barH;
+    const ballInBottomBar = ballY > h - p - r - barH;
 
     if (ballCrossedRight || ballCrossedLeft) {
       speedX = -speedX;
     }
 
-    if (ballInBarY && ballX >= barX && ballX <= barX + barW && speedY > 0) {
-      speedY = -speedY;
-    }
-
-    if (ballCrossedUp && speedY < 0) {
+    if (ballInTopBar && speedY < 0) {
       speedY = -speedY;
     } else if (ballY > h + r && speedY > 0) {
       ballY = -r;
+    }
+
+    if (
+      ballInBottomBar &&
+      ballX >= bottomBarY &&
+      ballX <= bottomBarY + barW &&
+      speedY > 0
+    ) {
+      speedY = -speedY;
     }
   };
 };
