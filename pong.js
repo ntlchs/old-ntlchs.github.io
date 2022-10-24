@@ -1,9 +1,8 @@
-const pong = document.getElementById("pong");
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
-pong.addEventListener("scroll", (e) => {
-  e.preventDefault();
-  return false;
-});
+const pong = document.getElementById("pong");
 
 var s = function (c) {
   var w = pong.clientWidth;
@@ -22,6 +21,8 @@ var s = function (c) {
   let speedY = 5;
 
   let gameStarted;
+  let computerScore = 0;
+  let yourScore = 0;
 
   c.setup = function () {
     c.createCanvas(pong.clientWidth, pong.clientHeight);
@@ -31,27 +32,40 @@ var s = function (c) {
     gameStarted = true;
   };
 
+  c.keyPressed = function () {
+    computerScore = 0;
+    yourScore = 0;
+  };
+
   c.draw = function () {
-    var bottomBarY = c.mouseX - barW / 2;
+    c.background(240);
+    c.fill(0);
+
+    //moves bars
+    var bottomBarX = c.mouseX - barW / 2;
     var topBarX = ballX - barW / 2;
 
-    c.background(0);
-    c.fill(255);
-
-    c.rect(bottomBarY, barY, barW, barH);
+    c.rect(bottomBarX, barY, barW, barH);
 
     c.rect(topBarX, p, barW, barH);
 
     c.ellipse(ballX, ballY, 2 * r, 2 * r);
-
     for (i = 0; i < w; i += 20) {
-      c.stroke(255);
+      //dash line
+      c.stroke(0);
       c.line(i, h / 2, i + 10, h / 2);
     }
 
+    // game info on screen
     if (!gameStarted) {
       c.text("CLICK TO START", 20, 50);
+      c.text("press any key to reset score", 20, 70);
       return;
+    } else {
+      c.text("computer", 20, 35);
+      c.text(computerScore, 20, 50);
+      c.text("you", 20, h - 50);
+      c.text(yourScore, 20, h - 35);
     }
 
     // moves ball
@@ -62,6 +76,7 @@ var s = function (c) {
     const ballCrossedLeft = ballX < r;
     const ballInTopBar = ballY < r + p + barH;
     const ballInBottomBar = ballY > h - p - r - barH;
+    const ballCrossedDown = ballY > h + r;
 
     if (ballCrossedRight || ballCrossedLeft) {
       speedX = -speedX;
@@ -69,14 +84,17 @@ var s = function (c) {
 
     if (ballInTopBar && speedY < 0) {
       speedY = -speedY;
-    } else if (ballY > h + r && speedY > 0) {
-      ballY = -r;
+    } else if (ballCrossedDown && speedY > 0) {
+      computerScore++;
+      ballX = w / 2;
+      ballY = h / 2;
+      gameStarted = false;
     }
 
     if (
       ballInBottomBar &&
-      ballX >= bottomBarY &&
-      ballX <= bottomBarY + barW &&
+      ballX >= bottomBarX &&
+      ballX <= bottomBarX + barW &&
       speedY > 0
     ) {
       speedY = -speedY;
@@ -85,6 +103,3 @@ var s = function (c) {
 };
 
 var myp5 = new p5(s, "pong");
-
-// website goes directly into game
-pong.scrollIntoView();
