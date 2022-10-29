@@ -20,10 +20,10 @@ scrollArea.onscroll = () => {
 };
 
 function setRandomBgColor(obj) {
-  obj.style.backgroundColor = `rgb(${random(0, 255)}, ${random(
-    0,
+  obj.style.backgroundColor = `rgb(${random(235, 255)}, ${random(
+    235,
     255
-  )}, ${random(0, 255)}, .2)`;
+  )}, ${random(235, 255)})`;
 }
 
 function loadNextColor() {

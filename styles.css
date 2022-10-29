@@ -31,7 +31,7 @@ main {
 }
 
 header {
-  background: rgba(240, 240, 240, 0.1);
+  background: rgb(252, 252, 252);
   background-image: url("assets/sparkle.png");
   background-repeat: repeat;
   background-size: 128px;
@@ -67,8 +67,10 @@ a:hover {
 }
 
 nav {
-  block-size: auto;
+  background-color: rgba(252, 252, 252);
   padding: 0 10px;
+  max-width: fit-content;
+  block-size: auto;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -93,11 +95,11 @@ nav {
   font-size: 40px;
 }
 
+nav,
 #presentation_area,
 .projectButton,
 #backToTop {
   border: none;
-  background: none;
   border-radius: 15px;
 }
 
