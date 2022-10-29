@@ -17,8 +17,8 @@ var s = function (c) {
   var ballY = h / 2;
   let r = 10; // ball radius
 
-  let speedX = 3;
-  let speedY = 5;
+  let speedX = 4;
+  let speedY = 7;
 
   let gameStarted;
   let computerScore = 0;
@@ -58,13 +58,14 @@ var s = function (c) {
 
     // game info on screen
     if (!gameStarted) {
+      c.textSize(20);
       c.text("CLICK TO START", 20, 50);
-      c.text("press any key to reset score", 20, 70);
+      c.text("press any key to reset score", 20, 80);
       return;
     } else {
       c.text("computer", 20, 35);
-      c.text(computerScore, 20, 50);
-      c.text("you", 20, h - 50);
+      c.text(computerScore, 20, 60);
+      c.text("you", 20, h - 60);
       c.text(yourScore, 20, h - 35);
     }
 
@@ -74,30 +75,36 @@ var s = function (c) {
 
     const ballCrossedRight = ballX > w - r;
     const ballCrossedLeft = ballX < r;
-    const ballInTopBar = ballY < r + p + barH;
-    const ballInBottomBar = ballY > h - p - r - barH;
-    const ballCrossedDown = ballY > h + r;
+    const ballInTopBar = ballY < r + p + barH && speedY < 0;
+    const ballInBottomBar = ballY > h - p - r - barH && speedY > 0;
+    const ballCrossedDown = ballY > h + r && speedY > 0;
 
     if (ballCrossedRight || ballCrossedLeft) {
       speedX = -speedX;
     }
 
-    if (ballInTopBar && speedY < 0) {
+    if (ballInTopBar) {
       speedY = -speedY;
-    } else if (ballCrossedDown && speedY > 0) {
+    } else if (ballCrossedDown) {
       computerScore++;
       ballX = w / 2;
       ballY = h / 2;
       gameStarted = false;
     }
 
-    if (
-      ballInBottomBar &&
-      ballX >= bottomBarX &&
-      ballX <= bottomBarX + barW &&
-      speedY > 0
-    ) {
+    let leftHalf = ballX >= bottomBarX && ballX < bottomBarX + barW / 2;
+    let rightHalf = ballX > bottomBarX + barW / 2 && ballX <= bottomBarX + barW;
+
+    if (ballInBottomBar && leftHalf) {
       speedY = -speedY;
+      if (speedX > 0) {
+        speedX = -speedX;
+      }
+    } else if (ballInBottomBar && rightHalf) {
+      speedY = -speedY;
+      if (speedX < 0) {
+        speedX = -speedX;
+      }
     }
   };
 };
