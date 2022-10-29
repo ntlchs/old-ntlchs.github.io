@@ -1,0 +1,163 @@
+body {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  font-size: 13px;
+  height: 40px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  column-gap: 15px;
+  color: rgba(0, 0, 0, 0.87);
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:visited {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+#avatar {
+  border-radius: 50%;
+}
+
+svg#menu-icon {
+  height: 24px;
+  width: 24px;
+  padding: 8px;
+  color: #5f6368;
+  fill: currentColor;
+}
+
+main {
+  color: #4d5156;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+main > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 92px;
+  aspect-ratio: auto 272 / 92;
+}
+
+#search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 22px;
+  width: 60%;
+  max-width: 584px;
+}
+
+svg#search-icon {
+  height: 20px;
+  width: 20px;
+  color: #9aa0a6;
+  margin: 9px 13px;
+}
+
+#search {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 80%;
+  height: 100%;
+}
+
+#search:active {
+  border: none;
+  outline: none;
+}
+
+main #search:active {
+  border: none;
+}
+
+#search-by-voice,
+#search-by-image {
+  height: 24px;
+  width: 24px;
+  margin: 0 8px;
+}
+
+main button {
+  font-size: 14px;
+  color: #3c4043;
+  height: 34px;
+  width: 150.5px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  margin: 11px 4px;
+  padding: 0 16px;
+  border-radius: 3px;
+}
+
+main > p > a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: rgb(248, 249, 250);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer hr {
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+#country {
+  padding: 10px;
+  padding-top: 15px;
+  font-size: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+#country > a,
+#first-row > a,
+#second-row > a {
+  color: #70757a;
+  text-decoration: none;
+  padding: 15px;
+}
+
+#first-row,
+#second-row {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#country > a:hover,
+#first-row > a:hover,
+#second-row > a:hover {
+  text-decoration: underline;
+}
