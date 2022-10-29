@@ -19,31 +19,23 @@ scrollArea.onscroll = () => {
   }
 };
 
-function loadNextColor() {
-  fetch("https://x-colors.herokuapp.com/api/random")
-    .then((response) => response.json())
-    .then((data) => setNextColor(data))
-    .catch((err) => console.log(err));
-
-  function setNextColor(data) {
-    nextColor = data.rgb.replace(")", ", .2)");
-    setColor();
-  }
+function setRandomBgColor(obj) {
+  obj.style.backgroundColor = `rgb(${random(0, 255)}, ${random(
+    0,
+    255
+  )}, ${random(0, 255)}, .2)`;
 }
 
-function setColor() {
-  presentationCard.style.backgroundColor = nextColor;
+function loadNextColor() {
+  setRandomBgColor(presentationCard);
 }
 
 function projectColor() {
   for (var i = 0; i < project.length; i++) {
-    project[i].style.backgroundColor = `rgb(${random(0, 255)}, ${random(
-      0,
-      255
-    )}, ${random(0, 255)}, .2)`;
+    setRandomBgColor(project[i]);
   }
 }
 
-loadNextColor();
 projectColor();
+loadNextColor();
 setInterval(loadNextColor, 1000);

@@ -4,13 +4,9 @@
 }
 
 html,
-a {
-  color: rgba(0, 0, 0, 0.7);
-  font-family: Baloo, sans-serif;
-}
-
-html,
 body {
+  font-family: Baloo, sans-serif;
+  color: rgba(0, 0, 0, 0.7);
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -36,6 +32,9 @@ main {
 
 header {
   background: rgba(240, 240, 240, 0.1);
+  background-image: url("assets/sparkle.png");
+  background-repeat: repeat;
+  background-size: 128px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -52,6 +51,11 @@ footer {
 a {
   font-size: 18px;
   text-decoration: solid;
+  color: rgba(170, 110, 255, 1);
+}
+
+button a {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 a:active,
@@ -59,7 +63,7 @@ a:link,
 a:visited,
 a:hover {
   background-color: none;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 nav {
