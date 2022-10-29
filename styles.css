@@ -4,11 +4,8 @@
 }
 
 html,
-nav > a {
+a {
   color: rgba(0, 0, 0, 0.7);
-}
-
-html {
   font-family: Baloo, sans-serif;
 }
 
@@ -37,14 +34,6 @@ main {
   scroll-behavior: smooth;
 }
 
-.screen {
-  min-height: calc(100vh - 60px);
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 header {
   background: rgba(240, 240, 240, 0.1);
   display: flex;
@@ -52,25 +41,25 @@ header {
   text-align: center;
 }
 
-#welcome_area {
-  padding: 40px;
-
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-#welcome_area h1 {
-  font-size: 40px;
-}
-
-#presentation_area {
-  margin: 5%;
-  padding: 10%;
-
+footer {
+  height: 60px;
+  background-color: rgba(195, 177, 225, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: solid;
+}
+
+a:active,
+a:link,
+a:visited,
+a:hover {
+  background-color: none;
+  text-decoration: none;
 }
 
 nav {
@@ -81,8 +70,40 @@ nav {
   justify-content: center;
 }
 
-a:hover {
-  background-color: none;
+.screen {
+  min-height: calc(100vh - 60px);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome_area {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#welcome_area h1 {
+  font-size: 40px;
+}
+
+#presentation_area,
+.projectButton,
+#backToTop {
+  border: none;
+  background: none;
+  border-radius: 15px;
+}
+
+#presentation_area {
+  margin: 5%;
+  padding: 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .projectButton {
@@ -99,19 +120,12 @@ a:hover {
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  background-color: none;
 }
 
-.projectButton,
-#backToTop,
-#presentation_area {
-  border: none;
-  background-color: none;
-  border-radius: 15px;
-}
-
-#backToTop:hover {
-  background-color: rgba(128, 125, 187, 0.2);
+#backToTop a {
+  font-size: xx-large;
+  font-family: Baloo, sans-serif;
+  font-weight: 600;
 }
 
 .hidden {
@@ -133,14 +147,6 @@ a:hover {
   text-align: center;
   font-size: 20px;
   font-weight: normal;
-}
-
-footer {
-  height: 60px;
-  background-color: rgba(195, 177, 225, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #pong {
