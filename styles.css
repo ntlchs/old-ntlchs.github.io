@@ -32,9 +32,9 @@ main {
 
 header {
   background: rgb(252, 252, 252);
-  background-image: url("assets/sparkle.png");
+  background-image: url("assets/balls.png");
   background-repeat: repeat;
-  background-size: 128px;
+  background-size: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -46,6 +46,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5px;
 }
 
 a {
@@ -106,7 +107,6 @@ nav,
 #presentation_area {
   margin: 5%;
   padding: 10%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
