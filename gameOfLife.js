@@ -6,6 +6,7 @@ var v = function (c) {
   let scale = null;
   let gridWidth = 100;
   let gridHeight = 100;
+  let gameStarted;
 
   function createArray() {
     let board = [];
@@ -31,6 +32,10 @@ var v = function (c) {
     c.frameRate(10);
   };
 
+  c.mousePressed = function () {
+    gameStarted = true;
+  };
+
   c.draw = () => {
     c.background(150);
     for (let x = 0; x < gridWidth; x++) {
@@ -46,7 +51,14 @@ var v = function (c) {
     }
     board = nextGeneration;
     nextGeneration = createArray();
-    //noLoop();
+
+    if (!gameStarted) {
+      c.fill(255);
+      c.textSize(20);
+      c.textAlign(c.CENTER);
+      c.text("Click to start", w / 2, h / 2);
+      return;
+    }
   };
 
   function evolve(i, j) {
@@ -211,10 +223,10 @@ var v = function (c) {
     } else if (c.keyCode == 78) {
       // n
       createGliderGun(x, y);
-    } else if (c.keyPressed == 80) {
+    } else if (c.keyCode == 80) {
       // p
       createRPentomino(x, y);
-    } else if (c.keyPressed == 82) {
+    } else if (c.keyCode == 82) {
       // r
       createReverseGlider(x, y);
     }
