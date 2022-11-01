@@ -1,9 +1,6 @@
 var nextColor;
 
-const backToTop = document.getElementById("backToTop");
-const scrollArea = document.getElementById("scroll_area");
-const windowSizeY = document.getElementById("firstScreen");
-const elementOffset = windowSizeY.offsetHeight;
+const elementOffset = document.getElementById("firstScreen").offsetHeight;
 const presentationCard = document.getElementById("presentation_area");
 const project = document.getElementsByClassName("project");
 

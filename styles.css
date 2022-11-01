@@ -3,23 +3,26 @@
   src: url("assets/Baloo-Regular.ttf");
 }
 
-html,
 body {
-  font-family: Baloo, sans-serif;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0;
-  padding: 0;
   height: 100vh;
-}
-
-body {
+  font-family: Baloo, sans-serif;
   overflow-x: hidden;
 }
 
-main {
-  background-color: white;
+body,
+button {
   margin: 0;
   padding: 0;
+  border: 0;
+  background: none;
+}
+
+body,
+button a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+main {
   height: calc(100vh - 60px);
 
   display: flex;
@@ -41,22 +44,18 @@ header {
 }
 
 footer {
+  background-color: rgb(253, 224, 246);
   height: 60px;
-  background-color: rgba(195, 177, 225, 0.2);
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5px;
 }
 
 a {
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: solid;
   color: rgba(170, 110, 255, 1);
-}
-
-button a {
-  color: rgba(0, 0, 0, 0.7);
 }
 
 a:active,
@@ -77,6 +76,15 @@ nav {
   justify-content: center;
 }
 
+h1 {
+  font-size: 40px;
+}
+
+p {
+  margin: 0;
+  font-size: medium;
+}
+
 .screen {
   min-height: calc(100vh - 60px);
   scroll-snap-align: start;
@@ -92,16 +100,12 @@ nav {
   position: relative;
 }
 
-#welcome_area h1 {
-  font-size: 40px;
-}
-
 nav,
 #presentation_area,
-.projectButton,
-#backToTop {
+.projectButton {
   border: none;
   border-radius: 15px;
+  background-color: rgb(168, 239, 239);
 }
 
 #presentation_area {
@@ -129,8 +133,7 @@ nav,
 }
 
 #backToTop a {
-  font-size: xx-large;
-  font-family: Baloo, sans-serif;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -159,5 +162,13 @@ nav,
   min-width: 70%;
   max-width: 400px;
   min-height: 70vh;
+  margin: auto;
+}
+
+#gol {
+  min-width: 250px;
+  min-height: 250px;
+  height: 500px;
+  width: 500px;
   margin: auto;
 }

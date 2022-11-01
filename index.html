@@ -29,7 +29,8 @@
 
         <nav>
           <a href="#googleClone" class="projectButton">Google Clone</a>
-          <a href="#javaScript" class="projectButton">JavaScript</a>
+          <a href="#pongGame" class="projectButton">Pong Game</a>
+          <a href="#gameOfLife" class="projectButton">Game of Life</a>
           <a href="#rlStats" class="projectButton">RLStats to CSV</a>
         </nav>
       </header>
@@ -46,8 +47,21 @@
         <div class="project screen" id="pongGame">
           <h1>Pong game</h1>
           <h2>Javascript, p5.js</h2>
-
           <div class="demo" id="pong"></div>
+        </div>
+
+        <div class="project screen" id="gameOfLife">
+          <h1>Game of Life</h1>
+          <h2>JavaScript, p5.js</h2>
+          <p>
+            Press the following keys to create desired structure on mouse
+            coordinates:
+          </p>
+          <p>
+            b - block, e - eater, g - glider, h - herschel, k - blinker, n -
+            gliderGun, p - rPentomino, r - reverse glider
+          </p>
+          <div class="demo" id="gol"></div>
         </div>
 
         <div class="project screen" id="rlStats">
@@ -66,5 +80,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     <script src="pong.js"></script>
+    <script src="gameOfLife.js"></script>
   </body>
 </html>
