@@ -12,7 +12,8 @@
 }
 
 .mgTop50 {
-  margin: 50px 0 0 0;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .h100vh {
@@ -21,6 +22,10 @@
 
 .noMP {
   margin: 0;
+  padding: 0;
+}
+
+.noP {
   padding: 0;
 }
 
@@ -66,8 +71,16 @@
   justify-content: flex-start;
 }
 
+.flexEnd {
+  align-content: flex-end;
+}
+
 .alignCenter {
   align-items: center;
+}
+
+.posAbsol {
+  position: absolute;
 }
 
 .fontXL {
@@ -108,25 +121,30 @@
   width: 500px;
 }
 
+.scrollHeight {
+  height: calc(100vh - 50px);
+}
+
 body {
   overflow-x: hidden;
 }
 
 main {
-  height: calc(100vh - 60px);
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
 header {
-  background-image: url("assets/balls.png");
+  background-image: url("assets/dots.png");
   background-repeat: repeat;
   background-size: 40px;
+  min-height: 100%;
+  justify-content: space-between;
 }
 
 footer {
-  height: 60px;
+  height: 50px;
   padding: 10px 0;
 }
 
@@ -148,7 +166,7 @@ nav {
 }
 
 .screen {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 50px);
   scroll-snap-align: start;
 }
 
@@ -169,7 +187,6 @@ nav {
 
 #backToTopContainer {
   width: 95%;
-  position: absolute;
   justify-content: flex-end;
 }
 
@@ -187,8 +204,36 @@ nav {
 
 .demo {
   margin-top: 20px;
+  border-radius: 15px;
+  border: 15px solid rgba(255, 255, 255, 0.6);
 }
 
 #googleCloneDemo {
-  border: none;
+  min-width: 100px;
+}
+
+.cats {
+  width: 100vw;
+  height: 150px;
+  background-size: 150px;
+}
+
+.longCatMiddle {
+  background-image: url("assets/longcat2.png");
+  background-repeat: repeat-y;
+  flex-direction: column;
+  background-size: 150px;
+}
+
+#longCatTop {
+  background-image: url("assets/longcat1.png");
+  background-repeat: no-repeat;
+  flex-direction: column-reverse;
+}
+
+.longCatBottom {
+  background-image: url("assets/longcat3.png");
+  background-repeat: no-repeat;
+  flex-direction: column;
+  background-size: 150px;
 }

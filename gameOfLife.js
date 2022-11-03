@@ -1,18 +1,17 @@
 const gol = document.getElementById("gol");
 let w = gol.clientWidth;
 let h = gol.clientHeight;
+console.log(w, h);
 
 var v = function (c) {
-  let scale = null;
-  let gridWidth = 100;
-  let gridHeight = 100;
+  let size = 100;
   let gameStarted;
 
   function createArray() {
     let board = [];
-    for (let i = 0; i < gridHeight; i++) {
+    for (let i = 0; i < size; i++) {
       let line = [];
-      for (let j = 0; j < gridWidth; j++) {
+      for (let j = 0; j < size; j++) {
         line.push(false);
       }
       board.push(line);
@@ -26,16 +25,22 @@ var v = function (c) {
   //createEater1(58,40);
 
   c.setup = () => {
-    scale = c.floor(c.min(w, h) / c.max(gridWidth, gridHeight));
-    c.createCanvas(gridWidth * scale, gridHeight * scale);
+    c.createCanvas(w, h);
+    cellSize = w / size;
     c.background(0);
     c.frameRate(10);
   };
 
   c.mousePressed = function () {
-    if (c.mousePressed) {
+    if (
+      c.mousePressed &&
+      c.mouseX > gol.clientLeft &&
+      c.mouseX < w &&
+      c.mouseY > gol.clientTop &&
+      c.mouseY < h
+    ) {
       gameStarted = true;
-      createGliderGun(gridWidth / 2 - 20, gridHeight / 2 - 5);
+      createGliderGun(size / 2 - 20, size / 2 - 5);
     }
   };
 
@@ -50,12 +55,12 @@ var v = function (c) {
     }
 
     c.background(0);
-    for (let x = 0; x < gridWidth; x++) {
-      for (let y = 0; y < gridHeight; y++) {
+    for (let x = 0; x < size; x++) {
+      for (let y = 0; y < size; y++) {
         nextGeneration[x][y] = evolve(x, y);
         if (board[x][y]) {
           c.fill(255);
-          c.square(scale * x, scale * y, scale);
+          c.square(cellSize * x, cellSize * y, cellSize);
         }
       }
     }
@@ -88,15 +93,14 @@ var v = function (c) {
   }
 
   function countNeighbors(i, j) {
-    let bottom = board[module(i + 1, gridHeight)][j];
-    let bottomLeft = board[module(i + 1, gridHeight)][module(j - 1, gridWidth)];
-    let bottomRight =
-      board[module(i + 1, gridHeight)][module(j + 1, gridWidth)];
-    let left = board[i][module(j - 1, gridWidth)];
-    let right = board[i][module(j + 1, gridWidth)];
-    let top = board[module(i - 1, gridHeight)][j];
-    let topLeft = board[module(i - 1, gridHeight)][module(j - 1, gridWidth)];
-    let topRight = board[module(i - 1, gridHeight)][module(j + 1, gridWidth)];
+    let bottom = board[module(i + 1, size)][j];
+    let bottomLeft = board[module(i + 1, size)][module(j - 1, size)];
+    let bottomRight = board[module(i + 1, size)][module(j + 1, size)];
+    let left = board[i][module(j - 1, size)];
+    let right = board[i][module(j + 1, size)];
+    let top = board[module(i - 1, size)][j];
+    let topLeft = board[module(i - 1, size)][module(j - 1, size)];
+    let topRight = board[module(i - 1, size)][module(j + 1, size)];
     return (
       bottom +
       bottomLeft +
@@ -204,8 +208,8 @@ var v = function (c) {
 
   c.keyPressed = () => {
     console.log("here");
-    let x = c.round(c.mouseX / scale);
-    let y = c.round(c.mouseY / scale);
+    let x = c.round(c.mouseX / cellSize);
+    let y = c.round(c.mouseY / cellSize);
     console.log({ k: c.keyCode });
     if (c.keyCode == 75) {
       // k

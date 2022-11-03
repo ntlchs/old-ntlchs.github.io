@@ -11,14 +11,18 @@
   </head>
 
   <body class="baloo blackFont noMP noBg h100vh">
-    <div id="backToTopContainer" class="mgTop50 flex">
+    <div id="backToTopContainer" class="mgTop30 flex posAbsol">
       <button id="backToTop" class="hidden noBg">
         <a href="#welcome_area" class="blackFont fontXL"> &#5169; </a>
       </button>
     </div>
 
-    <main id="scroll_area" class="flex flexCol flexStart">
-      <header id="firstScreen" class="screen flex flexCol whiteBg alignCenter">
+    <main id="scroll_area" class="flex flexCol flexStart scrollHeight">
+      <header
+        id="firstScreen"
+        scrollHeight
+        class="screen scrollHeight flex flexCol whiteBg alignCenter"
+      >
         <div id="welcome_area" class="flex alignCenter textCenter">
           <div
             id="presentation_area"
@@ -32,22 +36,25 @@
 
         <nav class="whiteBg roundBorder justCenter">
           <a
-            href="#googleClone"
+            href="#gameOfLife"
             class="projectButton roundBorder fontMd blueBg lilac"
-            >Google Clone</a
           >
+            Game of Life
+          </a>
+
           <a
             href="#pongGame"
             class="projectButton roundBorder fontMd blueBg lilac"
           >
             Pong Game
           </a>
+
           <a
-            href="#gameOfLife"
+            href="#googleClone"
             class="projectButton roundBorder fontMd blueBg lilac"
+            >Google Clone</a
           >
-            Game of Life
-          </a>
+
           <a
             href="#rlStats"
             class="projectButton roundBorder fontMd blueBg lilac"
@@ -55,14 +62,43 @@
             RLStats to CSV
           </a>
         </nav>
+
+        <div id="longCatTop" class="flex cats"></div>
       </header>
+
+      <div
+        class="project screen scrollHeight flex flexCol alignCenter flexStart longCatMiddle"
+        id="gameOfLife"
+      >
+        <h1 class="fontLg noMP">Game of Life</h1>
+        <h2 class="fontMd noMP">JavaScript, p5.js</h2>
+        <p class="noMP fontSm">
+          Press these <u>keys</u> to create a structure on mouse coordinates:
+        </p>
+        <p class="noMP fontSm">
+          <u>B</u>lock, <u>E</u>ater, <u>G</u>lider, <u>H</u>erschel,
+          blin<u>K</u>er, glider gu<u>N</u>, r<u>P</u>entomino, <u>R</u>everse
+          glider
+        </p>
+        <p class="noMP fontSm">Press <u>esc</u> to pause simulation</p>
+        <div id="gol" class="demo sqDemo"></div>
+      </div>
+
+      <div
+        class="project screen scrollHeight flex flexCol alignCenter flexStart longCatMiddle"
+        id="pongGame"
+      >
+        <h1 class="fontLg noMP">Pong game</h1>
+        <h2 class="fontMd noMP">Javascript, p5.js</h2>
+        <div class="demo rectDemo mgAuto" id="pong"></div>
+      </div>
 
       <section id="projects">
         <div
-          class="project screen flex flexCol alignCenter flexStart"
+          class="project screen scrollHeight flex flexCol alignCenter flexStart longCatMiddle"
           id="googleClone"
         >
-          <h1 class="fontLg mgTop50">Google Clone</h1>
+          <h1 class="fontLg noMP">Google Clone</h1>
           <h2 class="fontMd noMP">HTML and CSS</h2>
           <a href="google_clone/index.html" class="fontMd purple">Link</a>
           <iframe
@@ -73,37 +109,10 @@
         </div>
 
         <div
-          class="project screen flex flexCol alignCenter flexStart"
-          id="pongGame"
-        >
-          <h1 class="fontLg mgTop50">Pong game</h1>
-          <h2 class="fontMd noMP">Javascript, p5.js</h2>
-          <div class="demo rectDemo mgAuto" id="pong"></div>
-        </div>
-
-        <div
-          class="project screen flex flexCol alignCenter flexStart"
-          id="gameOfLife"
-        >
-          <h1 class="fontLg mgTop50">Game of Life</h1>
-          <h2 class="fontMd noMP">JavaScript, p5.js</h2>
-          <p class="noMP fontSm">
-            Press these <u>keys</u> to create a structure on mouse coordinates:
-          </p>
-          <p class="noMP fontSm">
-            <u>B</u>lock, <u>E</u>ater, <u>G</u>lider, <u>H</u>erschel,
-            blin<u>K</u>er, glider gu<u>N</u>, r<u>P</u>entomino, <u>R</u>everse
-            glider
-          </p>
-          <p class="noMP fontSm">Press <u>esc</u> to pause simulation</p>
-          <div id="gol" class="demo sqDemo"></div>
-        </div>
-
-        <div
           id="rlStats"
-          class="project screen flex flexCol alignCenter flexStart"
+          class="project screen scrollHeight flex flexCol alignCenter flexStart longCatBottom"
         >
-          <h1 class="fontLg mgTop50">RLStats to CSV</h1>
+          <h1 class="fontLg noMP">RLStats to CSV</h1>
           <h2 class="fontMd noMP">Python script</h2>
         </div>
       </section>

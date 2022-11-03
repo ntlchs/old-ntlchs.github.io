@@ -30,7 +30,15 @@ var s = function (c) {
   };
 
   c.mousePressed = function () {
-    gameStarted = true;
+    if (
+      c.mousePressed &&
+      c.mouseX > gol.clientLeft &&
+      c.mouseX < w &&
+      c.mouseY > gol.clientTop &&
+      c.mouseY < h
+    ) {
+      gameStarted = true;
+    }
   };
 
   c.draw = function () {
