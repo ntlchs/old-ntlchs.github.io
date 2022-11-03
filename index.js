@@ -4,6 +4,7 @@ const scrollArea = document.getElementById("scroll_area");
 const elementOffset = document.getElementById("firstScreen").offsetHeight;
 const presentationCard = document.getElementById("presentation_area");
 const project = document.getElementsByClassName("project");
+var root = document.getElementsByTagName("h1");
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);

@@ -26,6 +26,7 @@ var s = function (c) {
 
   c.setup = function () {
     c.createCanvas(pong.clientWidth, pong.clientHeight);
+    c.frameRate(100);
   };
 
   c.mousePressed = function () {

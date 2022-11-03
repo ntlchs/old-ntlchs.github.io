@@ -10,75 +10,116 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   </head>
 
-  <body>
-    <div id="backToTopContainer">
-      <button id="backToTop" class="hidden">
-        <a href="#welcome_area"> &#5169; </a>
+  <body class="baloo blackFont noMP noBg h100vh">
+    <div id="backToTopContainer" class="mgTop50 flex">
+      <button id="backToTop" class="hidden noBg">
+        <a href="#welcome_area" class="blackFont fontXL"> &#5169; </a>
       </button>
     </div>
 
-    <main id="scroll_area">
-      <header id="firstScreen" class="screen">
-        <div id="welcome_area">
-          <div id="presentation_area">
-            <h1>Welcome to My Portfolio!</h1>
-            <p>Hi, I`m Natalia Chies.</p>
+    <main id="scroll_area" class="flex flexCol flexStart">
+      <header id="firstScreen" class="screen flex flexCol whiteBg alignCenter">
+        <div id="welcome_area" class="flex alignCenter textCenter">
+          <div
+            id="presentation_area"
+            class="flex flexCol roundBorder alignCenter"
+          >
+            <h1 class="noMP fontXL">Welcome to My Portfolio!</h1>
+            <p class="noMP fontSm">Hi, I`m Natalia Chies.</p>
           </div>
           <!-- <img id="header_img" src="assets/kitten.png" alt="3d model of a cat." /> -->
         </div>
 
-        <nav>
-          <a href="#googleClone" class="projectButton">Google Clone</a>
-          <a href="#pongGame" class="projectButton">Pong Game</a>
-          <a href="#gameOfLife" class="projectButton">Game of Life</a>
-          <a href="#rlStats" class="projectButton">RLStats to CSV</a>
+        <nav class="whiteBg roundBorder justCenter">
+          <a
+            href="#googleClone"
+            class="projectButton roundBorder fontMd blueBg lilac"
+            >Google Clone</a
+          >
+          <a
+            href="#pongGame"
+            class="projectButton roundBorder fontMd blueBg lilac"
+          >
+            Pong Game
+          </a>
+          <a
+            href="#gameOfLife"
+            class="projectButton roundBorder fontMd blueBg lilac"
+          >
+            Game of Life
+          </a>
+          <a
+            href="#rlStats"
+            class="projectButton roundBorder fontMd blueBg lilac"
+          >
+            RLStats to CSV
+          </a>
         </nav>
       </header>
 
       <section id="projects">
-        <div class="project screen" id="googleClone">
-          <h1>Google Clone</h1>
-          <h2>HTML and CSS</h2>
-          <div class="demo" id="googleCloneDemo">
-            <a href="google_clone/index.html">Link</a>
-          </div>
+        <div
+          class="project screen flex flexCol alignCenter flexStart"
+          id="googleClone"
+        >
+          <h1 class="fontLg mgTop50">Google Clone</h1>
+          <h2 class="fontMd noMP">HTML and CSS</h2>
+          <a href="google_clone/index.html" class="fontMd purple">Link</a>
+          <iframe
+            class="demo rectDemo noMP"
+            id="googleCloneDemo"
+            src="/google_clone/index.html"
+          ></iframe>
         </div>
 
-        <div class="project screen" id="pongGame">
-          <h1>Pong game</h1>
-          <h2>Javascript, p5.js</h2>
-          <div class="demo" id="pong"></div>
+        <div
+          class="project screen flex flexCol alignCenter flexStart"
+          id="pongGame"
+        >
+          <h1 class="fontLg mgTop50">Pong game</h1>
+          <h2 class="fontMd noMP">Javascript, p5.js</h2>
+          <div class="demo rectDemo mgAuto" id="pong"></div>
         </div>
 
-        <div class="project screen" id="gameOfLife">
-          <h1>Game of Life</h1>
-          <h2>JavaScript, p5.js</h2>
-          <p>
-            Press the following keys to create desired structure on mouse
-            coordinates:
+        <div
+          class="project screen flex flexCol alignCenter flexStart"
+          id="gameOfLife"
+        >
+          <h1 class="fontLg mgTop50">Game of Life</h1>
+          <h2 class="fontMd noMP">JavaScript, p5.js</h2>
+          <p class="noMP fontSm">
+            Press these <u>keys</u> to create a structure on mouse coordinates:
           </p>
-          <p>
-            b - block, e - eater, g - glider, h - herschel, k - blinker, n -
-            gliderGun, p - rPentomino, r - reverse glider
+          <p class="noMP fontSm">
+            <u>B</u>lock, <u>E</u>ater, <u>G</u>lider, <u>H</u>erschel,
+            blin<u>K</u>er, glider gu<u>N</u>, r<u>P</u>entomino, <u>R</u>everse
+            glider
           </p>
-          <div class="demo" id="gol"></div>
+          <p class="noMP fontSm">Press <u>esc</u> to pause simulation</p>
+          <div id="gol" class="demo sqDemo"></div>
         </div>
 
-        <div class="project screen" id="rlStats">
-          <h1>RLStats to CSV</h1>
-          <h2>Python script</h2>
+        <div
+          id="rlStats"
+          class="project screen flex flexCol alignCenter flexStart"
+        >
+          <h1 class="fontLg mgTop50">RLStats to CSV</h1>
+          <h2 class="fontMd noMP">Python script</h2>
         </div>
       </section>
     </main>
 
-    <footer id="footer">
+    <footer class="flex flexCol pinkBg alignCenter noMP">
       Copyright Natália Chies 2022
-      <a href="https://github.com/ntlchs" target="_blank">GitHub</a>
+      <a href="https://github.com/ntlchs" target="_blank" class="fontSm purple">
+        GitHub
+      </a>
     </footer>
 
     <script src="index.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+
     <script src="pong.js"></script>
     <script src="gameOfLife.js"></script>
   </body>

@@ -37,28 +37,27 @@ var v = function (c) {
   };
 
   c.draw = () => {
-    c.background(150);
-    for (let x = 0; x < gridWidth; x++) {
-      for (let y = 0; y < gridHeight; y++) {
-        if (board[x][y]) {
-          c.fill(255);
-        } else {
-          c.fill(0);
-        }
-        c.square(scale * x, scale * y, scale);
-        nextGeneration[x][y] = evolve(x, y);
-      }
-    }
-    board = nextGeneration;
-    nextGeneration = createArray();
-
     if (!gameStarted) {
+      c.background(0);
       c.fill(255);
       c.textSize(20);
       c.textAlign(c.CENTER);
       c.text("Click to start", w / 2, h / 2);
       return;
     }
+
+    c.background(0);
+    for (let x = 0; x < gridWidth; x++) {
+      for (let y = 0; y < gridHeight; y++) {
+        nextGeneration[x][y] = evolve(x, y);
+        if (board[x][y]) {
+          c.fill(255);
+          c.square(scale * x, scale * y, scale);
+        }
+      }
+    }
+    board = nextGeneration;
+    nextGeneration = createArray();
   };
 
   function evolve(i, j) {
@@ -229,6 +228,10 @@ var v = function (c) {
     } else if (c.keyCode == 82) {
       // r
       createReverseGlider(x, y);
+    } else if (c.keyCode == 27) {
+      // esc
+      gameStarted = false;
+      return;
     }
   };
 };
