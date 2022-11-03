@@ -56,10 +56,11 @@ var s = function (c) {
       c.text("press esc to pause game", w / 2, h / 4 + 60);
       return;
     } else {
+      c.textAlign(c.LEFT);
       c.text("computer", w - 120, 60);
-      c.text(computerScore, w - 120, 80);
+      c.text(computerScore, w - 120, 90);
       c.text("you", 20, 60);
-      c.text(yourScore, 20, 80);
+      c.text(yourScore, 20, 90);
       ballX += speedX;
       ballY += speedY;
     }
