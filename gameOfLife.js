@@ -33,7 +33,10 @@ var v = function (c) {
   };
 
   c.mousePressed = function () {
-    gameStarted = true;
+    if (c.mousePressed) {
+      gameStarted = true;
+      createGliderGun(gridWidth / 2 - 20, gridHeight / 2 - 5);
+    }
   };
 
   c.draw = () => {
