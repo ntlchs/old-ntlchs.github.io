@@ -5,7 +5,8 @@ console.log(w, h);
 
 var v = function (c) {
   let size = 100;
-  let gameStarted;
+  let gameStarted = false;
+  let gamePaused = false;
 
   function createArray() {
     let board = [];
@@ -39,8 +40,11 @@ var v = function (c) {
       c.mouseY > gol.clientTop &&
       c.mouseY < h
     ) {
+      let gameStatus = gameStarted;
       gameStarted = true;
-      createGliderGun(size / 2 - 20, size / 2 - 5);
+      if (gameStatus != gameStarted) {
+        createGliderGun(size / 2 - 20, size / 2 - 5);
+      }
     }
   };
 
@@ -51,6 +55,15 @@ var v = function (c) {
       c.textSize(20);
       c.textAlign(c.CENTER);
       c.text("Click to start", w / 2, h / 2);
+      return;
+    }
+
+    if (gamePaused) {
+      c.background(0);
+      c.fill(255);
+      c.textSize(20);
+      c.textAlign(c.CENTER);
+      c.text("Press esc to play", w / 2, h / 2);
       return;
     }
 
@@ -237,8 +250,12 @@ var v = function (c) {
       createReverseGlider(x, y);
     } else if (c.keyCode == 27) {
       // esc
-      gameStarted = false;
-      return;
+      if (gameStarted || gamePaused == false) {
+        gamePaused = true;
+        return;
+      } else {
+        gamePaused = false;
+      }
     }
   };
 };
