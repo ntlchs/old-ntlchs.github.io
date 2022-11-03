@@ -122,18 +122,27 @@
 }
 
 .rectDemo {
-  min-width: 100px;
   width: 1100px;
-  min-height: 50px;
   height: 500px;
 }
 
-.sqDemo {
-  min-width: 100px;
-  min-height: 100px;
-  height: 500px;
-  width: 500px;
+@media screen and (max-width: 640px) {
+  .demo,
+  .rectDemo {
+    width: 70vw;
+    height: 78vh;
+  }
+
+  .sqDemo {
+    width: 70vw;
+    height: 70vh;
+  }
 }
+
+/* .sqDemo {
+  max-height: 500px;
+  max-width: 500px;
+} */
 
 .scrollHeight {
   height: calc(100vh - 50px);
@@ -175,8 +184,9 @@ a:visited {
 
 nav {
   padding: 0 10px;
+  margin: 0 10px;
   max-width: fit-content;
-  block-size: auto;
+  min-block-size: 1vmax;
   display: inline-flex;
   flex-wrap: wrap;
 }
@@ -187,16 +197,24 @@ nav {
 }
 
 #welcome_area {
-  padding: 40px;
+  padding: 0;
+  margin: 0 10px;
   position: relative;
+  min-width: 30vw;
+  min-height: 30px;
+  max-width: 600px;
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
 
 #presentation_area {
-  margin: 50px;
-  padding: 100px;
+  min-width: 30vw;
+  margin: 50px 0;
+  padding: 100px 0;
 }
 
+#navLinks {
+  display: flex;
+}
 .projectButton {
   padding: 5px 10px;
   margin: 5px;
@@ -215,6 +233,10 @@ nav {
   display: none;
 }
 
+.screen {
+  padding: 0 10px;
+}
+
 .project h2 {
   font-weight: normal;
 }
@@ -226,13 +248,13 @@ nav {
 }
 
 #googleCloneDemo {
-  min-width: 100px;
 }
 
 .cats {
   width: 100vw;
   height: 150px;
   background-size: 150px;
+  min-width: 125px;
 }
 
 .longCatMiddle {
@@ -240,12 +262,14 @@ nav {
   background-repeat: repeat-y;
   flex-direction: column;
   background-size: 150px;
+  min-width: 125px;
 }
 
 #longCatTop {
   background-image: url("assets/longcat1.png");
   background-repeat: no-repeat;
   flex-direction: column-reverse;
+  min-width: 125px;
 }
 
 .longCatBottom {
@@ -253,4 +277,5 @@ nav {
   background-repeat: no-repeat;
   flex-direction: column;
   background-size: 150px;
+  min-width: 125px;
 }
