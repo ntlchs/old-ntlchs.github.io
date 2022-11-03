@@ -42,12 +42,18 @@ var s = function (c) {
   };
 
   c.draw = function () {
-    c.background(0);
+    c.background(200, 240, 200);
     c.fill(255);
+    c.stroke(255);
 
     //moves bars
     var LeftBarY = c.mouseY - barH / 2;
     var RightBarY = ballY - barH / 2;
+
+    for (i = 0; i < h; i += 20) {
+      //dash line
+      c.line(w / 2, i, w / 2, i + 10);
+    }
 
     c.rect(barX, LeftBarY, barW, barH);
 
@@ -55,6 +61,7 @@ var s = function (c) {
 
     c.ellipse(ballX, ballY, 2 * r, 2 * r);
 
+    c.fill(0);
     // game info on screen
     if (!gameStarted) {
       c.textSize(20);
@@ -71,12 +78,6 @@ var s = function (c) {
       c.text(yourScore, 20, 90);
       ballX += speedX;
       ballY += speedY;
-    }
-
-    for (i = 0; i < h; i += 20) {
-      //dash line
-      c.stroke(255);
-      c.line(w / 2, i, w / 2, i + 10);
     }
 
     const ballCrossedTop = ballY < r;
