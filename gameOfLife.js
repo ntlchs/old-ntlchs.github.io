@@ -28,7 +28,7 @@ var v = function (c) {
     c.createCanvas(w, h);
     cellSize = w / size;
     c.background(0);
-    c.frameRate(10);
+    c.frameRate(9);
   };
 
   c.mousePressed = function () {
