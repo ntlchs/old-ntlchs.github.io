@@ -9,16 +9,16 @@ var s = function (c) {
   var h = pong.clientHeight;
   var p = 2; //padding
 
-  let barW = 150;
-  let barH = 15;
-  var barY = h - p - barH;
+  let barW = 15;
+  let barH = 150;
+  var barX = p;
 
   var ballX = w / 2;
   var ballY = h / 2;
   let r = 10; // ball radius
 
-  let speedX = 4;
-  let speedY = 7;
+  let speedX = 7;
+  let speedY = 4;
 
   let gameStarted;
   let computerScore = 0;
@@ -33,79 +33,85 @@ var s = function (c) {
     gameStarted = true;
   };
 
-  c.keyPressed = function () {
-    computerScore = 0;
-    yourScore = 0;
-  };
-
   c.draw = function () {
-    c.background(240);
-    c.fill(0);
+    c.background(0);
+    c.fill(255);
 
     //moves bars
-    var bottomBarX = c.mouseX - barW / 2;
-    var topBarX = ballX - barW / 2;
+    var LeftBarY = c.mouseY - barH / 2;
+    var RightBarY = ballY - barH / 2;
 
-    c.rect(bottomBarX, barY, barW, barH);
+    c.rect(barX, LeftBarY, barW, barH);
 
-    c.rect(topBarX, p, barW, barH);
+    c.rect(w - p - barW, RightBarY, barW, barH);
 
     c.ellipse(ballX, ballY, 2 * r, 2 * r);
-    for (i = 0; i < w; i += 20) {
-      //dash line
-      c.stroke(0);
-      c.line(i, h / 2, i + 10, h / 2);
-    }
 
     // game info on screen
     if (!gameStarted) {
       c.textSize(20);
-      c.text("CLICK TO START", 20, 50);
-      c.text("press any key to reset score", 20, 80);
+      c.textAlign(c.CENTER);
+      c.text("Click to start", w / 2, h / 4);
+      c.text("press r to reset score", w / 2, h / 4 + 30);
+      c.text("press esc to pause game", w / 2, h / 4 + 60);
       return;
     } else {
-      c.text("computer", 20, 35);
-      c.text(computerScore, 20, 60);
-      c.text("you", 20, h - 60);
-      c.text(yourScore, 20, h - 35);
+      c.text("computer", w - 120, 60);
+      c.text(computerScore, w - 120, 80);
+      c.text("you", 20, 60);
+      c.text(yourScore, 20, 80);
+      ballX += speedX;
+      ballY += speedY;
     }
 
-    // moves ball
-    ballX += speedX;
-    ballY += speedY;
-
-    const ballCrossedRight = ballX > w - r;
-    const ballCrossedLeft = ballX < r;
-    const ballInTopBar = ballY < r + p + barH && speedY < 0;
-    const ballInBottomBar = ballY > h - p - r - barH && speedY > 0;
-    const ballCrossedDown = ballY > h + r && speedY > 0;
-
-    if (ballCrossedRight || ballCrossedLeft) {
-      speedX = -speedX;
+    for (i = 0; i < h; i += 20) {
+      //dash line
+      c.stroke(255);
+      c.line(w / 2, i, w / 2, i + 10);
     }
 
-    if (ballInTopBar) {
+    const ballCrossedTop = ballY < r;
+    const ballCrossedDown = ballY > h - r;
+    const ballInLeftBar = ballX < p + r + barW && speedX < 0;
+    const ballInRightBar = ballX > w - p - barW - r && speedX > 0;
+    const ballCrossedLeft = ballX < p && speedX < 0;
+
+    if (ballCrossedTop || ballCrossedDown) {
       speedY = -speedY;
-    } else if (ballCrossedDown) {
+    }
+
+    if (ballInRightBar) {
+      speedX = -speedX;
+    } else if (ballCrossedLeft) {
       computerScore++;
       ballX = w / 2;
       ballY = h / 2;
-      gameStarted = false;
     }
 
-    let leftHalf = ballX >= bottomBarX && ballX < bottomBarX + barW / 2;
-    let rightHalf = ballX > bottomBarX + barW / 2 && ballX <= bottomBarX + barW;
+    let TopHalf = ballY >= LeftBarY && ballY < LeftBarY + barH / 2;
+    let bottomHalf = ballY > LeftBarY + barH / 2 && ballY <= LeftBarY + barH;
 
-    if (ballInBottomBar && leftHalf) {
-      speedY = -speedY;
-      if (speedX > 0) {
-        speedX = -speedX;
+    if (ballInLeftBar && TopHalf) {
+      speedX = -speedX;
+      if (speedY > 0) {
+        speedY = -speedY;
       }
-    } else if (ballInBottomBar && rightHalf) {
-      speedY = -speedY;
-      if (speedX < 0) {
-        speedX = -speedX;
+    } else if (ballInLeftBar && bottomHalf) {
+      speedX = -speedX;
+      if (speedY < 0) {
+        speedY = -speedY;
       }
+    }
+  };
+  c.keyPressed = () => {
+    if (c.keyCode == 27) {
+      // esc
+      gameStarted = false;
+      return;
+    } else if ((c.keyCode = 82)) {
+      // r
+      computerScore = 0;
+      yourScore = 0;
     }
   };
 };
