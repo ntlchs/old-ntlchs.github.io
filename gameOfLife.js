@@ -1,9 +1,9 @@
 const gol = document.getElementById("gol");
 let w = gol.clientWidth;
 let h = gol.clientHeight;
-console.log(w, h);
 
 var v = function (c) {
+  console.log(w, h);
   let size = 100;
   let gameStarted = false;
   let gamePaused = false;
@@ -22,8 +22,6 @@ var v = function (c) {
 
   let board = createArray();
   let nextGeneration = createArray();
-  //createGliderGun(60, 60);
-  //createEater1(58,40);
 
   c.setup = () => {
     c.createCanvas(w, h);

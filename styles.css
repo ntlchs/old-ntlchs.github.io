@@ -1,15 +1,23 @@
 @font-face {
-  font-family: Baloo;
-  src: url("fonts/Baloo-Regular.ttf");
-}
-
-@font-face {
   font-family: Courier;
   src: url("fonts/courier-prime-sans/Courier/Prime/Sans.ttf");
 }
 
-.baloo {
+.courier {
   font-family: Courier, sans-serif;
+}
+
+/* Margin and Padding */
+.h100vh {
+  height: 100vh;
+}
+
+.noM {
+  margin: 0;
+}
+
+.noP {
+  padding: 0;
 }
 
 .mgAuto {
@@ -26,23 +34,16 @@
   padding-bottom: 0;
 }
 
+.pdTB10 {
+  padding: 10px 0;
+}
+
 .pd5 {
   padding-top: 5px;
   padding-bottom: 0;
 }
 
-.h100vh {
-  height: 100vh;
-}
-
-.noM {
-  margin: 0;
-}
-
-.noP {
-  padding: 0;
-}
-
+/* Background and colors */
 .noBg {
   background: none;
   border: 0;
@@ -68,11 +69,13 @@
   color: rgba(170, 110, 255, 1);
 }
 
+/* Border */
 .roundBorder {
   border: none;
   border-radius: 15px;
 }
 
+/* Flex and positioning */
 .flex {
   display: flex;
 }
@@ -93,10 +96,19 @@
   align-items: center;
 }
 
+.textCenter {
+  text-align: center;
+}
+
+.justCenter {
+  justify-content: center;
+}
+
 .posAbsol {
   position: absolute;
 }
 
+/* Font sizes */
 .fontXL {
   font-size: 40px;
 }
@@ -113,38 +125,33 @@
   font-size: 16px;
 }
 
-.textCenter {
-  text-align: center;
+.scrollHeight {
+  height: calc(100vh - 50px);
 }
 
-.justCenter {
-  justify-content: center;
-}
-
+/* demos */
 .rectDemo {
   width: 1100px;
   height: 500px;
 }
 
-.sqDemo {
-  max-height: 80vh;
-  max-width: 90vwpx;
+.sqDemo,
+#gol {
+  min-height: 450px;
+  min-width: 450px;
 }
+
+/* Change arrangements on mobile */
 @media screen and (max-width: 640px) {
-  .demo,
   .rectDemo {
     width: 70vw;
     height: 78vh;
   }
 
   .sqDemo {
-    width: 70vw;
-    height: 70vh;
+    min-width: 70vw;
+    min-height: 70vh;
   }
-}
-
-.scrollHeight {
-  height: calc(100vh - 50px);
 }
 
 body {
@@ -168,7 +175,6 @@ header {
 
 footer {
   height: 50px;
-  padding: 10px 0;
 }
 
 a {
@@ -189,7 +195,7 @@ nav {
 }
 
 .screen {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 70px);
   scroll-snap-align: start;
 }
 
