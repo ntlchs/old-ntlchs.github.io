@@ -129,16 +129,67 @@
   height: calc(100vh - 50px);
 }
 
-/* demos */
-.rectDemo {
-  width: 1100px;
-  height: 500px;
-}
+/* Change arrangements for horizontal screen */
+@media screen and (min-width: 641px) {
+  /* demos */
+  .rectDemo {
+    width: 80vw;
+    height: 70vh;
+  }
 
-.sqDemo,
-#gol {
-  min-height: 450px;
-  min-width: 450px;
+  .sqDemo {
+    min-height: 450px;
+    min-width: 450px;
+  }
+
+  header {
+    background-size: 40px;
+  }
+
+  #navLinks {
+    grid-template-columns: 120px 120px 120px;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #welcome_area {
+    max-height: 30vh;
+    max-width: 600px;
+    margin-top: 50px;
+  }
+
+  #presentation_area {
+    min-width: 30vw;
+    margin: 50px;
+    padding: 40px 20px;
+  }
+
+  .cats {
+    height: 150px;
+    background-size: 150px;
+  }
+
+  .longCatMiddle {
+    background-size: 150px;
+  }
+
+  #longCatTop {
+    min-width: 150px;
+  }
+
+  .longCatBottom {
+    background-size: 150px;
+  }
+
+  footer {
+    height: 50px;
+  }
+
+  .projectButton {
+    padding: 5px 10px;
+    margin: 5px;
+    height: 50px;
+  }
 }
 
 /* Change arrangements on mobile */
@@ -149,8 +200,75 @@
   }
 
   .sqDemo {
-    min-width: 70vw;
-    min-height: 70vh;
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  #navLinks {
+    grid-template-columns: 50% 50%;
+    padding: 2px;
+    gap: 2px;
+    align-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  header {
+    background-size: 20px;
+  }
+
+  #welcome_area {
+    min-width: 30vw;
+    margin: 10px 0px;
+  }
+  #presentation_area {
+    min-height: 20vh;
+    padding: 30px 30px;
+    margin: 0 10px;
+  }
+
+  .fontXL {
+    font-size: 22px;
+  }
+
+  .fontLg {
+    font-size: 20px;
+  }
+
+  .fontMd {
+    font-size: 18px;
+  }
+
+  .fontSm {
+    font-size: 14px;
+  }
+
+  .cats {
+    width: 100vw;
+    background-size: 75px;
+  }
+
+  .longCatMiddle {
+    background-size: 75px;
+  }
+
+  #longCatTop {
+    min-width: 75px;
+  }
+
+  .longCatBottom {
+    background-size: 75px;
+  }
+  footer {
+    height: 30px;
+  }
+
+  .projectButton {
+    padding: 2px 10px;
+    margin: 2px;
+    height: 30px;
   }
 }
 
@@ -168,13 +286,8 @@ header {
   background-image: url("assets/dots.png");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: 40px;
   min-height: 100%;
   justify-content: space-between;
-}
-
-footer {
-  height: 50px;
 }
 
 a {
@@ -195,38 +308,23 @@ nav {
 }
 
 .screen {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 50px);
   scroll-snap-align: start;
 }
 
 #welcome_area {
-  padding: 0;
-  margin: 0 10px;
   position: relative;
-  min-width: 30vw;
-  min-height: 30px;
-  max-width: 600px;
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
-}
-
-#presentation_area {
-  min-width: 30vw;
-  margin: 50px;
-  padding: 100px 20px;
+  justify-content: center;
 }
 
 #navLinks {
   display: grid;
-  grid-template-columns: 120px 120px 120px;
   grid-auto-rows: max-content;
-  padding: 10px;
-  gap: 10px;
   align-content: center;
 }
+
 .projectButton {
-  padding: 5px 10px;
-  margin: 5px;
-  height: 50px;
   text-align: center;
 }
 
@@ -253,36 +351,28 @@ nav {
 
 .demo {
   margin-top: 15px;
-  border-radius: 15px;
   border: 15px solid rgba(255, 255, 255, 0.6);
 }
 
 .cats {
   width: 100vw;
-  height: 150px;
-  background-size: 150px;
-  min-width: 125px;
+  min-height: 75px;
 }
 
 .longCatMiddle {
   background-image: url("assets/longcat2.png");
   background-repeat: repeat-y;
   flex-direction: column;
-  background-size: 150px;
-  min-width: 125px;
 }
 
 #longCatTop {
   background-image: url("assets/longcat1.png");
   background-repeat: no-repeat;
   flex-direction: column-reverse;
-  min-width: 125px;
 }
 
 .longCatBottom {
   background-image: url("assets/longcat3.png");
   background-repeat: no-repeat;
   flex-direction: column;
-  background-size: 150px;
-  min-width: 125px;
 }
