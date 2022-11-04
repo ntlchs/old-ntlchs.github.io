@@ -23,56 +23,59 @@
         scrollHeight
         class="screen scrollHeight flex flexCol whiteBg alignCenter"
       >
-        <div id="welcome_area" class="flex alignCenter textCenter">
+        <div
+          id="welcome_area"
+          class="flex flexCol alignCenter textCenter justCenter shadow"
+        >
           <div
             id="presentation_area"
-            class="flex flexCol roundBorder alignCenter"
+            class="flex flexCol roundBorder alignCenter mgTop30"
           >
-            <h1 class="noM pd5 fontXL">Welcome to My Portfolio!</h1>
+            <h1 class="noM fontXL">Welcome to My Portfolio!</h1>
             <p class="noM pd5 fontSm">
               Hi, I`m Natalia Chies, a junior developer.
             </p>
           </div>
           <!-- <img id="header_img" src="assets/kitten.png" alt="3d model of a cat." /> -->
-        </div>
 
-        <div class="whiteBg roundBorder flex flexCol">
-          <p>Here are some of my projects:</p>
-          <div id="navLinks" class="alignCenter">
-            <a
-              href="#gameOfLife"
-              class="projectButton roundBorder fontMd blueBg lilac"
-            >
-              Game of Life
-            </a>
+          <div class="whiteBg roundBorder flex flexCol">
+            <p>Here are some of my projects:</p>
+            <div id="navLinks" class="alignCenter">
+              <a
+                href="#gameOfLife"
+                class="projectButton roundBorder fontMd blueBg lilac"
+              >
+                Game of Life
+              </a>
 
-            <a
-              href="#pongGame"
-              class="projectButton roundBorder fontMd blueBg lilac"
-            >
-              Pong
-            </a>
+              <a
+                href="#pongGame"
+                class="projectButton roundBorder fontMd blueBg lilac"
+              >
+                Pong
+              </a>
 
-            <a
-              href="#googleClone"
-              class="projectButton roundBorder fontMd blueBg lilac"
-              >Google Clone</a
-            >
+              <a
+                href="#googleClone"
+                class="projectButton roundBorder fontMd blueBg lilac"
+                >Google Clone</a
+              >
 
-            <a
-              href="#rlStats"
-              class="projectButton roundBorder fontMd blueBg lilac"
-            >
-              RLStats to CSV
-            </a>
+              <a
+                href="#rlStats"
+                class="projectButton roundBorder fontMd blueBg lilac"
+              >
+                RLStats to CSV
+              </a>
+            </div>
           </div>
         </div>
 
-        <div id="longCatTop" class="flex cats"></div>
+        <img src="/assets/longcat1.png" id="longCatTop" class="flex cats" />
       </header>
 
       <div
-        class="project screen scrollHeight flex flexCol alignCenter flexStart longCatMiddle"
+        class="project screen scrollHeight flex flexCol alignCenter flexStart longCatMiddle textCenter"
         id="gameOfLife"
       >
         <h1 class="fontLg pd15 noM">Game of Life</h1>
@@ -122,10 +125,19 @@
           <h1 class="fontLg pd15 noM">RLStats to CSV</h1>
           <h2 class="fontMd noM pd5">Python script</h2>
         </div>
+        <div
+          id="rlStats"
+          class="project screen scrollHeight flex flexCol alignCenter flexStart"
+        >
+          <h1 class="fontLg pd15 noM">h1</h1>
+          <h2 class="fontMd noM pd5">h2</h2>
+          <img src="/assets/cat.png" class="background" />
+          <img src="/assets/kitten.png" alt="" class="foreground" />
+        </div>
       </section>
     </main>
 
-    <footer class="flex flexCol pinkBg alignCenter noM pdTB10">
+    <footer class="flex flexCol pinkBg alignCenter noM pdTB10 shadow">
       Copyright Natália Chies 2022
       <a href="https://github.com/ntlchs" target="_blank" class="fontSm purple">
         GitHub

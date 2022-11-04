@@ -11,7 +11,7 @@ function random(min, max) {
 }
 
 scrollArea.onscroll = () => {
-  if (scrollArea.scrollTop >= elementOffset) {
+  if (scrollArea.scrollTop >= elementOffset - 1) {
     backToTop.classList.remove("class", "hidden");
   } else {
     backToTop.classList.add("class", "hidden");
