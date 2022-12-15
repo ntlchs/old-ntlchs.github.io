@@ -1,0 +1,22 @@
+---
+// import "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js";
+import Header from "../components/Header.astro";
+import BackToTopBtn from "../components/BackToTopBtn.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutMe from "../components/AboutMe.astro";
+---
+
+<BaseLayout>
+  <div id="backToTopContainer">
+    <BackToTopBtn />
+  </div>
+
+  <main id="scroll_area">
+    <Header />
+    <AboutMe />
+    <Projects />
+    <Footer />
+  </main>
+</BaseLayout>

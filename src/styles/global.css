@@ -1,0 +1,25 @@
+:root {
+  --black: #383428;
+  --blue: #1e90ff;
+  --offWhite: #fefff1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+}
+
+body {
+  background-color: var(--offWhite);
+  text-align: center;
+}
+.dotted {
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(#ccc 5%, transparent 5%),
+    radial-gradient(#ccc 5%, transparent 5%);
+  background-color: #fff;
+  background-position: 0 0, 50px 50px;
+  background-size: 50px 50px;
+}
