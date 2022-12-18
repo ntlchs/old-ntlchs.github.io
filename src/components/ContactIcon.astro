@@ -1,5 +1,7 @@
 ---
-const { name, link, src } = Astro.props;
+const { name, link, img } = Astro.props;
 ---
 
-<a href={link}> <img src={src} alt={name} /></a>
+<a id={name} href={link}>
+  <img src={img} alt={name} class="footer_icon" />
+</a>

@@ -1,29 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-
-@font-face {
-  font-family: Cookies;
-  src: url("assets/shortbread-cookies-font/shortbreadCookiesRegular.otf")
-    format("opentype");
-}
-
-@font-face {
-  font-family: Rainmaker;
-  src: url("assets/the-rainmaker/TheRainmaker.otf");
-}
-
-@font-face {
-  font-family: Affectionately;
-  src: url("assets/affectionately-yours/Affectionately.ttf") format("truetype");
-}
 
 :root {
   --black: #32302e;
   --offWhite: #fcfdec;
   --light-gray: #dbd8be;
   --gray: #b7b49d;
-  --light-green: rgb(243, 251, 237);
+  --light-green: rgb(242, 255, 243);
   --transparent: rgba(255, 255, 255, 0);
 }
 
@@ -63,6 +46,10 @@ header {
   padding: 60px 30px;
 }
 
+button {
+  font-family: "Patrick Hand", cursive;
+}
+
 #title {
   text-transform: capitalize;
   /* letter-spacing: 20px; */
@@ -89,7 +76,6 @@ li {
 }
 
 h1 {
-  margin-top: 10px;
   padding-top: 1rem;
   padding-bottom: 0;
   text-transform: uppercase;
@@ -107,8 +93,7 @@ a {
 }
 
 .dotted {
-  background-image: radial-gradient (var(--black) 5%, transparent 5%),
-    radial-gradient(var(--black) 5%, transparent 5%);
+  background-image: radial-gradient (var(--black) 5%, transparent 5%);
   background-position: center;
   background-size: 50px 50px;
 }
@@ -121,13 +106,13 @@ a {
 }
 
 .project {
-  height: 12rem;
+  height: 30vh;
   outline: 1px solid var(--black);
   position: relative;
 }
 
 #projects {
-  background-color: rgb(242, 255, 243);
+  background-color: var(--light-green);
 }
 
 .cardText {
@@ -157,7 +142,7 @@ a {
   min-width: 45%;
   letter-spacing: 4px;
   border: 1px solid var(--black);
-  background: pink;
+  background: rgb(255, 204, 208);
   border-radius: 5px;
   box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
   position: relative;
@@ -227,7 +212,6 @@ a {
 #girlCollage {
   margin: auto;
   padding: 10px;
-  border: 1px solid var(--black);
   max-width: 80%;
   position: relative;
   background-color: rgb(243, 210, 251);
@@ -235,6 +219,7 @@ a {
   align-items: center;
   justify-content: center;
   rotate: -1deg;
+  box-shadow: 1px 1px 1px var(--gray);
 }
 
 #girlCollage:after {
@@ -337,6 +322,8 @@ a {
 
 #presentation {
   padding: 1rem;
+  overflow-y: auto;
+  box-shadow: 1px 1px 1px var(--gray);
 }
 
 footer {
@@ -356,7 +343,29 @@ footer {
   border-left: 1px dotted var(--gray);
   opacity: 0.5;
 }
+*/
 
-#projects_div {
-  position: relative;
-} */
+#pages {
+  overflow-x: hidden;
+}
+
+footer h1 {
+  padding: 5px;
+}
+
+img.footer_icon {
+  height: 40px;
+}
+
+#gitHub {
+  /* display: block;
+  background-size: cover;
+  width: 80px;
+  height: 80px; */
+}
+
+#linkedin {
+}
+
+#email {
+}
