@@ -1,11 +1,11 @@
 ---
 // import "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js";
-import Header from "../components/Header.astro";
-import BackToTopBtn from "../components/BackToTopBtn.astro";
-import Projects from "../components/Projects.astro";
-import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import AboutMe from "../components/AboutMe.astro";
+import BackToTopBtn from "../components/BackToTopBtn.astro";
+import ContactIcon from "../components/ContactIcon.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Page from "../components/Page.astro";
+import Button from "../components/Button.astro";
 ---
 
 <BaseLayout>
@@ -13,10 +13,64 @@ import AboutMe from "../components/AboutMe.astro";
     <BackToTopBtn />
   </div>
 
-  <main id="scroll_area">
-    <Header />
-    <AboutMe />
-    <Projects />
-    <Footer />
+  <main>
+    <!-- <div class="stamp"> -->
+    <header>
+      <!-- <img src="assets/smiley.svg" alt="" id="smiley" /> -->
+      <h1>Natália Chies</h1>
+      <div class="collage">
+        <div id="presentation">
+          <p>
+            Junior web developer with a passion for creating beautiful and
+            functional websites, always striviving to create intuitive and
+            user-friendly experiences.
+          </p>
+          <Button url="" text="Contact Me" />
+        </div>
+      </div>
+    </header>
+    <!-- </div> -->
+    <Page id="about" title="About Me">
+      <div id="girlCollage" class="paper">
+        <div class="tape"></div>
+        <img src="assets/girl.svg" alt="" id="girl" />
+        <div class="tape"></div>
+      </div>
+      <ul>
+        <li>
+          Originally a graduated nurse with a passion for technology and
+          computer science
+        </li>
+        <li>
+          Currently a self-learner in web development, with 3 months of
+          experience
+        </li>
+        <li>
+          Native of Porto Alegre, Rio Grande do Sul, Brazil, with a desire to
+          learn and grow as a developer.
+        </li>
+      </ul>
+      <Button url="" text="Resume" />
+    </Page>
+    <Page title="Projects" id="projects">
+      <div id="cards">
+        <ProjectCard projectName="gameOfLife" />
+        <ProjectCard projectName="pongGame" />
+        <ProjectCard projectName="googleClone" />
+        <ProjectCard projectName="rlStats" />
+      </div>
+    </Page>
+    <Page title="Skills" id="skills">
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>JavaScript</p>
+    </Page>
+    <footer>
+      <a href="https://github.com/ntlchs" target="_blank"> GitHub</a>
+      <ContactIcon name="GitHub" link="github.com/ntlchs" src="" />
+      <h1>Contact Me</h1>
+      <p>Copyright Natália Chies 2022</p>
+      <p>insert form here</p>
+    </footer>
   </main>
 </BaseLayout>
