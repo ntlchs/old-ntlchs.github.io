@@ -8,9 +8,18 @@
     format("opentype");
 }
 
+@font-face {
+  font-family: Rainmaker;
+  src: url("assets/the-rainmaker/TheRainmaker.otf");
+}
+
+@font-face {
+  font-family: Affectionately;
+  src: url("assets/affectionately-yours/Affectionately.ttf") format("truetype");
+}
+
 :root {
-  --black: #382b22;
-  --blue: #1e90ff;
+  --black: #32302e;
   --offWhite: #fcfdec;
   --light-gray: #dbd8be;
   --gray: #b7b49d;
@@ -21,15 +30,19 @@
 * {
   padding: 0;
   margin: 0;
-  color: var(--black);
-  font-family: "Patrick Hand", sans-serif;
 }
 
 html {
   width: 100vw;
 }
 
+header,
 body {
+  color: var(--black);
+}
+
+body {
+  font-family: "Patrick Hand", sans-serif;
   background-color: var(--offWhite);
   text-align: center;
   height: fit-content;
@@ -40,28 +53,30 @@ body {
   justify-content: center;
 }
 
-.dotted {
-  background-image: radial-gradient (var(--black) 5%, transparent 5%),
-    radial-gradient(var(--black) 5%, transparent 5%);
-  background-position: center;
-  background-size: 50px 50px;
-}
-
 header {
   display: flex;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: var(--offWhite);
   margin: auto;
   padding: 60px 30px;
 }
 
-header h1 {
+#title {
   text-transform: capitalize;
   /* letter-spacing: 20px; */
-  font-size: 100px;
-  font-family: Cookies, sans-serif;
+  font-family: "Patrick Hand", cursive;
+  font-weight: 500;
+  font-size: 8rem;
+  min-width: fit-content;
+  letter-spacing: 0.02em;
+  background-image: url("assets/iridescent.png");
+  -webkit-background-clip: text;
+  background-repeat: repeat;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 3px rgb(99, 99, 99);
 }
 
 ul {
@@ -85,6 +100,19 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.dotted {
+  background-image: radial-gradient (var(--black) 5%, transparent 5%),
+    radial-gradient(var(--black) 5%, transparent 5%);
+  background-position: center;
+  background-size: 50px 50px;
+}
+
 #cards {
   display: grid;
   grid-gap: 10px;
@@ -96,6 +124,10 @@ h2 {
   height: 12rem;
   outline: 1px solid var(--black);
   position: relative;
+}
+
+#projects {
+  background-color: rgb(242, 255, 243);
 }
 
 .cardText {
@@ -116,12 +148,6 @@ h2 {
 #cards h2,
 #cards a {
   font-size: 22px;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .pinkBtn {
@@ -167,7 +193,6 @@ a {
   box-sizing: border-box;
   margin: 0 auto;
   top: 30px;
-  color: #fbfbfb;
   text-indent: 20px;
 }
 
@@ -271,7 +296,8 @@ a {
   background: #fff;
   width: 100%;
   position: relative;
-  margin-top: 20px;
+  margin: 30px 0;
+  margin-bottom: 60px;
 }
 
 #about:after {
@@ -312,3 +338,25 @@ a {
 #presentation {
   padding: 1rem;
 }
+
+footer {
+  outline-style: dashed;
+  background-color: var(--black);
+  color: #fbfbfb;
+}
+
+/* #horizontal-tape {
+  position: absolute;
+  top: -0.5rem;
+  left: 25%;
+  width: 50vmin;
+  height: 4vmin;
+  background-color: var(--light-gray);
+  border-right: 1px dotted var(--gray);
+  border-left: 1px dotted var(--gray);
+  opacity: 0.5;
+}
+
+#projects_div {
+  position: relative;
+} */
