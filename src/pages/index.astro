@@ -15,8 +15,10 @@ import Button from "../components/Button.astro";
 
   <main>
     <header>
-      <div id="title">Natália Chies</div>
+      <img src="" alt="" />
+
       <div id="presentation">
+        <h1 id="title">Natalia Chies</h1>
         <img src="assets/paper-clip.svg" alt="paper clip" class="paper-clip" />
         <p>
           Junior web developer with a passion for creating beautiful and
@@ -51,8 +53,11 @@ import Button from "../components/Button.astro";
         <Button url="" text="Resume" />
       </Page>
       <!-- <div id="horizontal-tape"></div> -->
+      <div class="wrapper">
+        <div class="log">console.log('Hello World!')</div>
+      </div>
       <Page title="Projects" id="projects">
-        <img src="assets/computer.svg" alt="computer" />
+        <img src="assets/heart-doodle.svg" alt="" />
         <div id="card_section">
           <ProjectCard projectName="gameOfLife" />
           <ProjectCard projectName="pongGame" />
@@ -66,29 +71,29 @@ import Button from "../components/Button.astro";
         <p>JavaScript</p>
       </Page>
     </div>
-    <footer>
-      <ContactIcon
-        name="gitHub"
-        link="github.com/ntlchs"
-        img="assets/github-mark/github-light.svg"
-      />
-      <ContactIcon
-        name="linkedin"
-        link="github.com/ntlchs"
-        img="assets/linkedin-mark/linkedin-light.svg"
-      />
-      <ContactIcon
-        name="email"
-        link="github.com/ntlchs"
-        img="assets/email-mark/at-light.svg"
-      />
-      <div id="contact_input">
-        <h1>Contact Me</h1>
-        <input type="text" id="name" />
-        <input type="text" id="email" />
-        <input type="text" id="message" />
-      </div>
-      <p>Copyright Natália Chies 2022</p>
-    </footer>
   </main>
+  <footer>
+    <ContactIcon
+      name="gitHub"
+      link="github.com/ntlchs"
+      img="assets/github-mark/github-light.svg"
+    />
+    <ContactIcon
+      name="linkedin"
+      link="github.com/ntlchs"
+      img="assets/linkedin-mark/linkedin-light.svg"
+    />
+    <ContactIcon
+      name="email"
+      link="mailto:nataliachies@gmail.com"
+      img="assets/email-mark/at-light.svg"
+    />
+    <div id="contact_input">
+      <h1>Contact Me</h1>
+      <input type="text" id="name" />
+      <input type="text" id="email" />
+      <input type="text" id="message" />
+    </div>
+    <p>Copyright Natália Chies 2022</p>
+  </footer>
 </BaseLayout>

@@ -21,6 +21,13 @@
   border: none;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
 html {
   width: 100vw;
   overflow-x: hidden;
@@ -32,7 +39,8 @@ html {
   justify-content: center;
 }
 
-body {
+body,
+*#title {
   font-family: var(--font);
   text-align: center;
   font-size: 22px;
@@ -47,14 +55,15 @@ header {
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 60px 0;
+  padding: 0 0 60px 0;
 }
 
 button {
   font-family: var(--font);
 }
 
-h1 {
+#pages h1,
+footer h1 {
   font-family: "Patrick Hand", cursive;
   padding-top: 1rem;
   padding-bottom: 0;
@@ -81,24 +90,6 @@ li {
   padding: 5px 0;
 }
 
-#title {
-  text-transform: capitalize;
-  /* letter-spacing: 20px; */
-  font-family: "Patrick Hand", cursive;
-  font-weight: 500;
-  font-size: 8rem;
-  min-width: fit-content;
-  letter-spacing: 0.02em;
-  background-image: url("assets/iridescent.png");
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-repeat: repeat;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 3px rgb(99, 99, 99);
-}
-
 #presentation {
   /* border: 1px solid var(--black); */
   background-color: #f9ebd6;
@@ -109,6 +100,7 @@ li {
   padding: 20px;
   overflow-wrap: break-word;
   display: block;
+  rotate: -1deg;
 }
 
 .paper-clip {
@@ -120,19 +112,17 @@ li {
   transform: rotate(5deg);
 }
 
-/* #presentation:before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-size: 20px;
-  top: 0;
-  left: 0;
-  background: url("assets/paper-clip.svg") no-repeat left;
-} */
-
 #projects {
   background-color: var(--light-green);
+}
+
+#projects img {
+  width: 95%;
+}
+
+#projects h2,
+#projects a {
+  font-family: "Patrick Hand", sans-serif;
 }
 
 #card_section {
@@ -324,18 +314,57 @@ footer {
   color: #fbfbfb;
 }
 
-#pages {
-  overflow-x: hidden;
-}
-
 footer h1 {
   padding: 5px;
+  font-size: 1.8rem;
+}
+
+footer p {
+  font-size: 1rem;
+  font-family: "Patrick Hand", sans-serif;
+  letter-spacing: 0.2rem;
 }
 
 img.footer_icon {
-  height: 40px;
+  margin: 5%;
+  height: 60px;
 }
 
-#projects img {
-  width: 60%;
+#title {
+  text-transform: uppercase;
+  font-family: "Patrick Hand", serif;
+  font-size: 3rem;
+}
+
+.wrapper {
+  height: 40%;
+  width: calc(100vw - 0.3px);
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  background: white;
+  border: 2px solid var(--black);
+  padding: 1rem;
+}
+
+.log {
+  width: 20.3rem;
+  animation: typing 3s steps(28), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.12rem solid;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
