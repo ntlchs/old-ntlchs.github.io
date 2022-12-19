@@ -17,12 +17,14 @@ import Button from "../components/Button.astro";
     <header>
       <div id="title">Natália Chies</div>
       <div id="presentation">
+        <img src="assets/paper-clip.svg" alt="paper clip" class="paper-clip" />
         <p>
           Junior web developer with a passion for creating beautiful and
           functional websites, always striviving to create intuitive and
           user-friendly experiences.
         </p>
         <Button url="" text="Contact Me" />
+        <img src="assets/curvy-line.svg" alt="" />
       </div>
     </header>
     <div id="pages">
@@ -50,7 +52,8 @@ import Button from "../components/Button.astro";
       </Page>
       <!-- <div id="horizontal-tape"></div> -->
       <Page title="Projects" id="projects">
-        <div id="cards">
+        <img src="assets/computer.svg" alt="computer" />
+        <div id="card_section">
           <ProjectCard projectName="gameOfLife" />
           <ProjectCard projectName="pongGame" />
           <ProjectCard projectName="googleClone" />
@@ -79,10 +82,13 @@ import Button from "../components/Button.astro";
         link="github.com/ntlchs"
         img="assets/email-mark/at-light.svg"
       />
-
-      <h1>Contact Me</h1>
+      <div id="contact_input">
+        <h1>Contact Me</h1>
+        <input type="text" id="name" />
+        <input type="text" id="email" />
+        <input type="text" id="message" />
+      </div>
       <p>Copyright Natália Chies 2022</p>
-      <p>insert form here</p>
     </footer>
   </main>
 </BaseLayout>
