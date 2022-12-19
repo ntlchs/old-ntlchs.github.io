@@ -14,24 +14,20 @@ import Button from "../components/Button.astro";
   </div>
 
   <main>
-    <!-- <div class="stamp"> -->
     <header>
       <div id="title">Natália Chies</div>
-      <div class="collage">
-        <div id="presentation">
-          <p>
-            Junior web developer with a passion for creating beautiful and
-            functional websites, always striviving to create intuitive and
-            user-friendly experiences.
-          </p>
-          <Button url="" text="Contact Me" />
-        </div>
+      <div id="presentation">
+        <p>
+          Junior web developer with a passion for creating beautiful and
+          functional websites, always striviving to create intuitive and
+          user-friendly experiences.
+        </p>
+        <Button url="" text="Contact Me" />
       </div>
     </header>
-    <!-- </div> -->
     <div id="pages">
       <Page id="about" title="About Me">
-        <div id="girlCollage" class="paper">
+        <div id="girl_sticker" class="paper">
           <div class="tape"></div>
           <img src="assets/girl.svg" alt="" id="girl" />
           <div class="tape"></div>
@@ -52,17 +48,15 @@ import Button from "../components/Button.astro";
         </ul>
         <Button url="" text="Resume" />
       </Page>
-      <div id="projects_div">
-        <!-- <div id="horizontal-tape"></div> -->
-        <Page title="Projects" id="projects">
-          <div id="cards">
-            <ProjectCard projectName="gameOfLife" />
-            <ProjectCard projectName="pongGame" />
-            <ProjectCard projectName="googleClone" />
-            <ProjectCard projectName="rlStats" />
-          </div>
-        </Page>
-      </div>
+      <!-- <div id="horizontal-tape"></div> -->
+      <Page title="Projects" id="projects">
+        <div id="cards">
+          <ProjectCard projectName="gameOfLife" />
+          <ProjectCard projectName="pongGame" />
+          <ProjectCard projectName="googleClone" />
+          <ProjectCard projectName="rlStats" />
+        </div>
+      </Page>
       <Page title="Skills" id="skills">
         <p>HTML</p>
         <p>CSS</p>
