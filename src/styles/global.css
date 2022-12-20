@@ -3,16 +3,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 :root {
-  --black: #32302e;
+  --black: #534c45;
   --offWhite: #fcfdec;
   --light-gray: #dbd8be;
-  --gray: #b7b49d;
+  --gray: #9c9982;
   --light-green: rgb(242, 255, 243);
   --transparent: rgba(255, 255, 255, 0);
   --grid: #d0e3e8;
   --button: rgb(252, 187, 213);
   --light-purple: rgb(243, 210, 251);
   --font: "Indie Flower", Rubik, sans-serif;
+  --color-front: #3e3d33;
+  --red: #ac3235;
 }
 
 * {
@@ -21,16 +23,8 @@
   border: none;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  position: relative;
-}
-
 html {
   width: 100vw;
-  overflow-x: hidden;
   color: var(--black);
   background-color: var(--offWhite);
   background-image: linear-gradient(var(--grid) 0.1em, transparent 0.1em),
@@ -39,8 +33,8 @@ html {
   justify-content: center;
 }
 
-body,
-*#title {
+body {
+  padding-top: 10px;
   font-family: var(--font);
   text-align: center;
   font-size: 22px;
@@ -58,15 +52,35 @@ header {
   padding: 0 0 60px 0;
 }
 
-button {
-  font-family: var(--font);
+main {
+  padding: 4%;
+  align-items: center;
+  box-shadow: 1px 1px black;
+}
+
+footer {
+  background-color: var(--black);
+  color: #fbfbfb;
+  padding: 4vh 0;
+  position: relative;
+}
+
+footer h1 {
+  padding: 5px;
+  font-size: 1.8rem;
+}
+
+footer p {
+  font-size: 1rem;
+  font-family: "Patrick Hand", sans-serif;
+  letter-spacing: 0.2rem;
 }
 
 #pages h1,
 footer h1 {
   font-family: "Patrick Hand", cursive;
   padding-top: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
 }
@@ -79,6 +93,10 @@ a {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+button {
+  font-family: var(--font);
 }
 
 ul {
@@ -101,23 +119,71 @@ li {
   overflow-wrap: break-word;
   display: block;
   rotate: -1deg;
+  border-radius: 1%;
 }
 
-.paper-clip {
+#back_div {
+  position: fixed;
+  z-index: 1;
+  right: 10%;
+  background: none;
+}
+#back_btn {
+  padding: 10px;
+  font-size: 24px;
+  color: var(--black);
+}
+
+.hidden {
+  display: none;
+}
+
+#paper_clip {
   position: absolute;
   offset-position: inherit;
   height: 4rem;
-  left: -1.5rem;
+  left: -1.3rem;
   top: -1rem;
   transform: rotate(5deg);
 }
 
-#projects {
-  background-color: var(--light-green);
+#avatar {
+  width: 40%;
+  background-color: var(--light-gray);
+  border-radius: 4%;
+  box-shadow: 1px 1px var(--gray);
 }
 
-#projects img {
-  width: 95%;
+.page img {
+  width: 40%;
+}
+
+#projects {
+  background: none;
+}
+
+.typing_card {
+  width: 20rem;
+  animation: typing 4s steps(28) infinite,
+    blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.12rem solid;
+  font-family: monospace;
+  font-size: 18px;
+  letter-spacing: 0.74px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 #projects h2,
@@ -125,26 +191,33 @@ li {
   font-family: "Patrick Hand", sans-serif;
 }
 
+#projects img {
+  width: 100%;
+}
+
 #card_section {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, 100%);
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 #card_section h1 {
-  font-size: 28px;
+  font-size: 24px;
+  letter-spacing: 5px;
 }
 
 #card_section h2,
 #card_section a {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .card {
-  height: 30vh;
-  outline: 1px solid var(--black);
+  min-height: 150px;
   position: relative;
+  box-shadow: 5px 5px var(--black);
 }
 
 .cardText {
@@ -155,17 +228,17 @@ li {
 
 .cardText a {
   text-decoration: underline;
-  padding: 0 5px;
+  padding: 0;
 }
 
 .cardText a:visited {
   color: var(--black);
 }
 
-.pinkBtn {
+.pink_btn {
   position: relative;
   font-family: "Patrick Hand", cursive;
-  font-size: 20px;
+  font-size: 22px;
   padding: 20px;
   margin: 20px 0;
   min-width: 45%;
@@ -176,7 +249,7 @@ li {
   box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
 }
 
-.pinkBtn:after {
+.pink_btn:after {
   position: absolute;
   content: "";
   left: 0;
@@ -188,10 +261,15 @@ li {
   color: var(--black);
 }
 
-.pinkBtn:active {
+.pink_btn:active {
   top: 5px;
   left: 5px;
   box-shadow: 0 0 0 0;
+}
+
+.pink_btn a {
+  color: var(--black);
+  text-decoration: none;
 }
 
 #about {
@@ -200,6 +278,10 @@ li {
   position: relative;
   margin: 30px 0;
   margin-bottom: 60px;
+}
+
+#about img {
+  width: 100%;
 }
 
 #about:after {
@@ -231,11 +313,11 @@ li {
   max-width: 90%;
 }
 
-#girl_sticker {
+#girl_card {
   position: relative;
   margin: auto;
   padding: 10px;
-  max-width: 80%;
+  width: 60%;
   background-color: var(--light-purple);
   display: flex;
   align-items: center;
@@ -244,7 +326,7 @@ li {
   box-shadow: 1px 1px 1px var(--gray);
 }
 
-#girl_sticker:after {
+#girl_card:after {
   position: absolute;
   content: "";
   width: 100%;
@@ -299,32 +381,6 @@ li {
   bottom: 0;
 }
 
-.stamp {
-  width: 85%;
-  margin: auto;
-  border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/stamp-border.png)
-    8 round;
-  border-width: 8px;
-  border-style: solid;
-  margin-bottom: 5rem;
-}
-
-footer {
-  background-color: var(--black);
-  color: #fbfbfb;
-}
-
-footer h1 {
-  padding: 5px;
-  font-size: 1.8rem;
-}
-
-footer p {
-  font-size: 1rem;
-  font-family: "Patrick Hand", sans-serif;
-  letter-spacing: 0.2rem;
-}
-
 img.footer_icon {
   margin: 5%;
   height: 60px;
@@ -338,33 +394,142 @@ img.footer_icon {
 
 .wrapper {
   height: 40%;
-  width: calc(100vw - 0.3px);
+  width: 100%;
   /*This part is important for centering*/
   display: grid;
   place-items: center;
   background: white;
   border: 2px solid var(--black);
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-.log {
-  width: 20.3rem;
-  animation: typing 3s steps(28), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.12rem solid;
-  font-family: monospace;
+#contact_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray);
+  padding: 2%;
+}
+
+#contact_input input {
+  width: 90%;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 14px;
+  padding: 0.4%;
+  margin: 2% 0;
+}
+
+#contact_input h1 {
+  padding: 0;
+}
+
+#contact_input button {
+  font-family: "Patrick Hand", sans-serif;
+  padding: 5px;
+  text-align: center;
   font-size: 20px;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 1px 1px var(--black);
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
+.folded {
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+  clip-path: polygon(6vw 0px, 100% 0px, 100% 100%, 0% 100%, 0% 6vw);
+  background: var(--color-front);
+  transition: clip-path 500ms;
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+.folded:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6vw;
+  height: 6vw;
+  background: var(--color-back);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 6px 0;
+  transition: transform 500ms;
+}
+
+.folded:hover {
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%, 0% 0px);
+}
+
+.folded:hover:after {
+  transform: translate(-100%, -100%);
+}
+
+#pink_box {
+  position: relative;
+  margin: 2em auto;
+  background: url("assets/white-piece-of-paper.svg") center no-repeat;
+  background-size: 100%;
+  width: 100%;
+}
+
+.box {
+  width: 100vw;
+  background: transparent;
+}
+
+#skills > h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.box p {
+  padding: -2rem;
+  font-size: 16px;
+}
+
+#stars {
+  max-width: 20%;
+  top: 30px;
+  right: 4px;
+  position: fixed;
+  rotate: 3deg;
+}
+
+#sticker {
+  align-self: flex-start;
+  justify-self: baseline;
+  left: 10vw;
+  width: 70vw;
+  top: -8vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.project_img {
+  height: 100%;
+}
+
+#gameOfLife {
+  background-color: black;
+  color: white;
+  height: fit-content;
+  padding-bottom: 20px;
+}
+
+#gameOfLife a {
+  color: white;
+}
+
+#gameOfLife img {
+  width: 80%;
+  height: 80%;
+}
+
+#red_tape {
+  max-width: 200px;
+  position: absolute;
+  align-self: center;
+  top: -30px;
+  left: 80px;
+  margin: 0;
 }

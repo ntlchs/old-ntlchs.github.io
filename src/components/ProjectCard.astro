@@ -4,24 +4,24 @@ const { projectName } = Astro.props;
 const projects = {
   gameOfLife: {
     title: "Game of Life",
-    img: "",
+    img: "assets/game_of_life.png",
     description: "JavaScript, p5.js",
     demo: "demos/gameOfLife/gameOfLife.js",
     github: "",
   },
   pongGame: {
     title: "Pong",
-    img: "",
+    img: "assets/pong.png",
     description: "JavaScript, p5.js",
     demo: "demos/rlStats",
     github: "",
   },
   googleClone: {
     title: "Google Clone",
-    img: "",
+    img: "assets/google_clone.png",
     description: "HTML, CSS",
     demo: "demos/rlStats",
-    github: "",
+    github: "https://github.com/ntlchs/google-clone",
   },
   rlStats: {
     title: "RLStats to CSV",
@@ -37,8 +37,8 @@ console.log(projectInfo);
 ---
 
 <div id={projectName} class="card">
+  <img src={projectInfo.img} alt={projectName} class="project_img" />
   <div class="cardText">
-    <img src={projectInfo.img} alt="" />
     <h1>{projectInfo.title}</h1>
     <h2>{projectInfo.description}</h2>
     <div class="links">
