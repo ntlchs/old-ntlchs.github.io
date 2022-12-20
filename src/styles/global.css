@@ -158,10 +158,6 @@ li {
   width: 40%;
 }
 
-#projects {
-  background: none;
-}
-
 .typing_card {
   width: 20rem;
   animation: typing 4s steps(28) infinite,
@@ -184,6 +180,14 @@ li {
   50% {
     border-color: transparent;
   }
+}
+
+#projects {
+  background: none;
+}
+
+.project_img {
+  height: 100%;
 }
 
 #projects h2,
@@ -503,10 +507,6 @@ img.footer_icon {
   top: -8vh;
   position: fixed;
   z-index: -1;
-}
-
-.project_img {
-  height: 100%;
 }
 
 #gameOfLife {

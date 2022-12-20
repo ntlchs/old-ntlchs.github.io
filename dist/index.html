@@ -6,70 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Natalia Chies</title>
     <link rel="icon" href="assets/favicon.svg">
-  <link rel="stylesheet" href="/assets/index.e7518ca9.css" /><script type="module">
+  <link rel="stylesheet" href="/assets/index.2fa12b41.css" /><script type="module">
 </script></head>
 
   <body class="dotted">
-    <div id="backToTopContainer">
+    <div id="back_container">
     
-<button id="backToTop">
-  <a href="#welcome_area"> &#5169;</a>
+<button id="back_div">
+  <a id="back_btn" href="#presentation" class="hidden"> &#5169;</a>
 </button>
   </div><main>
-    <!-- <div class="stamp"> -->
     <header>
-      <!-- <img src="assets/smiley.svg" alt="" id="smiley" /> -->
-      <div id="title">Natália Chies</div>
-      <div class="collage">
-        <div id="presentation">
-          <p>
-            Junior web developer with a passion for creating beautiful and
-            functional websites, always striviving to create intuitive and
-            user-friendly experiences.
-          </p>
-          <button class="pinkBtn">
-  <a href="">
+      <div id="presentation">
+        <img src="assets/me.svg" alt="avatar" id="avatar">
+        <h1 id="title">Natalia Chies</h1>
+        <img src="assets/paper-clip.svg" alt="paper clip" id="paper_clip">
+        <p>Welcome to my portfolio!</p>
+        <p>
+          As a junior web developer, I am excited to show you my skills and
+          abilities in creating functional and visually appealing experiences.
+        </p>
+        <button class="pink_btn">
+  <a href="#contact_input">
     Contact Me
   </a>
 </button>
-        </div>
+        <p>nataliachies@gmail.com</p>
+        <p>add info here, make copiable</p>
+        <img src="assets/curvy-line.svg" alt="">
       </div>
     </header>
-    <!-- </div> -->
     <div id="pages">
-      <div id="about" class="page">
-  <h1>About Me</h1>
-  <div id="girlCollage" class="paper">
-          <div class="tape"></div>
-          <img src="assets/girl.svg" alt="" id="girl">
-          <div class="tape"></div>
-        </div><ul>
-          <li>
-            Originally a graduated nurse with a passion for technology and
-            computer science
-          </li>
-          <li>
-            Currently a self-learner in web development, with 3 months of
-            experience
-          </li>
-          <li>
-            Native of Porto Alegre, Rio Grande do Sul, Brazil, with a desire to
-            learn and grow as a developer.
-          </li>
-        </ul><button class="pinkBtn">
-  <a href="">
-    Resume
-  </a>
-</button>
-</div>
-      <div id="projects_div">
-        <div id="horizontal-tape"></div>
-        <div id="projects" class="page">
+      <div class="wrapper">
+        <div class="typing_card">console.log('Hello World!');</div>
+      </div>
+      <div id="projects" class="page">
   <h1>Projects</h1>
-  <div id="cards">
-            <div id="gameOfLife" class="project">
+  <img src="assets/heart-doodle.svg" alt=""><div id="card_section">
+          <div id="gameOfLife" class="card">
+  <img src="assets/game_of_life.png" alt="gameOfLife" class="project_img">
   <div class="cardText">
-    <img src="" alt="">
     <h1>Game of Life</h1>
     <h2>JavaScript, p5.js</h2>
     <div class="links">
@@ -78,9 +54,9 @@
     </div>
   </div>
 </div>
-            <div id="pongGame" class="project">
+          <div id="pongGame" class="card">
+  <img src="assets/pong.png" alt="pongGame" class="project_img">
   <div class="cardText">
-    <img src="" alt="">
     <h1>Pong</h1>
     <h2>JavaScript, p5.js</h2>
     <div class="links">
@@ -89,20 +65,20 @@
     </div>
   </div>
 </div>
-            <div id="googleClone" class="project">
+          <div id="googleClone" class="card">
+  <img src="assets/google_clone.png" alt="googleClone" class="project_img">
   <div class="cardText">
-    <img src="" alt="">
     <h1>Google Clone</h1>
     <h2>HTML, CSS</h2>
     <div class="links">
       <a href="demos/rlStats">See demo</a>
-      <a href="">Github repo</a>
+      <a href="https://github.com/ntlchs/google-clone">Github repo</a>
     </div>
   </div>
 </div>
-            <div id="rlStats" class="project">
+          <div id="rlStats" class="card">
+  <img src="" alt="rlStats" class="project_img">
   <div class="cardText">
-    <img src="" alt="">
     <h1>RLStats to CSV</h1>
     <h2>Python</h2>
     <div class="links">
@@ -111,20 +87,54 @@
     </div>
   </div>
 </div>
-          </div>
+        </div>
 </div>
-      </div>
-      <div id="skills" class="page">
+      <div id="about" class="page">
+  <h1>About Me</h1>
+  <div id="girl_card" class="paper">
+          <div class="tape"></div>
+          <img src="assets/girl.svg" alt="" id="girl">
+          <div class="tape"></div>
+        </div><ul>
+  <li>Originally a curious-minded nurse, passionated about technology</li>
+  <li>Currently self-learning web development and plan to enroll in college to earn a computer science degree</li>
+  <li>Living in Porto Alegre, Brazil, wish to learn and grow as a developer</li>
+</ul><button class="pink_btn">
+  <a href="">
+    Resume
+  </a>
+</button>
+</div>
+      <!-- <div id="horizontal-tape"></div> -->
+      <div id="pink_box">
+        <div class="box">
+          <div id="skills" class="page">
   <h1>Skills</h1>
   <p>HTML</p><p>CSS</p><p>JavaScript</p>
 </div>
+        </div>
+      </div>
     </div>
-    <footer>
-      <a href="https://github.com/ntlchs" target="_blank"> GitHub</a>
-      <a href="github.com/ntlchs"> <img src="" alt="GitHub"></a>
+  </main><footer>
+    <img id="red_tape" src="assets/tape-red.svg" alt="red tape with white hearts">
+    <a id="gitHub" href="https://github.com/ntlchs" target="_blank">
+  <img src="assets/github-mark/github-light.svg" alt="gitHub" class="footer_icon">
+</a>
+    <a id="linkedin" href="https://www.linkedin.com/in/nataliachies/" target="_blank">
+  <img src="assets/linkedin-mark/linkedin-light.svg" alt="linkedin" class="footer_icon">
+</a>
+    <a id="email" href="mailto:nataliachies@gmail.com" target="_blank">
+  <img src="assets/email-mark/at-light.svg" alt="email" class="footer_icon">
+</a>
+    <div id="contact_input" class="folded">
       <h1>Contact Me</h1>
-      <p>Copyright Natália Chies 2022</p>
-      <p>insert form here</p>
-    </footer>
-  </main>
-  </body></html>
+      <input type="text" name="name" placeholder="Name">
+      <input type="text" name="email" placeholder="E-mail">
+      <input type="text" name="content" placeholder="Write your message...">
+      <button id="send">Send</button>
+    </div>
+    <p>Copyright Natália Chies 2022</p>
+  </footer>
+  
+</body>
+</html>
