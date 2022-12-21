@@ -4,38 +4,26 @@ const { projectName } = Astro.props;
 const projects = {
   gameOfLife: {
     title: "Game of Life",
-    img: "assets/game_of_life.png",
-    description: "JavaScript, p5.js",
     demo: "demos/gameOfLife/gameOfLife.js",
     github: "",
   },
   pongGame: {
     title: "Pong",
-    img: "assets/pong.png",
     description: "JavaScript, p5.js",
     demo: "demos/",
     github: "",
   },
   googleClone: {
     title: "Google Clone",
-    img: "assets/google_clone.png",
     description: "HTML, CSS",
     demo: "demos/",
     github: "https://github.com/ntlchs/google-clone",
   },
-  rlStats: {
-    title: "RLStats to CSV",
-    img: "",
-    description: "Python",
-    demo: "demos/",
-    github: "",
-  },
   silviasDesign: {
     title: "Silvia's Design",
-    img: "assets/silvias_design.png",
     description: "Astro framework",
     demo: "https://silviasdesign.com",
-    github: "",
+    github: "https://github.com/ntlchs/silviasDesign",
   },
 };
 
@@ -43,13 +31,81 @@ const projectInfo = projects[projectName];
 ---
 
 <div id={projectName} class="card">
-  <img src={projectInfo.img} alt={projectName} class="project_img" />
-  <div class="cardText">
-    <h1>{projectInfo.title}</h1>
-    <h2>{projectInfo.description}</h2>
-    <div class="links">
-      <a href={projectInfo.demo}>See demo</a>
-      <a href={projectInfo.github}>Github repo</a>
+  <!-- <img src={projectInfo.img} alt={projectName} class="project_img" /> -->
+  <div class="cardOverlay">
+    <div class="cardInfo">
+      <h2>{projectInfo.title}</h2>
+      <h3>{projectInfo.description}</h3>
+      <div class="links">
+        <a href={projectInfo.demo}>See demo</a>
+        <a href={projectInfo.github}>Github repo</a>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+  img {
+    width: 100%;
+  }
+
+  .card {
+    min-height: 150px;
+    position: relative;
+    box-shadow: 5px 5px var(--black);
+    width: 95%;
+    border-radius: 0.1rem;
+    height: 40vh;
+  }
+
+  .cardOverlay {
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cardOverlay.overlay {
+    mix-blend-mode: overlay;
+  }
+
+  .cardInfo {
+    position: absolute;
+    bottom: 1rem;
+    width: 50%;
+    margin: 0 25%;
+    background-color: var(--light-purple);
+    border-radius: 0.2rem;
+  }
+
+  #gameOfLife {
+    background-image: url("assets/game_of_life.png") center no-repeat;
+    background-size: contain;
+    background-color: black;
+  }
+
+  #googleClone {
+    background: url("assets/google_clone.png") center no-repeat;
+    background-size: 100%;
+  }
+
+  #pong {
+    background: url("assets/pong.png") center no-repeat;
+    background-size: 100%;
+  }
+  #silviasDesign {
+    background: url("assets/silvias_design.png") center no-repeat;
+    background-size: 100%;
+  }
+
+  .cardInfo h2,
+  .cardInfo h3,
+  .links a {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
+</style>

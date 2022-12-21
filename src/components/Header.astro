@@ -1,0 +1,70 @@
+---
+import Button from "./Button.astro";
+import CopiableText from "./CopyAndTooltip.astro";
+---
+
+<header id="header">
+  <div id="header_card">
+    <img src="assets/paper-clip.svg" alt="paper clip" id="paper_clip" />
+    <img src="assets/me.svg" alt="avatar" id="avatar" />
+    <h1 id="title">Natalia Chies</h1>
+    <p>Welcome to my portfolio!</p>
+    <p>
+      As a junior web developer, I am excited to show you my skills and
+      abilities in creating functional and visually appealing experiences.
+    </p>
+    <Button url="#contact_input" text="Contact Me" />
+    <CopiableText
+      id="copy_email"
+      text="nataliachies@gmail.com"
+      tooltipText="Copy to clipboard"
+    />
+    <img src="assets/curvy-line.svg" alt="" />
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0 0 60px 0;
+  }
+
+  #header_card {
+    background-color: #f9ebd6;
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    top: 30px;
+    padding: 20px;
+    overflow-wrap: break-word;
+    display: block;
+    rotate: -1deg;
+    border-radius: 1%;
+  }
+
+  #paper_clip {
+    position: absolute;
+    offset-position: inherit;
+    height: 4rem;
+    left: -1.3rem;
+    top: -1rem;
+    transform: rotate(5deg);
+  }
+
+  #avatar {
+    width: 40%;
+    background-color: var(--light-gray);
+    border-radius: 4%;
+    box-shadow: 1px 1px var(--gray);
+  }
+
+  #title {
+    text-transform: uppercase;
+    font-family: "Patrick Hand", serif;
+    font-size: 3rem;
+  }
+</style>

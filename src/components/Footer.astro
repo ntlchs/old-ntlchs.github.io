@@ -1,0 +1,45 @@
+---
+import ContactBoard from "./Contact/Board.astro";
+import ContactForm from "./Contact/Form.astro";
+---
+
+<footer>
+  <img
+    id="red_tape"
+    src="assets/tape-red.svg"
+    alt="red tape with white hearts"
+  />
+  <ContactBoard />
+  <ContactForm />
+  <p>Copyright Natália Chies 2022</p>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--black);
+    width: 100vw;
+    color: #fbfbfb;
+    padding: 4vh 0;
+    position: relative;
+  }
+
+  footer h1 {
+    padding: 5px;
+    font-size: 1.8rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+    font-family: "Patrick Hand", sans-serif;
+    letter-spacing: 0.2rem;
+  }
+
+  #red_tape {
+    max-width: 200px;
+    position: absolute;
+    align-self: center;
+    top: -30px;
+    left: 80px;
+    margin: 0;
+  }
+</style>

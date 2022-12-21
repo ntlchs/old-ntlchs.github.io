@@ -1,0 +1,58 @@
+---
+import Projects from "./Projects.astro";
+import About from "./About.astro";
+import Skills from "./Skills.astro";
+---
+
+<main id="pages">
+  <div class="wrapper">
+    <div class="typing_card">console.log('Hello World!');</div>
+  </div>
+  <Projects />
+  <About />
+  <Skills />
+</main>
+
+<style>
+  #pages h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+  }
+
+  .wrapper {
+    height: 40%;
+    width: 100%;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+    background: white;
+    border: 2px solid var(--black);
+    padding: 1rem 0;
+  }
+
+  .typing_card {
+    width: 20rem;
+    animation: typing 4s steps(28) infinite,
+      blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.12rem solid;
+    font-family: monospace;
+    font-size: 18px;
+    letter-spacing: 0.74px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>

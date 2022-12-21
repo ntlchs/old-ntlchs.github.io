@@ -1,100 +1,15 @@
 ---
 // import "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BackToTopBtn from "../components/BackToTopBtn.astro";
-import Page from "../components/Page.astro";
-import Button from "../components/Button.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import ContactIcon from "../components/ContactIcon.astro";
-import ContactInput from "../components/ContactInput.astro";
-import AboutMeList from "../components/AboutMeList.astro";
+import BackToTopBtn from "../components/BackToTop/Button.astro";
+import Header from "../components/Header.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout>
-  <div id="back_container">
-    <BackToTopBtn />
-  </div>
-
-  <main>
-    <header>
-      <div id="presentation">
-        <img src="assets/me.svg" alt="avatar" id="avatar" />
-        <h1 id="title">Natalia Chies</h1>
-        <img src="assets/paper-clip.svg" alt="paper clip" id="paper_clip" />
-        <p>Welcome to my portfolio!</p>
-        <p>
-          As a junior web developer, I am excited to show you my skills and
-          abilities in creating functional and visually appealing experiences.
-        </p>
-        <Button url="#contact_input" text="Contact Me" />
-        <p>nataliachies@gmail.com</p>
-        <p>add info here, make copiable</p>
-        <img src="assets/curvy-line.svg" alt="" />
-      </div>
-    </header>
-    <div id="pages">
-      <div class="wrapper">
-        <div class="typing_card">console.log('Hello World!');</div>
-      </div>
-      <Page title="Projects" id="projects">
-        <img src="assets/heart-doodle.svg" alt="" />
-        <div id="card_section">
-          <ProjectCard projectName="gameOfLife" />
-          <ProjectCard projectName="pongGame" />
-          <ProjectCard projectName="googleClone" />
-          <ProjectCard projectName="rlStats" />
-          <ProjectCard projectName="silviasDesign" />
-        </div>
-      </Page>
-      <Page id="about" title="About Me">
-        <div id="girl_card" class="paper">
-          <div class="tape"></div>
-          <img src="assets/girl.svg" alt="" id="girl" />
-          <div class="tape"></div>
-        </div>
-        <AboutMeList />
-        <Button url="" text="Resume" />
-      </Page>
-      <!-- <div id="horizontal-tape"></div> -->
-      <div id="pink_box">
-        <div class="box">
-          <Page title="Skills" id="skills">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-          </Page>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <img
-      id="red_tape"
-      src="assets/tape-red.svg"
-      alt="red tape with white hearts"
-    />
-    <ContactIcon
-      name="gitHub"
-      link="https://github.com/ntlchs"
-      img="assets/github-mark/github-light.svg"
-    />
-    <ContactIcon
-      name="linkedin"
-      link="https://www.linkedin.com/in/nataliachies/"
-      img="assets/linkedin-mark/linkedin-light.svg"
-    />
-    <ContactIcon
-      name="email"
-      link="mailto:nataliachies@gmail.com"
-      img="assets/email-mark/at-light.svg"
-    />
-    <div id="contact_input" class="folded">
-      <h1>Contact Me</h1>
-      <ContactInput name="name" placeholder="Name" />
-      <ContactInput name="email" placeholder="E-mail" />
-      <ContactInput name="content" placeholder="Write your message..." />
-      <button id="send">Send</button>
-    </div>
-    <p>Copyright Natália Chies 2022</p>
-  </footer>
+  <BackToTopBtn />
+  <Header />
+  <Main />
+  <Footer />
 </BaseLayout>

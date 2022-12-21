@@ -1,0 +1,55 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import Section from "../components/Section.astro";
+---
+
+<Section title="Projects" id="projects">
+  <img src="assets/heart-doodle.svg" alt="" />
+  <div id="card_section">
+    <ProjectCard projectName="gameOfLife" />
+    <ProjectCard projectName="pongGame" />
+    <ProjectCard projectName="googleClone" />
+    <ProjectCard projectName="silviasDesign" />
+  </div>
+</Section>
+
+<style>
+  #projects h2,
+  #projects a {
+    font-family: "Patrick Hand", sans-serif;
+  }
+
+  #card_section {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 100%);
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+  }
+
+  #card_section h1,
+  #card_section h2,
+  #card_section a {
+    padding: 0;
+    margin: 0;
+  }
+
+  #card_section h1 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+
+  #card_section h2,
+  #card_section a {
+    font-size: 18px;
+  }
+
+  #card_section a {
+    text-decoration: underline;
+  }
+
+  #card_section a:visited {
+    color: var(--black);
+  }
+</style>

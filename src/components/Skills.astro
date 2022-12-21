@@ -1,0 +1,28 @@
+---
+import Section from "./Section.astro";
+---
+
+<div class="paper_with_lines">
+  <Section title="Skills" id="skills">
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+  </Section>
+</div>
+
+<style>
+  #skills > h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .paper_with_lines {
+    width: 100vw;
+    background: transparent;
+  }
+
+  .paper_with_lines p {
+    padding: -2rem;
+    font-size: 16px;
+  }
+</style>

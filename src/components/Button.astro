@@ -7,3 +7,42 @@ const { url, text } = Astro.props;
     {text}
   </a>
 </button>
+
+<style>
+  .pink_btn {
+    position: relative;
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    padding: 20px;
+    margin: 20px 0;
+    min-width: 45%;
+    letter-spacing: 4px;
+    border: 1px solid var(--black);
+    background: var(--button);
+    border-radius: 5px;
+    box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+  }
+
+  .pink_btn:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all 0.5s;
+    color: var(--black);
+  }
+
+  .pink_btn:active {
+    top: 5px;
+    left: 5px;
+    box-shadow: 0 0 0 0;
+  }
+
+  .pink_btn a {
+    color: var(--black);
+    text-decoration: none;
+  }
+</style>
