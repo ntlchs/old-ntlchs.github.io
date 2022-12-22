@@ -11,4 +11,42 @@ const { id, title } = Astro.props;
   .page img {
     width: 40%;
   }
+  h1 {
+    padding-top: var(--regular-padding);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  #about {
+    background: #fff;
+    width: 100%;
+    position: relative;
+    margin: 30px 0;
+    margin-bottom: 60px;
+  }
+
+  #about:after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg)
+      bottom;
+    background-size: 200%;
+  }
+
+  #about:before {
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    height: 20px;
+    width: 100%;
+    left: 0;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg)
+      bottom;
+    background-size: 200%;
+    rotate: 180deg;
+  }
 </style>

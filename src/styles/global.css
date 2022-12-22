@@ -14,6 +14,7 @@
   --button: rgb(252, 187, 213);
   --light-purple: rgb(243, 210, 251);
   --color-front: #3e3d33;
+  --regular-padding: 2%;
 }
 
 * {
@@ -64,10 +65,16 @@ button {
 #pages h1,
 .cardInfo h2,
 .cardInfo h3,
-.links a {
+.links a,
+footer h1 {
   font-family: "Patrick Hand", cursive;
 }
 
-.cardInfo h2 {
+.cardInfo h2,
+footer h1 {
   text-transform: uppercase;
+}
+
+.btn {
+  font-family: "Patrick Hand", cursive;
 }

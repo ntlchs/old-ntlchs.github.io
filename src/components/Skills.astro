@@ -18,11 +18,17 @@ import Section from "./Section.astro";
 
   .paper_with_lines {
     width: 100vw;
-    background: transparent;
+    background: url("assets/white-piece-of-paper.svg");
+    background-size: cover;
+    margin-bottom: calc(10 * var(--regular-padding));
   }
 
   .paper_with_lines p {
     padding: -2rem;
-    font-size: 16px;
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 40px;
   }
 </style>

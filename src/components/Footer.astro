@@ -15,11 +15,15 @@ import ContactForm from "./Contact/Form.astro";
 </footer>
 
 <style>
+  :root {
+    --tape-width: 200px;
+  }
+
   footer {
     background-color: var(--black);
     width: 100vw;
     color: #fbfbfb;
-    padding: 4vh 0;
+    padding: 2vh 0;
     position: relative;
   }
 
@@ -31,15 +35,14 @@ import ContactForm from "./Contact/Form.astro";
   footer p {
     font-size: 1rem;
     font-family: "Patrick Hand", sans-serif;
+    padding-top: 2vh;
     letter-spacing: 0.2rem;
   }
 
   #red_tape {
-    max-width: 200px;
+    max-width: var(--tape-width);
     position: absolute;
-    align-self: center;
+    left: calc(50% - var(--tape-width) / 2);
     top: -30px;
-    left: 80px;
-    margin: 0;
   }
 </style>
