@@ -2,13 +2,38 @@
 import ContactInput from "../Input.astro";
 ---
 
-<div id="contact_form" class="folded">
-  <h1>Contact Me</h1>
-  <ContactInput name="name" placeholder="Name" />
-  <ContactInput name="email" placeholder="E-mail" />
-  <ContactInput name="content" placeholder="Write your message..." />
-  <button id="send">Send</button>
-</div>
+<form
+  id="contact_form"
+  class="folded"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="b51ada5e-fbde-44c6-9349-44a02eba5240"
+  />
+
+  <input type="text" placeholder="Name" name="name" required />
+  <input type="email" placeholder="Email" name="email" required />
+  <textarea placeholder="Message" name="message" required></textarea>
+  <input type="hidden" name="redirect" value="https://ntlchs.github.io" />
+  <button type="submit" id="submit">Send Email</button>
+</form>
+<p id="toast" class="hidden">Thank you! Sending email...</p>
+
+<script>
+  const btn = document.querySelector("#submit");
+  const toast = document.querySelector("#toast");
+  const form = document.querySelector("form");
+
+  btn.addEventListener("click", () => {
+    const isValid = form.checkValidity();
+    if (isValid) {
+      toast.classList.remove("hidden");
+    }
+  });
+</script>
 
 <style>
   #contact_form {
@@ -19,12 +44,14 @@ import ContactInput from "../Input.astro";
     padding: 2%;
   }
 
-  #contact_form input {
+  #contact_form input,
+  #contact_form textarea {
     width: 90%;
     font-family: "Patrick Hand", sans-serif;
     font-size: 14px;
     padding: 0.4%;
     margin: 2% 0;
+    letter-spacing: 0.1em;
   }
 
   #contact_form h1 {
