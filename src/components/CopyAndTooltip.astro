@@ -6,6 +6,7 @@ const { id, text, tooltipText } = Astro.props;
   {text}
 </p>
 <button id="copy_btn" class="btn">{tooltipText}</button>
+<p id="copy_toast" class="hidden">Email copied to clipboard!</p>
 <script>
   import "./copyToClipboard.js";
 </script>
@@ -15,5 +16,18 @@ const { id, text, tooltipText } = Astro.props;
     background: var(--light-purple);
     padding: 0.5em 0.5em;
     text-transform: uppercase;
+    border-radius: 3px;
+    letter-spacing: 0.2em;
+  }
+
+  #copy_toast {
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    background-color: white;
+    box-shadow: 4px 4px var(--black);
+    border-radius: 3px;
+    font-family: "Patrick Hand", sans-serif;
   }
 </style>

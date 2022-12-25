@@ -1,0 +1,28 @@
+---
+const { id, name, src } = Astro.props;
+---
+
+<div id="cards">
+  <div>
+    <img src={src} alt="" />
+    <p id={id} class="skill">{name}</p>
+  </div>
+</div>
+
+<style>
+  div #cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  img {
+    height: auto;
+    width: 60px;
+  }
+
+  p {
+    font-size: 40px;
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 24px;
+  }
+</style>

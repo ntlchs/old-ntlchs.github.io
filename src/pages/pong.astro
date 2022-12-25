@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <header><h1>Pong</h1></header>
+  <main>
+    <div id="pong"></div>
+  </main>
+  <footer></footer>
+  <script>
+    import "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js";
+    import "../scripts/pong.js";
+  </script>
+</BaseLayout>
+
+<style>
+  main {
+    width: 100vw;
+    height: fit-content;
+  }
+
+  #pong {
+    width: 100%;
+  }
+</style>

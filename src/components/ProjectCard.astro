@@ -37,8 +37,9 @@ const projectInfo = projects[projectName];
       <h2>{projectInfo.title}</h2>
       <h3>{projectInfo.description}</h3>
       <div class="links">
-        <a href={projectInfo.demo}>See demo</a>
-        <a href={projectInfo.github}>Github repo</a>
+        <a href={projectInfo.demo}>link</a>
+        <span>l</span>
+        <a href={projectInfo.github}>Github</a>
       </div>
     </div>
   </div>
@@ -49,6 +50,7 @@ const projectInfo = projects[projectName];
 
   img {
     width: 100%;
+    height: 100%;
   }
 
   .card {
@@ -62,7 +64,7 @@ const projectInfo = projects[projectName];
   }
 
   .cardOverlay {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.6);
     position: absolute;
     top: 0;
     width: 100%;
@@ -80,12 +82,17 @@ const projectInfo = projects[projectName];
     margin: 0 25%;
     background-color: var(--light-purple);
     border-radius: 0.2rem;
+    box-shadow: 2px 2px var(--black);
   }
 
   #gameOfLife {
-    background-image: url("assets/game_of_life.png") center no-repeat;
+    background-image: url("assets/game_of_life.png");
     background-size: contain;
-    background-color: black;
+  }
+
+  #pongGame {
+    background: url("assets/pong.png") center no-repeat;
+    background-size: 100%;
   }
 
   #googleClone {
@@ -93,10 +100,6 @@ const projectInfo = projects[projectName];
     background-size: 100%;
   }
 
-  #pong {
-    background: url("assets/pong.png") center no-repeat;
-    background-size: 100%;
-  }
   #silviasDesign {
     background: url("assets/silvias_design.png") center no-repeat;
     background-size: 100%;

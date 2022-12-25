@@ -1,12 +1,15 @@
 ---
 import Section from "./Section.astro";
+import SkillCard from "./SkillCard.astro";
 ---
 
 <div class="paper_with_lines">
   <Section title="Skills" id="skills">
-    <p>HTML</p>
-    <p>CSS</p>
-    <p>JavaScript</p>
+    <div id="skill_names">
+      <SkillCard id="html" name="HTML" src="assets/html.svg" />
+      <SkillCard id="css" name="CSS" src="assets/css.svg" />
+      <SkillCard id="js" name="JavaScript" src="assets/js.svg" />
+    </div>
   </Section>
 </div>
 
@@ -16,19 +19,15 @@ import Section from "./Section.astro";
     margin: 0;
   }
 
+  #skill_names {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
   .paper_with_lines {
     width: 100vw;
     background: url("assets/white-piece-of-paper.svg");
     background-size: cover;
     margin-bottom: calc(10 * var(--regular-padding));
-  }
-
-  .paper_with_lines p {
-    padding: -2rem;
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 40px;
   }
 </style>
