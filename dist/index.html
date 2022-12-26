@@ -6,135 +6,220 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Natalia Chies</title>
     <link rel="icon" href="assets/favicon.svg">
-  <link rel="stylesheet" href="/assets/index.2fa12b41.css" /><script type="module">
+  <link rel="stylesheet" href="/assets/gameoflife.cac6448c.css" />
+<link rel="stylesheet" href="/assets/index.fe186652.css" /><script type="module">var s=document.getElementById("header"),t=document.getElementById("back_div"),r=document.documentElement;function i(e){e.length!==1&&console.error("Did not expect that"),e[0].isIntersecting?t.classList.add("hidden"):t.classList.remove("hidden")}function l(){r.scrollTo({top:0,behavior:"smooth"})}t.addEventListener("click",l);let a=new IntersectionObserver(i);a.observe(s);const d=document.querySelector("#submit"),u=document.querySelector("#toast"),m=document.querySelector("form");d.addEventListener("click",()=>{m.checkValidity()&&(u.classList.remove("hidden"),console.log("toast"))});const y=document.querySelector("#copy_btn"),c=document.querySelector("#copy_email");let v=c.innerText;const n=document.querySelector("#copy_toast");let o=null;y.addEventListener("click",()=>{n.classList.remove("hidden"),o=setTimeout(()=>{o!==null&&n.classList.add("hidden"),h()},2e3),f(),(async()=>await parent.navigator.clipboard.writeText(v))()});function f(){c.focus()}function h(){clearTimeout(o)}
 </script></head>
 
   <body class="dotted">
-    <div id="back_container">
-    
-<button id="back_div">
-  <a id="back_btn" href="#presentation" class="hidden"> &#5169;</a>
-</button>
-  </div><main>
-    <header>
-      <div id="presentation">
-        <img src="assets/me.svg" alt="avatar" id="avatar">
-        <h1 id="title">Natalia Chies</h1>
-        <img src="assets/paper-clip.svg" alt="paper clip" id="paper_clip">
-        <p>Welcome to my portfolio!</p>
-        <p>
-          As a junior web developer, I am excited to show you my skills and
-          abilities in creating functional and visually appealing experiences.
-        </p>
-        <button class="pink_btn">
-  <a href="#contact_input">
+    <div class="wrapper">
+      <div id="back_container" class="astro-3VSLMXUS">
+  <button id="back_div" class="astro-3VSLMXUS">
+    <!-- <a id="back_btn" href="#presentation" class="hidden"> &#5169;</a> -->
+  </button>
+</div>
+
+
+<header id="header" class="astro-I22WH556">
+  <div id="header_card" class="astro-I22WH556">
+    <img src="assets/paper-clip.svg" alt="paper clip" id="paper_clip" class="astro-I22WH556">
+    <img src="assets/me.svg" alt="avatar" id="avatar" class="astro-I22WH556">
+    <h1 id="title" class="astro-I22WH556">Natalia Chies</h1>
+    <p class="astro-I22WH556">Welcome to my portfolio!</p>
+    <p class="astro-I22WH556">
+      As a junior web developer, I am excited to show you my skills in creating
+      functional and visually appealing experiences.
+    </p>
+    <button class="pink_btn btn astro-YLE4GLPM">
+  <a href="#contact_input" class="astro-YLE4GLPM">
     Contact Me
   </a>
 </button>
-        <p>nataliachies@gmail.com</p>
-        <p>add info here, make copiable</p>
-        <img src="assets/curvy-line.svg" alt="">
+
+
+    <p id="copy_email" class="copiable astro-J36B4UHS" id="nataliachies@gmail.com">
+  nataliachies@gmail.com
+</p>
+<button id="copy_btn" class="btn astro-J36B4UHS">Copy to clipboard</button>
+<p id="copy_toast" class="hidden astro-J36B4UHS">Email copied to clipboard!</p>
+
+
+
+    <img src="assets/curvy-line.svg" alt="" class="astro-I22WH556">
+  </div>
+</header>
+
+<main id="pages" class="astro-BJZJBV2U">
+  <div class="wrapper_text astro-BJZJBV2U">
+    <div class="typing_card astro-BJZJBV2U">console.log('Hello World!');</div>
+  </div>
+  <div id="projects" class="page astro-7CYGQT3I">
+  <h1 class="astro-7CYGQT3I">Projects</h1>
+  <img src="assets/heart-doodle.svg" alt="" class="astro-V7AHF4PY"><div id="card_section" class="astro-V7AHF4PY">
+    <div id="silviasDesign" class="card astro-FUTIHQI2">
+  <!-- <img src={projectInfo.img} alt={projectName} class="project_img" /> -->
+  <div class="cardOverlay astro-FUTIHQI2">
+    <div class="cardInfo astro-FUTIHQI2">
+      <h2 class="astro-FUTIHQI2">Silvia&#39;s Design</h2>
+      <h3 class="astro-FUTIHQI2">Astro framework</h3>
+      <div class="links astro-FUTIHQI2">
+        <a href="https://silviasdesign.com" target="_blank" class="astro-FUTIHQI2">link</a>
+        <span class="astro-FUTIHQI2">l</span>
+        <a href="https://github.com/ntlchs/silviasDesign" target="_blank" class="astro-FUTIHQI2">Github</a>
       </div>
-    </header>
-    <div id="pages">
-      <div class="wrapper">
-        <div class="typing_card">console.log('Hello World!');</div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="gameOfLife" class="card astro-FUTIHQI2">
+  <!-- <img src={projectInfo.img} alt={projectName} class="project_img" /> -->
+  <div class="cardOverlay astro-FUTIHQI2">
+    <div class="cardInfo astro-FUTIHQI2">
+      <h2 class="astro-FUTIHQI2">Game of Life</h2>
+      <h3 class="astro-FUTIHQI2">JavaScript, p5.js</h3>
+      <div class="links astro-FUTIHQI2">
+        <a href="gameoflife" target="_blank" class="astro-FUTIHQI2">link</a>
+        <span class="astro-FUTIHQI2">l</span>
+        <a href="https://github.com/ntlchs/game-of-life" target="_blank" class="astro-FUTIHQI2">Github</a>
       </div>
-      <div id="projects" class="page">
-  <h1>Projects</h1>
-  <img src="assets/heart-doodle.svg" alt=""><div id="card_section">
-          <div id="gameOfLife" class="card">
-  <img src="assets/game_of_life.png" alt="gameOfLife" class="project_img">
-  <div class="cardText">
-    <h1>Game of Life</h1>
-    <h2>JavaScript, p5.js</h2>
-    <div class="links">
-      <a href="demos/gameOfLife/gameOfLife.js">See demo</a>
-      <a href="">Github repo</a>
     </div>
   </div>
 </div>
-          <div id="pongGame" class="card">
-  <img src="assets/pong.png" alt="pongGame" class="project_img">
-  <div class="cardText">
-    <h1>Pong</h1>
-    <h2>JavaScript, p5.js</h2>
-    <div class="links">
-      <a href="demos/rlStats">See demo</a>
-      <a href="">Github repo</a>
+
+
+    <div id="pongGame" class="card astro-FUTIHQI2">
+  <!-- <img src={projectInfo.img} alt={projectName} class="project_img" /> -->
+  <div class="cardOverlay astro-FUTIHQI2">
+    <div class="cardInfo astro-FUTIHQI2">
+      <h2 class="astro-FUTIHQI2">Pong</h2>
+      <h3 class="astro-FUTIHQI2">JavaScript, p5.js</h3>
+      <div class="links astro-FUTIHQI2">
+        <a href="pong" target="_blank" class="astro-FUTIHQI2">link</a>
+        <span class="astro-FUTIHQI2">l</span>
+        <a href="https://github.com/ntlchs/pong" target="_blank" class="astro-FUTIHQI2">Github</a>
+      </div>
     </div>
   </div>
 </div>
-          <div id="googleClone" class="card">
-  <img src="assets/google_clone.png" alt="googleClone" class="project_img">
-  <div class="cardText">
-    <h1>Google Clone</h1>
-    <h2>HTML, CSS</h2>
-    <div class="links">
-      <a href="demos/rlStats">See demo</a>
-      <a href="https://github.com/ntlchs/google-clone">Github repo</a>
+
+
+    <div id="googleClone" class="card astro-FUTIHQI2">
+  <!-- <img src={projectInfo.img} alt={projectName} class="project_img" /> -->
+  <div class="cardOverlay astro-FUTIHQI2">
+    <div class="cardInfo astro-FUTIHQI2">
+      <h2 class="astro-FUTIHQI2">Google Clone</h2>
+      <h3 class="astro-FUTIHQI2">HTML, CSS</h3>
+      <div class="links astro-FUTIHQI2">
+        <a href="googleclone" target="_blank" class="astro-FUTIHQI2">link</a>
+        <span class="astro-FUTIHQI2">l</span>
+        <a href="https://github.com/ntlchs/google-clone" target="_blank" class="astro-FUTIHQI2">Github</a>
+      </div>
     </div>
   </div>
 </div>
-          <div id="rlStats" class="card">
-  <img src="" alt="rlStats" class="project_img">
-  <div class="cardText">
-    <h1>RLStats to CSV</h1>
-    <h2>Python</h2>
-    <div class="links">
-      <a href="demos/rlStats">See demo</a>
-      <a href="">Github repo</a>
-    </div>
+
+
   </div>
 </div>
-        </div>
-</div>
-      <div id="about" class="page">
-  <h1>About Me</h1>
-  <div id="girl_card" class="paper">
-          <div class="tape"></div>
-          <img src="assets/girl.svg" alt="" id="girl">
-          <div class="tape"></div>
-        </div><ul>
-  <li>Originally a curious-minded nurse, passionated about technology</li>
-  <li>Currently self-learning web development and plan to enroll in college to earn a computer science degree</li>
-  <li>Living in Porto Alegre, Brazil, wish to learn and grow as a developer</li>
-</ul><button class="pink_btn">
-  <a href="">
+
+
+
+
+  <div id="about" class="page astro-7CYGQT3I">
+  <h1 class="astro-7CYGQT3I">About Me</h1>
+  <div id="girl" class="paper astro-JAUJ6WLB">
+    <div class="tape astro-JAUJ6WLB"></div>
+    <img src="assets/girl.svg" alt="" id="girl_img" class="astro-JAUJ6WLB">
+    <div class="tape astro-JAUJ6WLB"></div>
+  </div><ul class="astro-JAUJ6WLB">
+    <li class="astro-JAUJ6WLB">Originally a curious-minded nurse, passionated about technology</li>
+    <li class="astro-JAUJ6WLB">Currently self-learning web development and plan to enroll in college to earn a computer science degree</li>
+    <li class="astro-JAUJ6WLB">Living in Porto Alegre, Brazil, wish to learn and grow as a developer</li>
+  </ul><button class="pink_btn btn astro-YLE4GLPM">
+  <a href="" class="astro-YLE4GLPM">
     Resume
   </a>
 </button>
+
+
 </div>
-      <!-- <div id="horizontal-tape"></div> -->
-      <div id="pink_box">
-        <div class="box">
-          <div id="skills" class="page">
-  <h1>Skills</h1>
-  <p>HTML</p><p>CSS</p><p>JavaScript</p>
+
+
+
+
+  <div class="paper_with_lines astro-7BCVAUBV">
+  <div id="skills" class="page astro-7CYGQT3I">
+  <h1 class="astro-7CYGQT3I">Skills</h1>
+  <div id="skill_names" class="astro-7BCVAUBV">
+      <div id="card" class="astro-T5IV5ZFU">
+  <div class="astro-T5IV5ZFU">
+    <img src="assets/html.svg" alt="" class="astro-T5IV5ZFU">
+    <p id="html" class="skill astro-T5IV5ZFU">HTML</p>
+  </div>
 </div>
-        </div>
-      </div>
+
+
+      <div id="card" class="astro-T5IV5ZFU">
+  <div class="astro-T5IV5ZFU">
+    <img src="assets/css.svg" alt="" class="astro-T5IV5ZFU">
+    <p id="css" class="skill astro-T5IV5ZFU">CSS</p>
+  </div>
+</div>
+
+
+      <div id="card" class="astro-T5IV5ZFU">
+  <div class="astro-T5IV5ZFU">
+    <img src="assets/js.svg" alt="" class="astro-T5IV5ZFU">
+    <p id="js" class="skill astro-T5IV5ZFU">JavaScript</p>
+  </div>
+</div>
+
+
     </div>
-  </main><footer>
-    <img id="red_tape" src="assets/tape-red.svg" alt="red tape with white hearts">
-    <a id="gitHub" href="https://github.com/ntlchs" target="_blank">
-  <img src="assets/github-mark/github-light.svg" alt="gitHub" class="footer_icon">
+</div>
+
+
+</div>
+
+
+</main>
+
+<footer class="astro-XSW33EX6">
+  <img id="red_tape" src="assets/tape-red.svg" alt="red tape with white hearts" class="astro-XSW33EX6">
+  <div id="contact_icons">
+  <a id="gitHub" href="https://github.com/ntlchs" target="_blank" class="astro-DCRJWG6L">
+  <img src="assets/github-mark/github-light.svg" alt="gitHub" class="footer_icon astro-DCRJWG6L">
 </a>
-    <a id="linkedin" href="https://www.linkedin.com/in/nataliachies/" target="_blank">
-  <img src="assets/linkedin-mark/linkedin-light.svg" alt="linkedin" class="footer_icon">
+
+
+  <a id="linkedin" href="https://www.linkedin.com/in/nataliachies/" target="_blank" class="astro-DCRJWG6L">
+  <img src="assets/linkedin-mark/linkedin-light.svg" alt="linkedin" class="footer_icon astro-DCRJWG6L">
 </a>
-    <a id="email" href="mailto:nataliachies@gmail.com" target="_blank">
-  <img src="assets/email-mark/at-light.svg" alt="email" class="footer_icon">
+
+
+  <a id="email" href="mailto:nataliachies@gmail.com" target="_blank" class="astro-DCRJWG6L">
+  <img src="assets/email-mark/at-light.svg" alt="email" class="footer_icon astro-DCRJWG6L">
 </a>
-    <div id="contact_input" class="folded">
-      <h1>Contact Me</h1>
-      <input type="text" name="name" placeholder="Name">
-      <input type="text" name="email" placeholder="E-mail">
-      <input type="text" name="content" placeholder="Write your message...">
-      <button id="send">Send</button>
+
+
+</div>
+  <form id="contact_form" class="folded astro-DPAGDDFG" action="https://api.web3forms.com/submit" method="POST" onsubmit="document.getElementById('submit').disabled=true;">
+  <input type="hidden" name="access_key" value="b51ada5e-fbde-44c6-9349-44a02eba5240" class="astro-DPAGDDFG">
+
+  <input type="text" placeholder="Name" name="name" required class="astro-DPAGDDFG">
+  <input type="email" placeholder="Email" name="email" required class="astro-DPAGDDFG">
+  <textarea placeholder="Message" name="message" required class="astro-DPAGDDFG"></textarea>
+  <input type="hidden" name="redirect" value="https://ntlchs.github.io/email-sent" class="astro-DPAGDDFG">
+  <button type="submit" id="submit" class="astro-DPAGDDFG">Send Email</button>
+</form>
+<p id="toast" class="hidden astro-DPAGDDFG">Sending email...</p>
+
+
+
+
+  <p class="astro-XSW33EX6">Copyright Natália Chies 2022</p>
+</footer>
+
+
     </div>
-    <p>Copyright Natália Chies 2022</p>
-  </footer>
-  
-</body>
-</html>
+  </body></html>
