@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { title, id } = Astro.props;
+---
+
+<BaseLayout>
+  <header><h1>{title}</h1></header>
+  <body>
+    <main>
+      <div id={id} class="demo"></div>
+    </main>
+    <slot />
+  </body>
+  <footer></footer>
+</BaseLayout>
+
+<style>
+  main {
+    width: 90%;
+    max-width: 600px;
+    height: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    top: 15%;
+  }
+
+  .demo {
+    min-height: 80%;
+    display: block;
+    overscroll-behavior-x: contain;
+  }
+</style>

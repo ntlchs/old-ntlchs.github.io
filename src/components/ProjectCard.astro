@@ -4,19 +4,20 @@ const { projectName } = Astro.props;
 const projects = {
   gameOfLife: {
     title: "Game of Life",
-    demo: "demos/gameOfLife/gameOfLife.js",
-    github: "",
+    description: "JavaScript, p5.js",
+    demo: "gameoflife",
+    github: "https://github.com/ntlchs/game-of-life",
   },
   pongGame: {
     title: "Pong",
     description: "JavaScript, p5.js",
-    demo: "demos/",
-    github: "",
+    demo: "pong",
+    github: "https://github.com/ntlchs/pong",
   },
   googleClone: {
     title: "Google Clone",
     description: "HTML, CSS",
-    demo: "demos/",
+    demo: "googleclone",
     github: "https://github.com/ntlchs/google-clone",
   },
   silviasDesign: {
@@ -37,9 +38,9 @@ const projectInfo = projects[projectName];
       <h2>{projectInfo.title}</h2>
       <h3>{projectInfo.description}</h3>
       <div class="links">
-        <a href={projectInfo.demo}>link</a>
+        <a href={projectInfo.demo} target="_blank">link</a>
         <span>l</span>
-        <a href={projectInfo.github}>Github</a>
+        <a href={projectInfo.github} target="_blank">Github</a>
       </div>
     </div>
   </div>
@@ -48,18 +49,12 @@ const projectInfo = projects[projectName];
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
   .card {
-    min-height: 150px;
     position: relative;
     box-shadow: 5px 5px var(--black);
     width: 95%;
     border-radius: 0.1rem;
-    height: 40vh;
+    min-height: 20em;
     margin: 1.5% 0;
   }
 
@@ -87,17 +82,17 @@ const projectInfo = projects[projectName];
 
   #gameOfLife {
     background-image: url("assets/game_of_life.png");
-    background-size: contain;
+    background-size: cover;
   }
 
   #pongGame {
     background: url("assets/pong.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
   }
 
   #googleClone {
     background: url("assets/google_clone.png") center no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
 
   #silviasDesign {

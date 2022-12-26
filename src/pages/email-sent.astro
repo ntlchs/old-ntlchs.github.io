@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <main>
+    <img src="assets/sent.svg" alt="" />
+    <h1>E-mail sent!</h1>
+    <p>Thank you for contacting me. I will return your e-mail asap.</p>
+    <a href="/">Back to website</a>
+  </main>
+</BaseLayout>
+
+<style>
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    overscroll-behavior-x: contain;
+  }
+  img {
+    width: 40%;
+    margin-bottom: 10%;
+  }
+
+  a {
+    font-family: "Patrick Hand", sans-serif;
+    background-color: var(--light-purple);
+    padding: 3px;
+    text-decoration: underline;
+    margin-top: 1em;
+  }
+</style>

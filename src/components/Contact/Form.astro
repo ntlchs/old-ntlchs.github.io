@@ -1,5 +1,4 @@
 ---
-import ContactInput from "../Input.astro";
 ---
 
 <form
@@ -7,6 +6,7 @@ import ContactInput from "../Input.astro";
   class="folded"
   action="https://api.web3forms.com/submit"
   method="POST"
+  onsubmit="document.getElementById('submit').disabled=true;"
 >
   <input
     type="hidden"
@@ -17,13 +17,17 @@ import ContactInput from "../Input.astro";
   <input type="text" placeholder="Name" name="name" required />
   <input type="email" placeholder="Email" name="email" required />
   <textarea placeholder="Message" name="message" required></textarea>
-  <input type="hidden" name="redirect" value="https://ntlchs.github.io" />
+  <input
+    type="hidden"
+    name="redirect"
+    value="https://ntlchs.github.io/email-sent"
+  />
   <button type="submit" id="submit">Send Email</button>
 </form>
-<p id="toast" class="hidden">Thank you! Sending email...</p>
+<p id="toast" class="hidden">Sending email...</p>
 
 <script>
-  const btn = document.querySelector("#submit");
+  const btn = document.querySelector("#submit") as HTMLButtonElement | null;
   const toast = document.querySelector("#toast");
   const form = document.querySelector("form");
 
@@ -31,8 +35,18 @@ import ContactInput from "../Input.astro";
     const isValid = form.checkValidity();
     if (isValid) {
       toast.classList.remove("hidden");
+      // disableBtn();
+      console.log("toast");
     }
   });
+
+  function disableBtn() {
+    btn.disabled = true;
+  }
+
+  function enableBtn() {
+    btn.disabled = false;
+  }
 </script>
 
 <style>
@@ -97,5 +111,15 @@ import ContactInput from "../Input.astro";
 
   .folded:hover:after {
     transform: translate(-100%, -100%);
+  }
+
+  form {
+    width: 90%;
+    margin: auto;
+  }
+
+  input,
+  textarea {
+    max-width: 80%;
   }
 </style>
