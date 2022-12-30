@@ -3,16 +3,16 @@ import Button from "../components/Button.astro";
 import Section from "./Section.astro";
 
 const sentences = {
-  a: "Originally a curious-minded nurse, passionated about technology",
-  b: "Currently self-learning web development and plan to enroll in college to earn a computer science degree",
-  c: "Living in Porto Alegre, Brazil, wish to learn and grow as a developer",
+  a: "Curious-minded, always passionated about science and technology",
+  b: "Currently self-learning web development, now enrolling in college to earn a Computer Science BS degree",
+  c: "Living in Porto Alegre, Brazil",
 };
 ---
 
 <Section id="about" title="About Me">
   <div id="girl" class="paper">
     <div class="tape"></div>
-    <img src="assets/girl.svg" alt="" id="girl_img" class="image" />
+    <!-- <img src="assets/girl.svg" alt="" id="girl_img" class="image" /> -->
     <div class="tape"></div>
   </div>
   <ul>
@@ -39,7 +39,10 @@ const sentences = {
     margin: auto;
     padding: 10px;
     width: 60%;
-    background-color: var(--gray);
+    height: 12em;
+    background: url("assets/me.jpeg");
+    background-size: cover;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +75,7 @@ const sentences = {
     content: "";
     width: 10vmin;
     height: 4vmin;
-    background-color: var(--light-gray);
+    background-color: rgb(242, 228, 148);
     opacity: 0.5;
     border-right: 1px dotted var(--gray);
     border-left: 1px dotted var(--gray);

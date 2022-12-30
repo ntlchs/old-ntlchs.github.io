@@ -51,6 +51,7 @@ const projectInfo = projects[projectName];
   .card {
     position: relative;
     box-shadow: 5px 5px var(--black);
+    border: 1px solid var(--black);
     width: 95%;
     border-radius: 0.1rem;
     min-height: 15em;
@@ -58,7 +59,7 @@ const projectInfo = projects[projectName];
   }
 
   .cardOverlay {
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--transparent_white);
     position: absolute;
     top: 0;
     width: 100%;
@@ -74,9 +75,11 @@ const projectInfo = projects[projectName];
     bottom: 1rem;
     width: 50%;
     margin: 0 25%;
-    background-color: var(--light-purple);
+    background-color: var(--mint);
     border-radius: 0.2rem;
-    box-shadow: 2px 2px var(--black);
+    border: 1px solid var(--black);
+    color: var(--black);
+    box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
   }
 
   #gameOfLife {

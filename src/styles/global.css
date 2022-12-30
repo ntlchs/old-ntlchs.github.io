@@ -4,7 +4,8 @@
 
 :root {
   /* fonts */
-  --font: "Indie Flower", Rubik, sans-serif;
+  --indie_flower: "Indie Flower", Rubik, sans-serif;
+  --patrick: "Patrick Hand", cursive;
   --title_font: 0px;
 
   /* colors */
@@ -16,11 +17,13 @@
   --transparent: rgba(255, 255, 255, 0);
   --transparent_black: rgba(0, 0, 0, 0.87);
   --transparent_gray: rgba(213, 213, 213, 0.621);
+  --transparent_white: rgba(255, 255, 255, 0.6);
   --grid_color: #ebe8e866;
   --button: rgb(252, 187, 213);
   --peach: #eda18a;
   --light-purple: rgb(243, 210, 251);
   --color-front: #3e3d33;
+  --mint: #d3f7e7;
 
   /* spacing */
   --regular-padding: 2%;
@@ -57,7 +60,7 @@ footer {
 
 body {
   padding-top: 10px;
-  font-family: var(--font);
+  font-family: var(--indie_flower);
   text-align: center;
   font-size: 22px;
   display: flex;
@@ -80,22 +83,27 @@ a {
 }
 
 button {
-  font-family: var(--font);
+  font-family: var(--indie_flower);
 }
 
 h1,
 .cardInfo h2,
 a {
-  font-family: "Patrick Hand", cursive;
   text-transform: uppercase;
 }
 
-.cardInfo h3 {
-  font-family: "Patrick Hand", cursive;
+h1,
+.cardInfo h2,
+a,
+.cardInfo h3,
+.btn,
+footer p,
+#contact_form input,
+#contact_form textarea {
+  font-family: var(--patrick);
 }
 
 .btn {
-  font-family: "Patrick Hand", cursive;
   border: 1px solid var(--black);
 }
 
@@ -115,9 +123,10 @@ a {
   min-width: 45%;
   letter-spacing: 4px;
   border: 1px solid var(--black);
-  background: var(--button);
+  background: var(--peach);
   border-radius: 5px;
   box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+  color: var(--black);
 }
 
 .pink_btn:after {

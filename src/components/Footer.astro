@@ -4,12 +4,12 @@ import ContactForm from "./Contact/Form.astro";
 ---
 
 <footer>
-  <img
+  <!-- <img
     src="assets/tape-red.svg"
     id="red_tape"
     class="image"
     alt="red tape with white hearts"
-  />
+  /> -->
   <ContactBoard />
   <ContactForm />
   <p>Copyright Natália Chies 2022</p>
@@ -35,16 +35,7 @@ import ContactForm from "./Contact/Form.astro";
 
   footer p {
     font-size: 1rem;
-    font-family: "Patrick Hand", sans-serif;
     padding-top: 2vh;
     letter-spacing: 0.2rem;
-  }
-
-  #red_tape {
-    max-width: var(--tape-width);
-    position: absolute;
-    left: calc(50% - var(--tape-width) / 2);
-    top: -30px;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
   }
 </style>

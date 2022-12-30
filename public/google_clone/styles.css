@@ -1,8 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-family: arial, sans-serif;
   height: inherit;
-  padding: 0;
-  margin: 0;
 }
 
 body {
@@ -14,8 +18,6 @@ body {
   background-color: white;
   height: 100vh;
   width: 100vw;
-  padding: 0;
-  margin: 0;
 }
 
 header {
