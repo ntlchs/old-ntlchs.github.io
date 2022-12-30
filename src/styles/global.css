@@ -3,31 +3,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 :root {
+  /* fonts */
   --font: "Indie Flower", Rubik, sans-serif;
+  --title_font: 0px;
+
+  /* colors */
   --black: #534c45;
-  --offWhite: #fcfdec;
-  --light-gray: #dbd8be;
-  --gray: #9c9982;
+  --offWhite: #fffff9;
+  --light-gray: rgb(248, 248, 248);
+  --gray: #70757a;
   --light-green: rgb(242, 255, 243);
   --transparent: rgba(255, 255, 255, 0);
-  --grid: #d0e3e8;
+  --transparent_black: rgba(0, 0, 0, 0.87);
+  --transparent_gray: rgba(213, 213, 213, 0.621);
+  --grid_color: #ebe8e866;
   --button: rgb(252, 187, 213);
+  --peach: #eda18a;
   --light-purple: rgb(243, 210, 251);
   --color-front: #3e3d33;
+
+  /* spacing */
   --regular-padding: 2%;
 }
 
 * {
-  padding: 0;
-  margin: 0;
+  padding: none;
+  margin: none;
   border: none;
 }
 
 html {
   color: var(--black);
   background-color: var(--offWhite);
-  background-image: linear-gradient(var(--grid) 0.1em, transparent 0.1em),
-    linear-gradient(90deg, var(--grid) 0.1em, transparent 0.1em);
+  background-image: linear-gradient(
+      var(--transparent_gray) 0.1em,
+      transparent 0.1em
+    ),
+    linear-gradient(90deg, var(--transparent_gray) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
   justify-content: center;
   scroll-behavior: smooth;
@@ -84,6 +96,7 @@ a {
 
 .btn {
   font-family: "Patrick Hand", cursive;
+  border: 1px solid var(--black);
 }
 
 .hidden {

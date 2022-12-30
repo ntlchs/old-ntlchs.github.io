@@ -17,12 +17,8 @@
   <input type="text" placeholder="Name" name="name" required />
   <input type="email" placeholder="Email" name="email" required />
   <textarea placeholder="Message" name="message" required></textarea>
-  <input
-    type="hidden"
-    name="redirect"
-    value="https://ntlchs.github.io/email-sent"
-  />
-  <button type="submit" id="submit" class="pink_btn">Send Email</button>
+  <input type="hidden" name="redirect" value="/email-sent" />
+  <button type="submit" id="submit" class="send_btn">Send Email</button>
 </form>
 <p id="toast" class="hidden">Sending email...</p>
 
@@ -54,7 +50,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--gray);
+    background-color: var(--peach);
     padding: 2%;
   }
 
@@ -121,5 +117,9 @@
   input,
   textarea {
     max-width: 80%;
+  }
+
+  .send_btn {
+    background-color: white;
   }
 </style>

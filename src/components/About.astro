@@ -12,7 +12,7 @@ const sentences = {
 <Section id="about" title="About Me">
   <div id="girl" class="paper">
     <div class="tape"></div>
-    <img src="assets/girl.svg" alt="" id="girl_img" />
+    <img src="assets/girl.svg" alt="" id="girl_img" class="image" />
     <div class="tape"></div>
   </div>
   <ul>
@@ -21,7 +21,12 @@ const sentences = {
     <li>{sentences.c}</li>
   </ul>
 
-  <Button url="" text="Resume" class="btn" />
+  <Button
+    url="https://drive.google.com/file/d/1gCA3uOjaSY3A10OXNVz9BXl6knWCB_3X/view?usp=sharing"
+    text="Resume"
+    class="btn"
+    target="_blank"
+  />
 </Section>
 
 <style>
@@ -34,11 +39,10 @@ const sentences = {
     margin: auto;
     padding: 10px;
     width: 60%;
-    background-color: var(--light-purple);
+    background-color: var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
-    rotate: -1deg;
     box-shadow: 1px 1px 1px var(--gray);
   }
 
