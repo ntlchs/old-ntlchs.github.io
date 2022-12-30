@@ -4,7 +4,7 @@ import Section from "../components/Section.astro";
 ---
 
 <Section title="Projects" id="projects">
-  <img src="assets/heart-doodle.svg" alt="" />
+  <!-- <img src="assets/heart-doodle.svg" alt="" /> -->
   <div id="card_section">
     <ProjectCard projectName="silviasDesign" />
     <ProjectCard projectName="gameOfLife" />
@@ -14,6 +14,9 @@ import Section from "../components/Section.astro";
 </Section>
 
 <style>
+  img {
+    width: 70%;
+  }
   #projects h2,
   #projects a {
     font-family: "Patrick Hand", sans-serif;

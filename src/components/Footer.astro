@@ -5,8 +5,9 @@ import ContactForm from "./Contact/Form.astro";
 
 <footer>
   <img
-    id="red_tape"
     src="assets/tape-red.svg"
+    id="red_tape"
+    class="image"
     alt="red tape with white hearts"
   />
   <ContactBoard />
@@ -44,5 +45,6 @@ import ContactForm from "./Contact/Form.astro";
     position: absolute;
     left: calc(50% - var(--tape-width) / 2);
     top: -30px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
   }
 </style>

@@ -4,7 +4,7 @@ const { id, name, src } = Astro.props;
 
 <div id="card">
   <div>
-    <img src={src} alt="" />
+    <img src={src} alt="" class="image" />
     <p id={id} class="skill">{name}</p>
   </div>
 </div>
@@ -19,6 +19,7 @@ const { id, name, src } = Astro.props;
   img {
     height: auto;
     width: 60px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
   }
 
   p {
