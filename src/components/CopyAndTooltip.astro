@@ -1,23 +1,28 @@
 ---
-const { id, text, tooltipText } = Astro.props;
+const { id, text } = Astro.props;
 ---
 
-<p id={id} class="copiable" id={text}>
-  {text}
-</p>
-<button id="copy_btn" class="btn">{tooltipText}</button>
-<p id="copy_toast" class="hidden">Email copied to clipboard!</p>
+<div id="copy_area">
+  <p id={id} class="copiable" id={text}>
+    {text}
+  </p>
+  <button id="copy_btn" class="btn">Copy</button>
+  <p id="copy_toast" class="hidden">Email copied to clipboard!</p>
+</div>
 <script>
   import "./copyToClipboard.js";
 </script>
 
 <style>
   #copy_btn {
-    background: var(--light-purple);
+    background-color: var(--light-purple);
+    border: 1px solid var(--black);
     padding: 0.5em 0.5em;
     text-transform: uppercase;
-    border-radius: 3px;
-    letter-spacing: 0.2em;
+    border: none;
+    /* background: url("assets/copy.svg") no-repeat; */
+    /* width: 1.2rem; */
+    /* height: 1.2rem; */
   }
 
   #copy_toast {
@@ -25,9 +30,23 @@ const { id, text, tooltipText } = Astro.props;
     position: absolute;
     bottom: 10%;
     left: 25%;
-    background-color: white;
+    padding: 1rem;
+    background-color: var(--mint);
     box-shadow: 4px 4px var(--black);
     border-radius: 3px;
     font-family: var(--patrick);
+  }
+
+  #copy_area {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 85%;
+    font-family: var(--patrick);
+  }
+
+  button,
+  #copy_area p {
+    padding: 0 1rem;
   }
 </style>

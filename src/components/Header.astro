@@ -22,7 +22,7 @@ import CopiableText from "./CopyAndTooltip.astro";
     <CopiableText
       id="copy_email"
       text="nataliachies@gmail.com"
-      tooltipText="Copy to clipboard"
+      tooltipText="Copy"
     />
     <img src="assets/curvy-line.svg" alt="" />
   </div>
@@ -68,8 +68,8 @@ import CopiableText from "./CopyAndTooltip.astro";
   }
 
   #title {
-    text-transform: uppercase;
-    font-family: var(--patrick);
+    text-transform: capitalize;
+    font-family: var(--title-font);
     font-size: 3rem;
   }
 </style>

@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 
 :root {
   /* fonts */
-  --indie_flower: "Indie Flower", Rubik, sans-serif;
+  --indie_flower: "Architects Daughter", Rubik, sans-serif;
   --patrick: "Patrick Hand", cursive;
-  --title_font: 0px;
+  --dancing: "Dancing Script", cursive;
+  --title-font: "Abril Fatface", cursive;
 
   /* colors */
   --black: #534c45;
@@ -46,6 +50,8 @@ html {
   background-size: 1em 1em;
   justify-content: center;
   scroll-behavior: smooth;
+}
+body {
   overflow-x: hidden;
 }
 
@@ -84,6 +90,7 @@ a {
 
 button {
   font-family: var(--indie_flower);
+  font-weight: bold;
 }
 
 h1,
