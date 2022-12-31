@@ -16,37 +16,38 @@ const { id, text } = Astro.props;
 <style>
   #copy_btn {
     background-color: var(--light-purple);
-    border: 1px solid var(--black);
     padding: 0.5em 0.5em;
     text-transform: uppercase;
-    border: none;
-    /* background: url("assets/copy.svg") no-repeat; */
-    /* width: 1.2rem; */
-    /* height: 1.2rem; */
   }
 
   #copy_toast {
     width: 50%;
     position: absolute;
-    bottom: 10%;
+    bottom: 50%;
     left: 25%;
     padding: 1rem;
     background-color: var(--mint);
     box-shadow: 4px 4px var(--black);
     border-radius: 3px;
-    font-family: var(--patrick);
+    z-index: 1;
   }
 
   #copy_area {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    max-width: 85%;
-    font-family: var(--patrick);
+    display: grid;
+    grid-template-columns: 75% 25%;
+    align-items: center;
   }
 
   button,
-  #copy_area p {
-    padding: 0 1rem;
+  #copy_area {
+    margin: var(--space) 0;
+  }
+
+  .copiable {
+    font-size: 18px;
+  }
+
+  button {
+    max-width: 100px;
   }
 </style>

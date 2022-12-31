@@ -11,10 +11,23 @@ const { id, title } = Astro.props;
   .page img {
     width: 40%;
   }
-  h1 {
-    padding-top: var(--regular-padding);
+
+  .page h1 {
+    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    font-size: 26px;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 16px 0;
+    grid-gap: 22px;
+  }
+
+  .page h1:after,
+  .page h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid var(--peach);
   }
 
   #about {
@@ -22,7 +35,7 @@ const { id, title } = Astro.props;
     width: 100%;
     position: relative;
     margin: 30px 0;
-    margin-bottom: 60px;
+    margin-bottom: 2em;
   }
 
   #about:after {

@@ -18,12 +18,12 @@ import CopiableText from "./CopyAndTooltip.astro";
       As a junior web developer, I am excited to show you my skills in creating
       functional and visually appealing experiences.
     </p>
-    <Button url="#contact_input" text="Contact Me" class="btn" />
     <CopiableText
       id="copy_email"
       text="nataliachies@gmail.com"
       tooltipText="Copy"
     />
+    <Button url="#contact_form" text="Contact Me" class="btn" />
     <img src="assets/curvy-line.svg" alt="" />
   </div>
 </header>
@@ -39,16 +39,16 @@ import CopiableText from "./CopyAndTooltip.astro";
   }
 
   #header_card {
-    background-color: white;
+    background-color: var(--off-white);
     border: 1px solid var(--black);
     position: relative;
-    width: 85%;
+    width: 95%;
+    max-width: 600px;
     margin: 0 auto;
-    top: 30px;
     padding: 20px;
+    box-sizing: border-box;
     overflow-wrap: break-word;
     display: block;
-    border-radius: 1%;
   }
 
   #paper_clip {
@@ -71,5 +71,9 @@ import CopiableText from "./CopyAndTooltip.astro";
     text-transform: capitalize;
     font-family: var(--title-font);
     font-size: 3rem;
+  }
+
+  p {
+    font-size: 18px;
   }
 </style>

@@ -1,10 +1,21 @@
 ---
 import Demo from "../components/Demo.astro";
+import Alert from "../components/Alert.astro";
 ---
 
 <Demo title="Game of Life" id="gol">
-  <script>
-    import "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js";
-    import "../scripts/gameOfLife.js";
-  </script>
+  <Alert>
+    <h2>Rules:</h2>
+    <p>
+      Press these <u>keys</u> to create a structure on mouse coordinates:
+      <u>B</u>lock, <u>E</u>ater, <u>G</u>lider, <u>H</u>erschel, blin<u>K</u
+      >er, glider gu<u>N</u>, r<u>P</u>entomino, <u>R</u>everse glider. Press <u
+        >esc</u
+      > to pause simulation
+    </p>
+  </Alert>
 </Demo>
+<script>
+  import "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js";
+  import "../scripts/gameOfLife.js";
+</script>

@@ -1,36 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
 
 :root {
   /* fonts */
-  --indie_flower: "Architects Daughter", Rubik, sans-serif;
-  --patrick: "Patrick Hand", cursive;
-  --dancing: "Dancing Script", cursive;
+  --font: "Klee One", sans-serif;
   --title-font: "Abril Fatface", cursive;
 
   /* colors */
   --black: #534c45;
-  --offWhite: #fffff9;
+  --off-white: #fffffc;
   --light-gray: rgb(248, 248, 248);
   --gray: #70757a;
   --light-green: rgb(242, 255, 243);
   --transparent: rgba(255, 255, 255, 0);
-  --transparent_black: rgba(0, 0, 0, 0.87);
-  --transparent_gray: rgba(213, 213, 213, 0.621);
-  --transparent_white: rgba(255, 255, 255, 0.6);
+  --transparent-black: rgba(0, 0, 0, 0.87);
+  --transparent-gray: rgba(213, 213, 213, 0.621);
+  --transparent-white: rgba(255, 255, 255, 0.6);
   --grid_color: #ebe8e866;
-  --button: rgb(252, 187, 213);
   --peach: #eda18a;
   --light-purple: rgb(243, 210, 251);
   --color-front: #3e3d33;
   --mint: #d3f7e7;
 
   /* spacing */
-  --regular-padding: 2%;
+  --space: 1rem;
 }
 
 * {
@@ -43,10 +36,10 @@ html {
   color: var(--black);
   background-color: var(--offWhite);
   background-image: linear-gradient(
-      var(--transparent_gray) 0.1em,
+      var(--transparent-gray) 0.1em,
       transparent 0.1em
     ),
-    linear-gradient(90deg, var(--transparent_gray) 0.1em, transparent 0.1em);
+    linear-gradient(90deg, var(--transparent-gray) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
   justify-content: center;
   scroll-behavior: smooth;
@@ -66,9 +59,9 @@ footer {
 
 body {
   padding-top: 10px;
-  font-family: var(--indie_flower);
+  font-family: var(--font);
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,7 +82,7 @@ a {
 }
 
 button {
-  font-family: var(--indie_flower);
+  font-family: var(--font);
   font-weight: bold;
 }
 
@@ -97,21 +90,6 @@ h1,
 .cardInfo h2,
 a {
   text-transform: uppercase;
-}
-
-h1,
-.cardInfo h2,
-a,
-.cardInfo h3,
-.btn,
-footer p,
-#contact_form input,
-#contact_form textarea {
-  font-family: var(--patrick);
-}
-
-.btn {
-  border: 1px solid var(--black);
 }
 
 .hidden {
@@ -122,21 +100,29 @@ footer p,
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
 }
 
+.btn {
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+  letter-spacing: 4px;
+}
+
 .pink_btn {
-  position: relative;
   font-size: 22px;
+  position: relative;
   padding: 20px;
   margin: 20px 0;
   min-width: 45%;
-  letter-spacing: 4px;
-  border: 1px solid var(--black);
   background: var(--peach);
-  border-radius: 5px;
-  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+}
+
+.btn a,
+.btn:after,
+.btn {
   color: var(--black);
 }
 
-.pink_btn:after {
+.btn:after {
   position: absolute;
   content: "";
   left: 0;
@@ -145,16 +131,14 @@ footer p,
   width: 100%;
   z-index: -1;
   transition: all 0.5s;
-  color: var(--black);
 }
 
-.pink_btn:active {
+.btn:active {
   top: 5px;
   left: 5px;
   box-shadow: 0 0 0 0;
 }
 
-.pink_btn a {
-  color: var(--black);
+.btn a {
   text-decoration: none;
 }

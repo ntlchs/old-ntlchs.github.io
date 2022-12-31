@@ -5,6 +5,10 @@ import Skills from "./Skills.astro";
 ---
 
 <main id="pages">
+  <div id="window">
+    <div id="bar"></div>
+    <div id="close">X</div>
+  </div>
   <div class="wrapper_text">
     <div class="typing_card">console.log('Hello World!');</div>
   </div>
@@ -14,6 +18,27 @@ import Skills from "./Skills.astro";
 </main>
 
 <style>
+  #window {
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 95% 5%;
+    height: 1rem;
+    border-top: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+  }
+
+  #bar {
+    background-color: var(--mint);
+  }
+
+  #close {
+    background-color: var(--off-white);
+    border-left: 1px solid var(--black);
+    font-size: 11px;
+  }
   #pages h1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -28,8 +53,8 @@ import Skills from "./Skills.astro";
     /*This part is important for centering*/
     display: grid;
     place-items: center;
-    background: white;
-    border: 2px solid var(--black);
+    background: var(--off-white);
+    border: 1px solid var(--black);
     padding: 1rem 0;
   }
 

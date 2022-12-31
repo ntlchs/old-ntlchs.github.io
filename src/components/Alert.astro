@@ -1,0 +1,20 @@
+<style>
+  .closebtn {
+    display: flex;
+  }
+  .alert {
+    position: absolute;
+    top: 20%;
+    align-self: center;
+    max-width: 600px;
+    background-color: var(--off-white);
+    box-sizing: border-box;
+    padding: 20px;
+  }
+</style>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';"
+    >&times;</span
+  >
+  <slot />
+</div>
