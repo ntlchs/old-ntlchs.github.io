@@ -34,13 +34,14 @@ const { id, text } = Astro.props;
 
   #copy_area {
     display: grid;
+    max-width: 400px;
     grid-template-columns: 75% 25%;
     align-items: center;
   }
 
   button,
   #copy_area {
-    margin: var(--space) 0;
+    margin: var(--space) auto;
   }
 
   .copiable {
