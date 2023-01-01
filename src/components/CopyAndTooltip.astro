@@ -1,4 +1,5 @@
 ---
+import Button from "./Button.astro";
 const { id, text } = Astro.props;
 ---
 
@@ -6,27 +7,20 @@ const { id, text } = Astro.props;
   <p id={id} class="copiable" id={text}>
     {text}
   </p>
-  <button id="copy_btn" class="btn">Copy</button>
-  <p id="copy_toast" class="hidden">Email copied to clipboard!</p>
+  <Button id="copy_btn" text="Copy" />
+  <p id="copy_toast" class="hidden border mintBg">Email copied to clipboard!</p>
 </div>
 <script>
   import "./copyToClipboard.js";
 </script>
 
 <style>
-  #copy_btn {
-    background-color: var(--light-purple);
-    padding: 0.5em 0.5em;
-    text-transform: uppercase;
-  }
-
   #copy_toast {
     width: 50%;
     position: absolute;
     bottom: 50%;
     left: 25%;
     padding: 1rem;
-    background-color: var(--mint);
     box-shadow: 4px 4px var(--black);
     border-radius: 3px;
     z-index: 1;
@@ -39,16 +33,11 @@ const { id, text } = Astro.props;
     align-items: center;
   }
 
-  button,
   #copy_area {
     margin: var(--space) auto;
   }
 
   .copiable {
     font-size: 18px;
-  }
-
-  button {
-    max-width: 100px;
   }
 </style>

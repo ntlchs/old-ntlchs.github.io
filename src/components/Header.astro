@@ -4,7 +4,7 @@ import CopiableText from "./CopyAndTooltip.astro";
 ---
 
 <header id="header">
-  <div id="header_card">
+  <div id="header_card" class="border offWhiteBg">
     <div id="title">
       <h1 class="title">Natalia</h1>
       <h1 class="title">Chies</h1>
@@ -19,7 +19,7 @@ import CopiableText from "./CopyAndTooltip.astro";
       text="nataliachies@gmail.com"
       tooltipText="Copy"
     />
-    <Button url="#contact_form" text="Contact Me" class="btn" />
+    <Button url="#contact_form" text="Contact Me" id="contact" />
   </div>
 </header>
 
@@ -34,8 +34,6 @@ import CopiableText from "./CopyAndTooltip.astro";
   }
 
   #header_card {
-    background-color: var(--off-white);
-    border: 1px solid var(--black);
     position: relative;
     width: 95%;
     max-width: 600px;

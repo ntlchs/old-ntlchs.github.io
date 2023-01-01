@@ -6,10 +6,10 @@ import Skills from "./Skills.astro";
 
 <main id="pages">
   <div id="window">
-    <div id="bar"></div>
-    <div id="close">X</div>
+    <div id="bar" class="mintBg"></div>
+    <div id="close" class="offWhiteBg">X</div>
   </div>
-  <div class="wrapper_text">
+  <div class="wrapper_text border">
     <div class="typing_card">console.log('Hello World!');</div>
   </div>
   <Projects />
@@ -18,6 +18,10 @@ import Skills from "./Skills.astro";
 </main>
 
 <style>
+  main {
+    align-items: center;
+  }
+
   #window {
     width: 95%;
     padding: 0;
@@ -30,12 +34,7 @@ import Skills from "./Skills.astro";
     border-right: 1px solid var(--black);
   }
 
-  #bar {
-    background-color: var(--mint);
-  }
-
   #close {
-    background-color: var(--off-white);
     border-left: 1px solid var(--black);
     font-size: 11px;
   }
@@ -54,7 +53,6 @@ import Skills from "./Skills.astro";
     display: grid;
     place-items: center;
     background: var(--off-white);
-    border: 1px solid var(--black);
     padding: 1rem 0;
   }
 

@@ -10,13 +10,10 @@
   --black: #534c45;
   --off-white: #fffffc;
   --light-gray: rgb(248, 248, 248);
-  --gray: #70757a;
-  --light-green: rgb(242, 255, 243);
   --transparent: rgba(255, 255, 255, 0);
   --transparent-black: rgba(0, 0, 0, 0.87);
   --transparent-gray: rgba(213, 213, 213, 0.621);
   --transparent-white: rgba(255, 255, 255, 0.6);
-  --grid_color: #ebe8e866;
   --peach: #eda18a;
   --light-purple: rgb(243, 210, 251);
   --color-front: #3e3d33;
@@ -33,31 +30,21 @@
 }
 
 html {
+  justify-content: center;
+  scroll-behavior: smooth;
+
   color: var(--black);
-  background-color: var(--offWhite);
+
   background-image: linear-gradient(
       var(--transparent-gray) 0.1em,
       transparent 0.1em
     ),
     linear-gradient(90deg, var(--transparent-gray) 0.1em, transparent 0.1em);
   background-size: 1em 1em;
-  justify-content: center;
-  scroll-behavior: smooth;
 }
+
 body {
   overflow-x: hidden;
-}
-
-.wrapper,
-footer {
-  max-width: 600px;
-  margin: auto;
-  width: 100vw;
-  padding: none;
-  margin: none;
-}
-
-body {
   padding-top: 10px;
   font-family: var(--font);
   text-align: center;
@@ -67,8 +54,11 @@ body {
   justify-content: center;
 }
 
-main {
-  align-items: center;
+.wrapper,
+footer {
+  max-width: 600px;
+  margin: auto;
+  width: 100vw;
 }
 
 h2 {
@@ -79,11 +69,12 @@ h2 {
 a {
   cursor: pointer;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
+.btn,
 h1,
 .cardInfo h2,
+.link,
 a {
   text-transform: uppercase;
 }
@@ -96,52 +87,14 @@ a {
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
 }
 
-.btn {
-  border-radius: 4px;
+.border {
   border: 1px solid var(--black);
-  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
-  letter-spacing: 4px;
-  position: relative;
-  font-family: var(--font);
-  font-weight: bold;
-  padding: 10px;
-  margin: 10px auto;
-  text-align: center;
-  color: var(--black);
-  text-transform: uppercase;
 }
 
-.pink_btn {
-  padding: 20px;
-  font-size: 22px;
-  margin: 20px 0;
-  min-width: 45%;
-  background: var(--peach);
+.mintBg {
+  background-color: var(--mint);
 }
 
-.btn a,
-.btn:after,
-.btn {
-  color: var(--black);
-}
-
-.btn:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  transition: all 0.5s;
-}
-
-.btn:active {
-  top: 5px;
-  left: 5px;
-  box-shadow: 0 0 0 0;
-}
-
-.btn a {
-  text-decoration: none;
+.offWhiteBg {
+  background-color: var(--off-white);
 }

@@ -10,7 +10,7 @@ const sentences = {
 ---
 
 <Section id="about" title="About Me">
-  <div id="girl" class="paper">
+  <div id="girl" class="paper border">
     <div class="tape"></div>
     <img src="assets/girl.svg" alt="girl" id="girl_img" class="shadow" />
     <div class="tape"></div>
@@ -21,7 +21,7 @@ const sentences = {
     <li>{sentences.c}</li>
   </ul>
 
-  <Button url="cv.pdf" text="Resume" class="btn" target="_blank" />
+  <Button url="cv.pdf" text="Resume" id="cv" />
 </Section>
 
 <style>
@@ -39,7 +39,6 @@ const sentences = {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--black);
   }
 
   #girl_card:after {

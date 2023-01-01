@@ -3,7 +3,7 @@
 
 <form
   id="contact_form"
-  class="folded"
+  class="folded border"
   action="https://api.web3forms.com/submit"
   method="POST"
   onsubmit="document.getElementById('submit').disabled=true;"
@@ -15,15 +15,22 @@
     value="b51ada5e-fbde-44c6-9349-44a02eba5240"
   />
 
-  <input type="text" placeholder="Name" name="name" required />
-  <input type="email" placeholder="Email" name="email" required />
-  <textarea placeholder="Message" name="message" required></textarea>
+  <input class="border" type="text" placeholder="Name" name="name" required />
+  <input
+    class="border"
+    type="email"
+    placeholder="Email"
+    name="email"
+    required
+  />
+  <textarea class="border" placeholder="Message" name="message" required
+  ></textarea>
   <input
     type="hidden"
     name="redirect"
     value="https://ntlchs.github.io/email-sent"
   />
-  <button type="submit" id="submit" class="btn">Send Email</button>
+  <button type="submit" id="submit" class="btn mintBg">Send Email</button>
 </form>
 <p id="toast" class="hidden">Sending email...</p>
 
@@ -85,7 +92,6 @@
     clip-path: polygon(6vw 0px, 100% 0px, 100% 100%, 0% 100%, 0% 6vw);
     box-shadow: 1px 1px 0 var(--transparent_black);
     background: var(--color-front);
-    border: 1px solid var(--black);
     transition: clip-path 500ms;
   }
 
@@ -104,27 +110,12 @@
 
   @media screen and (min-width: 500px) {
     .folded {
-      position: relative;
-      display: inline-block;
-      border-radius: 6px;
       clip-path: polygon(4vw 0px, 100% 0px, 100% 100%, 0% 100%, 0% 4vw);
-      box-shadow: 1px 1px 0 var(--transparent_black);
-      background: var(--color-front);
-      border: 1px solid var(--black);
-      transition: clip-path 500ms;
     }
 
     .folded:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 4vw;
       height: 4vw;
-      background: var(--color-back);
-      box-shadow: 1px 1px 0 var(--transparent-black);
-      border-radius: 0 0 6px 0;
-      transition: transform 500ms;
     }
   }
 
@@ -145,11 +136,6 @@
   textarea {
     max-width: 80%;
     font-family: var(--font);
-    border: 1px solid var(--black);
     color: var(--black);
-  }
-
-  #submit {
-    background-color: var(--mint);
   }
 </style>

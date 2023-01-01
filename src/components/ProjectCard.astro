@@ -31,9 +31,9 @@ const projects = {
 const projectInfo = projects[projectName];
 ---
 
-<div id={projectName} class="card">
+<div id={projectName} class="card border">
   <div class="cardOverlay">
-    <div class="cardInfo">
+    <div class="cardInfo border mintBg">
       <h2>{projectInfo.title}</h2>
       <h3>{projectInfo.description}</h3>
       <div class="links">
@@ -51,7 +51,6 @@ const projectInfo = projects[projectName];
   .card {
     position: relative;
     box-shadow: 5px 5px var(--black);
-    border: 1px solid var(--black);
     width: 95%;
     border-radius: 0.1rem;
     min-height: 15em;
@@ -75,9 +74,7 @@ const projectInfo = projects[projectName];
     bottom: 1rem;
     width: 50%;
     margin: 0 25%;
-    background-color: var(--mint);
     border-radius: 0.2rem;
-    border: 1px solid var(--black);
     color: var(--black);
     box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
   }
