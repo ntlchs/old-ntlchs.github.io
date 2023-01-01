@@ -23,7 +23,7 @@
     name="redirect"
     value="https://ntlchs.github.io/email-sent"
   />
-  <button type="submit" id="submit" class="send_btn btn">Send Email</button>
+  <button type="submit" id="submit" class="btn">Send Email</button>
 </form>
 <p id="toast" class="hidden">Sending email...</p>
 
@@ -73,16 +73,9 @@
     padding: 0;
   }
 
-  #contact_form button {
+  #submit {
     padding: 5px;
-    text-align: center;
     font-size: 20px;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-    border-radius: 4px;
-    box-shadow: 1px 1px var(--black);
-    color: var(--black);
-    box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
   }
 
   .folded {
@@ -156,8 +149,7 @@
     color: var(--black);
   }
 
-  .send_btn {
+  #submit {
     background-color: var(--mint);
-    border: 1px solid var(--black);
   }
 </style>
