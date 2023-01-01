@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
-@import url("https://fonts.cdnfonts.com/css/space-time");
+@import url("https://fonts.cdnfonts.com/css/gidget");
 
 :root {
   /* fonts */
   --font: "Klee One", sans-serif;
-  --title-font: "Space Time", cursive;
+  --title-font: "Gidget", cursive;
 
   /* colors */
   --black: #534c45;
@@ -76,15 +75,11 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+.link,
 a {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-button {
-  font-family: var(--font);
-  font-weight: bold;
 }
 
 h1,
@@ -97,7 +92,7 @@ a {
   display: none;
 }
 
-.image {
+.shadow {
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
 }
 
@@ -106,12 +101,16 @@ a {
   border: 1px solid var(--black);
   box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
   letter-spacing: 4px;
+  position: relative;
+  font-family: var(--font);
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px auto;
 }
 
 .pink_btn {
-  font-size: 22px;
-  position: relative;
   padding: 20px;
+  font-size: 22px;
   margin: 20px 0;
   min-width: 45%;
   background: var(--peach);

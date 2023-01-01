@@ -4,10 +4,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
   <main>
-    <img src="assets/sent.svg" alt="" class="image" />
+    <img src="/assets/sent.svg" alt="email sent" class="shadow" />
     <h1>E-mail sent!</h1>
-    <p>Thank you for contacting me. I will return your e-mail asap.</p>
-    <a href="/">Back to website</a>
+    <p>Thank you for contacting me.</p>
+    <p>I will return your e-mail asap.</p>
+    <button class="btn">
+      <a class="link" href="/">Back to website</a>
+    </button>
   </main>
 </BaseLayout>
 
@@ -31,11 +34,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin-bottom: 10%;
   }
 
-  a {
-    font-family: "Patrick Hand", sans-serif;
+  button {
+    font-family: var(--font);
     background-color: var(--light-purple);
-    padding: 3px;
-    text-decoration: underline;
-    margin-top: 1em;
   }
 </style>

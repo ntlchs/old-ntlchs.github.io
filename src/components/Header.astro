@@ -5,13 +5,6 @@ import CopiableText from "./CopyAndTooltip.astro";
 
 <header id="header">
   <div id="header_card">
-    <!-- <img
-      src="assets/paper-clip.svg"
-      alt="paper clip"
-      id="paper_clip"
-      class="image"
-    /> -->
-    <!-- <img src="assets/me.svg" alt="avatar" id="avatar" class="image" /> -->
     <div id="title">
       <h1 class="title">Natalia</h1>
       <h1 class="title">Chies</h1>
@@ -71,9 +64,8 @@ import CopiableText from "./CopyAndTooltip.astro";
   }
 
   .title {
-    text-transform: uppercase;
+    text-transform: capitalize;
     /* font-family: var(--title-font); */
-    font-size: 4rem;
   }
   #title {
     margin: 2em 0;
@@ -83,20 +75,23 @@ import CopiableText from "./CopyAndTooltip.astro";
   }
 
   .title {
+    font-size: 4rem;
     color: var(--light-mint);
-    -webkit-text-stroke: 1px var(--black);
+    /* -webkit-text-stroke: 1px var(--black); */
+    font-family: var(--title-font);
     position: relative;
     top: 30%;
-    animation-name: shadow;
-    animation-duration: 2s;
+    animation-name: color;
+    animation-duration: 5s;
     animation-iteration-count: 5;
-    animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-direction: normal;
+    animation-direction: alternate-reverse;
+    text-shadow: 1px 1px 1px var(--black);
   }
 
   :root {
-    --light-mint: #c7f0dc;
+    --light-mint: #d9fae0;
+    --medium-mint: #c7f0dc;
     --dark-mint: #afe3ce;
     --dark-peach: #fdaa9d;
     --medium-peach: #ffd4c2;
@@ -104,11 +99,12 @@ import CopiableText from "./CopyAndTooltip.astro";
     --lighter-peach: #faefe6;
   }
 
-  @keyframes shadow {
+  @keyframes color {
     0% {
+      color: var(--light-mint);
     }
     20% {
-      color: var(--light-mint);
+      color: var(--medium-mint);
     }
 
     40% {
