@@ -109,6 +109,32 @@
     transition: transform 500ms;
   }
 
+  @media screen and (min-width: 500px) {
+    .folded {
+      position: relative;
+      display: inline-block;
+      border-radius: 6px;
+      clip-path: polygon(4vw 0px, 100% 0px, 100% 100%, 0% 100%, 0% 4vw);
+      box-shadow: 1px 1px 0 var(--transparent_black);
+      background: var(--color-front);
+      border: 1px solid var(--black);
+      transition: clip-path 500ms;
+    }
+
+    .folded:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4vw;
+      height: 4vw;
+      background: var(--color-back);
+      box-shadow: 1px 1px 0 var(--transparent-black);
+      border-radius: 0 0 6px 0;
+      transition: transform 500ms;
+    }
+  }
+
   .folded:hover {
     clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%, 0% 0px);
   }
