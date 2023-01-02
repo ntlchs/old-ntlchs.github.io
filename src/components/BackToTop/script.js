@@ -9,9 +9,9 @@ function callback(entries) {
 
   const entry = entries[0];
   if (!entry.isIntersecting) {
-    scrollToTopBtn.classList.remove("hidden", 2000);
+    scrollToTopBtn.classList.remove("hidden");
   } else {
-    scrollToTopBtn.classList.add("hidden", 2000);
+    scrollToTopBtn.classList.add("hidden");
   }
 }
 
