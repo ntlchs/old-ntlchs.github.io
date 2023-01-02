@@ -1,12 +1,17 @@
 ---
-const { id, url, text } = Astro.props;
+const { id, url, text, type } = Astro.props;
 ---
 
 <button class="btn border" id={id}>
-  <a href={url} target="_blank">
+  <a class={id} href={url} target="_blank" type={type}>
     {text}
   </a>
 </button>
+
+<script>
+  document.querySelector(".contact").removeAttribute("target");
+  document.querySelector(".contact").removeAttribute("target");
+</script>
 
 <style>
   #cv,
@@ -18,46 +23,5 @@ const { id, url, text } = Astro.props;
   #copy_btn {
     background-color: var(--light-purple);
     max-width: 100px;
-  }
-
-  .btn {
-    border-radius: 4px;
-    box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
-    letter-spacing: 4px;
-    position: relative;
-    font-family: var(--font);
-    font-weight: bold;
-    padding: 10px;
-    margin: 10px auto;
-    text-align: center;
-    color: var(--black);
-    font-size: 16px;
-  }
-
-  .btn a,
-  .btn:after,
-  .btn {
-    color: var(--black);
-  }
-
-  .btn:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    transition: all 0.5s;
-  }
-
-  .btn:active {
-    top: 5px;
-    left: 5px;
-    box-shadow: 0 0 0 0;
-  }
-
-  .btn a {
-    text-decoration: none;
   }
 </style>
