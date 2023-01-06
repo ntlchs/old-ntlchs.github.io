@@ -26,21 +26,26 @@ const projects = {
     demo: "https://silviasdesign.com",
     github: "https://github.com/ntlchs/silviasDesign",
   },
+  ticTacToe: {
+    title: "Tic-Tac-Toe",
+    description: "React",
+    demo: "/tic_tac_toe/index.html",
+    github: "https://github.com/ntlchs/tictactoe",
+  },
 };
 
 const projectInfo = projects[projectName];
 ---
 
 <div id={projectName} class="card border">
-  <div class="cardOverlay">
-    <div class="cardInfo border mintBg">
-      <h2>{projectInfo.title}</h2>
-      <h3>{projectInfo.description}</h3>
-      <div class="links">
-        <a href={projectInfo.demo} target="_blank">link</a>
-        <span>l</span>
-        <a href={projectInfo.github} target="_blank">Github</a>
-      </div>
+  <div class="cardOverlay"></div>
+  <div class="cardInfo border mintBg">
+    <h2>{projectInfo.title}</h2>
+    <h3>{projectInfo.description}</h3>
+    <div class="links">
+      <a href={projectInfo.demo} target="_blank">link</a>
+      <span>l</span>
+      <a href={projectInfo.github} target="_blank">Github</a>
     </div>
   </div>
 </div>
@@ -58,7 +63,7 @@ const projectInfo = projects[projectName];
   }
 
   .cardOverlay {
-    background: var(--transparent_white);
+    background-color: var(--transparent-white);
     position: absolute;
     top: 0;
     width: 100%;
@@ -96,6 +101,11 @@ const projectInfo = projects[projectName];
 
   #silviasDesign {
     background: url("/assets/projects/silvias_design.png") center no-repeat;
+    background-size: 100%;
+  }
+
+  #ticTacToe {
+    background: url("/assets/projects/tic_tac_toe.png") center no-repeat;
     background-size: 100%;
   }
 
