@@ -4,8 +4,8 @@ const { id, name, src } = Astro.props;
 
 <div id="card">
   <div>
-    <img src={src} alt="" class="shadow drop-shadow" />
-    <p id={id} class="skill">{name}</p>
+    <img src={src} alt="" class="shadow drop-shadow" id={id} />
+    <p class="skill">{name}</p>
   </div>
 </div>
 
@@ -17,13 +17,22 @@ const { id, name, src } = Astro.props;
   }
 
   img {
-    height: 60px;
-    width: 60px;
+    margin-top: 20px;
+    height: 70px;
+    width: 70px;
   }
 
   p {
     font-family: var(--patrick);
+    margin: 0 auto;
     font-size: 18px;
     margin: 0 0 20px 0;
+    padding-top: 10px;
+  }
+
+  #js {
+    outline: 5px solid white;
+    border-radius: 5px;
+    /* outline-offset: 10px; */
   }
 </style>
