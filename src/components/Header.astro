@@ -15,11 +15,7 @@ import CopiableText from "./CopyAndTooltip.astro";
       tooltipText="Copy"
     />
     <div id="header_text">
-      <p>Welcome to my portfolio!</p>
-      <p>
-        I am excited to show you my skills in creating functional and visually
-        appealing experiences.
-      </p>
+      <h3>Welcome to my portfolio!</h3>
     </div>
     <div id="nav">
       <Button url="#projects" text="✖ My Projects ✖" id="project-section" />
@@ -36,14 +32,17 @@ import CopiableText from "./CopyAndTooltip.astro";
     justify-content: center;
     align-items: center;
     margin: auto;
+    border: 3px solid var(--black);
+    background-color: var(--white);
     box-sizing: border-box;
     width: 95%;
+    height: 97vh;
     overflow-y: hidden;
   }
 
   #header_text {
     text-align: center;
-    padding: 0 1em;
+    padding: 0 0.5em;
     line-height: 30px;
   }
 
@@ -53,7 +52,7 @@ import CopiableText from "./CopyAndTooltip.astro";
   }
 
   #title {
-    margin: 1em 0;
+    margin: 0.5em 0;
   }
 
   p {

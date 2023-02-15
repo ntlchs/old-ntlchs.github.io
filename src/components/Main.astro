@@ -7,7 +7,7 @@ import Skills from "./Skills.astro";
 <main id="pages">
   <div id="window">
     <div id="bar" class=""></div>
-    <div id="close" class="offWhiteBg">X</div>
+    <div id="close" class="offWhiteBg">✖</div>
   </div>
   <div class="wrapper_text border">
     <div class="typing_card">console.log('Hello World!');</div>
@@ -20,6 +20,7 @@ import Skills from "./Skills.astro";
 <style>
   main {
     align-items: center;
+    background-color: var(--white);
   }
 
   .bar {
@@ -40,6 +41,7 @@ import Skills from "./Skills.astro";
   }
 
   #close {
+    justify-items: center;
     border-left: 3px solid var(--black);
     background-color: var(--accent_two);
     font-size: 11px;
@@ -55,6 +57,7 @@ import Skills from "./Skills.astro";
     height: 40%;
     width: 95%;
     margin: 0 auto var(--space) auto;
+    background-color: var(--white);
     /*This part is important for centering*/
     display: grid;
     place-items: center;
