@@ -23,24 +23,24 @@ import Skills from "./Skills.astro";
   }
 
   .bar {
-    background-color: var(--accent_three);
+    /* background-color: var(--accent_three); */
   }
 
   #window {
     width: 95%;
     padding: 0;
-    margin: 0 auto;
+    margin: var(--space) auto 0 auto;
     display: grid;
     grid-template-columns: 95% 5%;
     height: 1rem;
-    background-color: var(--accent_four);
-    border-top: 1px solid var(--black);
-    border-left: 1px solid var(--black);
-    border-right: 1px solid var(--black);
+    background-color: var(--black);
+    border-top: 3px solid var(--black);
+    border-left: 3px solid var(--black);
+    border-right: 3px solid var(--black);
   }
 
   #close {
-    border-left: 1px solid var(--black);
+    border-left: 3px solid var(--black);
     background-color: var(--accent_two);
     font-size: 11px;
   }
@@ -54,7 +54,7 @@ import Skills from "./Skills.astro";
   .wrapper_text {
     height: 40%;
     width: 95%;
-    margin: auto;
+    margin: 0 auto var(--space) auto;
     /*This part is important for centering*/
     display: grid;
     place-items: center;

@@ -4,22 +4,28 @@ import CopiableText from "./CopyAndTooltip.astro";
 ---
 
 <header id="header">
-  <div id="header_card" class="border offWhiteBg">
+  <div id="header_card">
     <div id="title">
-      <h1 class="title">Natalia</h1>
-      <h1 class="title">Chies</h1>
+      <h1 class="title">Natalia Chies</h1>
+      <h2>Front End Developer</h2>
     </div>
-    <p>Welcome to my portfolio!</p>
-    <p>
-      As a junior web developer, I am excited to show you my skills in creating
-      functional and visually appealing experiences.
-    </p>
     <CopiableText
       id="copy_email"
       text="nataliachies@gmail.com"
       tooltipText="Copy"
     />
-    <Button url="#contact_form" text="Contact Me" id="contact" />
+    <div id="header_text">
+      <p>Welcome to my portfolio!</p>
+      <p>
+        I am excited to show you my skills in creating functional and visually
+        appealing experiences.
+      </p>
+    </div>
+    <div id="nav">
+      <Button url="#projects" text="✖ My Projects ✖" id="project-section" />
+      <Button url="#about" text="✖ About Me ✖" id="about-section" />
+      <Button url="#contact_form" text="✖ Contact ✖" id="contact" />
+    </div>
   </div>
 </header>
 
@@ -30,38 +36,24 @@ import CopiableText from "./CopyAndTooltip.astro";
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 0 0 60px 0;
-  }
-
-  #header_card {
-    position: relative;
-    width: 95%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
     box-sizing: border-box;
-    overflow-wrap: break-word;
-    display: block;
+    width: 95%;
+    overflow-y: hidden;
   }
 
-  #paper_clip {
-    position: absolute;
-    offset-position: inherit;
-    height: 4rem;
-    left: -1.3rem;
-    top: -1rem;
-    transform: rotate(1deg);
+  #header_text {
+    text-align: center;
+    padding: 0 1em;
+    line-height: 30px;
   }
 
-  #avatar {
-    width: 40%;
-    /* background-color: var(--light-gray); */
-    border-radius: 4%;
-    /* box-shadow: 1px 1px var(--gray); */
+  #nav {
+    display: flex;
+    flex-direction: column;
   }
 
   #title {
-    margin: 2em 0;
+    margin: 1em 0;
   }
 
   p {
@@ -71,9 +63,8 @@ import CopiableText from "./CopyAndTooltip.astro";
   .title {
     font-display: swap;
     text-transform: capitalize;
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--black);
-    /* -webkit-text-stroke: 1px var(--black); */
     font-family: var(--title-font);
     position: relative;
     top: 30%;

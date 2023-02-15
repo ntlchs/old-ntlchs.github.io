@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
-@import url("https://fonts.cdnfonts.com/css/gidget");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
 :root {
   /* fonts */
   --font: sans-serif;
-  --title-font: "Gidget", cursive;
+  --title-font: "Arvo";
 
   /* colors */
-  --black: #000000;
+  --black: #000;
   --white: #fffffc;
-  --accent_one: #ff00f5;
-  --accent_two: #2fff2f;
-  --accent_three: #3300ff;
+  --accent_one: lime;
+  --accent_two: #ff00f5;
+  --accent_three: cyan;
   --accent_four: #6600ff;
+  --accent_five: #ffff00;
 
   /* spacing */
   --space: 1rem;
@@ -29,6 +29,7 @@ html {
   justify-content: center;
   scroll-behavior: smooth;
   color: var(--black);
+  box-sizing: border-box;
 }
 
 body {
@@ -72,7 +73,7 @@ a {
 }
 
 .border {
-  border: 1px solid var(--black);
+  border: 3px solid var(--black);
 }
 
 .offWhiteBg {
@@ -80,9 +81,8 @@ a {
 }
 
 .btn {
-  border-radius: 4px;
   box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   position: relative;
   font-family: var(--font);
   font-weight: bold;

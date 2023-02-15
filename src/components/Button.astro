@@ -11,17 +11,31 @@ const { id, url, text, type } = Astro.props;
 <script>
   document.querySelector(".contact").removeAttribute("target");
   document.querySelector(".contact").removeAttribute("target");
+  document.querySelector(".about-section").removeAttribute("target");
+  document.querySelector(".about-section").removeAttribute("target");
+  document.querySelector(".project-section").removeAttribute("target");
+  document.querySelector(".project-section").removeAttribute("target");
 </script>
 
 <style>
   #cv,
-  #contact {
+  #contact,
+  #project-section,
+  #about-section {
     background-color: var(--accent_one);
     font-size: 22px;
+    min-width: 80%;
+  }
+
+  #contact,
+  #project-section,
+  #about-section {
   }
 
   #copy_btn {
     background-color: var(--accent_two);
     max-width: 100px;
+    font-size: small;
+    font-weight: bolder;
   }
 </style>

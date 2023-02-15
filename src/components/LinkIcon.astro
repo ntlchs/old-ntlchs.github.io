@@ -3,14 +3,13 @@ const { name, link, img } = Astro.props;
 ---
 
 <a id={name} href={link} target="_blank">
-  <img src={img} alt={name} class="footer_icon shadow" />
+  <img src={img} alt={name} class="footer_icon" />
 </a>
 
 <style>
   img.footer_icon {
-    margin: 0 0;
-    width: 45px;
-    height: 45px;
+    width: 90%;
+    height: auto;
   }
 
   #email {

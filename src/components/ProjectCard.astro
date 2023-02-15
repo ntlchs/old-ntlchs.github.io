@@ -39,7 +39,7 @@ const projectInfo = projects[projectName];
 
 <div id={projectName} class="card border">
   <div class="cardOverlay"></div>
-  <div class="cardInfo border mintBg">
+  <div class="cardInfo border accentBg">
     <h2>{projectInfo.title}</h2>
     <h3>{projectInfo.description}</h3>
     <div class="links">
@@ -63,7 +63,7 @@ const projectInfo = projects[projectName];
   }
 
   .cardOverlay {
-    background-color: var(--transparent-white);
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     top: 0;
     width: 100%;
@@ -79,8 +79,8 @@ const projectInfo = projects[projectName];
     bottom: 1rem;
     width: 50%;
     margin: 0 25%;
-    border-radius: 0.2rem;
     color: var(--black);
+    background-color: var(--accent_two);
     box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
   }
 
