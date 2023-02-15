@@ -6,7 +6,7 @@ import Skills from "./Skills.astro";
 
 <main id="pages">
   <div id="window">
-    <div id="bar" class="mintBg"></div>
+    <div id="bar" class=""></div>
     <div id="close" class="offWhiteBg">X</div>
   </div>
   <div class="wrapper_text border">
@@ -22,6 +22,10 @@ import Skills from "./Skills.astro";
     align-items: center;
   }
 
+  .bar {
+    background-color: var(--accent_three);
+  }
+
   #window {
     width: 95%;
     padding: 0;
@@ -29,6 +33,7 @@ import Skills from "./Skills.astro";
     display: grid;
     grid-template-columns: 95% 5%;
     height: 1rem;
+    background-color: var(--accent_four);
     border-top: 1px solid var(--black);
     border-left: 1px solid var(--black);
     border-right: 1px solid var(--black);
@@ -36,6 +41,7 @@ import Skills from "./Skills.astro";
 
   #close {
     border-left: 1px solid var(--black);
+    background-color: var(--accent_two);
     font-size: 11px;
   }
   #pages h1 {
@@ -52,7 +58,6 @@ import Skills from "./Skills.astro";
     /*This part is important for centering*/
     display: grid;
     place-items: center;
-    background: var(--off-white);
     padding: 1rem 0;
   }
 

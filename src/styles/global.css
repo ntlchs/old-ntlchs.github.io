@@ -3,21 +3,16 @@
 
 :root {
   /* fonts */
-  --font: "Klee One", sans-serif;
+  --font: sans-serif;
   --title-font: "Gidget", cursive;
 
   /* colors */
-  --black: #534c45;
-  --off-white: #fffffc;
-  --light-gray: rgb(248, 248, 248);
-  --transparent: rgba(255, 255, 255, 0);
-  --transparent-black: rgba(0, 0, 0, 0.87);
-  --transparent-gray: rgba(241, 241, 241, 0.621);
-  --transparent-white: rgba(255, 255, 255, 0.5);
-  --peach: #eda18a;
-  --light-purple: rgb(243, 210, 251);
-  --color-front: #3e3d33;
-  --mint: #d3f7e7;
+  --black: #000000;
+  --white: #fffffc;
+  --accent_one: #ff00f5;
+  --accent_two: #2fff2f;
+  --accent_three: #3300ff;
+  --accent_four: #6600ff;
 
   /* spacing */
   --space: 1rem;
@@ -33,15 +28,7 @@
 html {
   justify-content: center;
   scroll-behavior: smooth;
-
   color: var(--black);
-
-  background-image: linear-gradient(
-      var(--transparent-gray) 0.1em,
-      transparent 0.1em
-    ),
-    linear-gradient(90deg, var(--transparent-gray) 0.1em, transparent 0.1em);
-  background-size: 1em 1em;
 }
 
 body {
@@ -84,20 +71,12 @@ a {
   display: none;
 }
 
-.shadow {
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
-}
-
 .border {
   border: 1px solid var(--black);
 }
 
-.mintBg {
-  background-color: var(--mint);
-}
-
 .offWhiteBg {
-  background-color: var(--off-white);
+  background-color: var(--white);
 }
 
 .btn {

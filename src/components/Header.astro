@@ -72,48 +72,11 @@ import CopiableText from "./CopyAndTooltip.astro";
     font-display: swap;
     text-transform: capitalize;
     font-size: 4rem;
-    color: var(--light-mint);
+    color: var(--black);
     /* -webkit-text-stroke: 1px var(--black); */
     font-family: var(--title-font);
     position: relative;
     top: 30%;
-    animation-name: color;
-    animation-duration: 5s;
-    animation-iteration-count: 5;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
     text-shadow: 1px 1px 1px var(--black);
-  }
-
-  :root {
-    --light-mint: #d9fae0;
-    --medium-mint: #c7f0dc;
-    --dark-mint: #afe3ce;
-    --dark-peach: #fdaa9d;
-    --medium-peach: #ffd4c2;
-    --light-peach: #ffe5d1;
-    --lighter-peach: #faefe6;
-  }
-
-  @keyframes color {
-    0% {
-      color: var(--light-mint);
-    }
-    20% {
-      color: var(--medium-mint);
-    }
-
-    40% {
-      color: var(--dark-mint);
-    }
-    60% {
-      color: var(--dark-peach);
-    }
-    80% {
-      color: var(--medium-peach);
-    }
-    100% {
-      color: var(--light-peach);
-    }
   }
 </style>

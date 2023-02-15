@@ -8,7 +8,7 @@
   method="POST"
   onsubmit="document.getElementById('submit').disabled=true;"
 >
-  <p>Contact me</p>
+  <p id="contact_title">Contact me</p>
   <input
     type="hidden"
     name="access_key"
@@ -30,8 +30,7 @@
     name="redirect"
     value="https://ntlchs.github.io/email-sent"
   />
-  <button type="submit" id="submit" class="btn border mintBg">Send Email</button
-  >
+  <button type="submit" id="submit" class="btn border">Send Email</button>
 </form>
 <p id="toast" class="hidden">Sending email...</p>
 
@@ -64,7 +63,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--peach);
+    background-color: var(--accent_four);
     padding: 4%;
   }
 
@@ -81,47 +80,16 @@
     padding: 0;
   }
 
-  /* .folded {
-    position: relative;
-    display: inline-block;
-    border-radius: 6px;
-    clip-path: polygon(6vw 0px, 100% 0px, 100% 100%, 0% 100%, 0% 6vw);
-    box-shadow: 1px 1px 0 var(--transparent_black);
-    background: var(--color-front);
-    transition: clip-path 500ms;
+  #contact_title {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 600;
+    font-size: larger;
   }
 
-  .folded:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6vw;
-    height: 6vw;
-    background: var(--color-back);
-    box-shadow: 1px 1px 0 var(--transparent-black);
-    border-radius: 0 0 6px 0;
-    transition: transform 500ms;
-  } 
-  
-  @media screen and (min-width: 500px) {
-    .folded {
-      clip-path: polygon(4vw 0px, 100% 0px, 100% 100%, 0% 100%, 0% 4vw);
-    }
-
-    .folded:after {
-      width: 4vw;
-      height: 4vw;
-    }
-  } 
-  
-  .folded:hover {
-    clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%, 0% 0px);
+  #submit {
+    background-color: var(--accent_two);
   }
-
-  .folded:hover:after {
-    transform: translate(-100%, -100%);
-  } */
 
   form {
     width: 90%;
