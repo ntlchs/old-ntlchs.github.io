@@ -4,31 +4,33 @@ const { title, id } = Astro.props;
 ---
 
 <BaseLayout>
-  <header><h1>{title}</h1></header>
-  <body>
-    <main>
-      <div id={id} class="demo"></div>
-    </main>
+  <div id="demo-body">
+    <h1>{title}</h1>
+    <div id={id} class="demo"></div>
     <slot />
-  </body>
-  <footer></footer>
+  </div>
 </BaseLayout>
 
 <style>
-  main {
-    width: 100%;
+  h1 {
+    background-color: var(--white);
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 32px;
+  }
+  #demo-body {
+    width: auto;
     max-width: 600px;
     height: 90%;
     overflow-x: hidden;
-    position: fixed;
   }
 
   .demo {
     margin: 0 auto;
     min-height: 400px;
-    height: 90%;
-    max-height: 900px;
-    width: 95%;
+    height: 90vh;
+    max-height: 600px;
+    width: 95vw;
     max-width: 95%;
     display: block;
     overscroll-behavior-x: contain;

@@ -8,9 +8,7 @@ const { id, text } = Astro.props;
     {text}
   </p>
   <Button id="copy_btn" text="Copy" />
-  <p id="copy_toast" class="hidden border accentBg">
-    Email copied to clipboard!
-  </p>
+  <p id="copy_toast" class="hidden border accentBg">copied to clipboard</p>
 </div>
 <script>
   import "./copyToClipboard.js";
@@ -18,18 +16,23 @@ const { id, text } = Astro.props;
 
 <style>
   #copy_toast {
-    width: 50%;
-    position: absolute;
-    bottom: 50%;
-    left: 25%;
+    width: auto;
+    margin: auto;
+    letter-spacing: 4px;
+    font-size: medium;
+    padding: 10px;
     background-color: var(--white);
     box-shadow: 4px 4px var(--black);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
   }
 
   #copy_area {
     display: grid;
-    max-width: 300px;
+    max-width: 75%;
     grid-template-columns: auto auto;
     align-items: center;
   }
@@ -39,6 +42,7 @@ const { id, text } = Astro.props;
   }
 
   .copiable {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
   }
 </style>

@@ -129,7 +129,6 @@ main #search:active {
   border: none;
   margin: 11px 4px;
   padding: 0 16px;
-  border-radius: 3px;
 }
 
 main > p > a {
@@ -140,7 +139,7 @@ footer {
   position: fixed;
   bottom: 0;
   background-color: var(--light-gray);
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   height: fit-content;
   width: 100%;

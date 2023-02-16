@@ -3,35 +3,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <main>
-    <img src="/assets/sent.svg" alt="email sent" class="shadow" />
-    <h1>E-mail sent!</h1>
-    <p>Thank you for contacting me.</p>
-    <p>I will return your e-mail asap.</p>
-    <button class="btn">
-      <a class="link" href="/">Back to website</a>
-    </button>
-  </main>
+  <section>
+    <div id="sent-div" class="border border-black">
+      <img src="/assets/sent.svg" alt="email sent" />
+      <h1>E-mail sent!</h1>
+      <p>Thank you for contacting me.</p>
+      <p>I will return your e-mail asap.</p>
+      <button class="btn border-black border">
+        <a class="link" href="/">Back to website</a>
+      </button>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  html,
-  body {
-    width: 100vw;
-    height: 100vh;
-  }
-  main {
+  section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    align-content: center;
+    height: 100vh;
     width: 100%;
-    padding: 0 20px;
     overscroll-behavior-x: contain;
   }
+
+  #sent-div {
+    background-color: var(--white);
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   img {
-    width: 40%;
-    margin-bottom: 10%;
+    width: 40vw;
+    margin: auto;
+    padding: 20px;
   }
 
   button {

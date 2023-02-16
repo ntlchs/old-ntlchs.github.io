@@ -9,13 +9,14 @@ import CopiableText from "./CopyAndTooltip.astro";
       <h1 class="title">Natalia Chies</h1>
       <h2>Front End Developer</h2>
     </div>
+    <h3></h3>
     <CopiableText
       id="copy_email"
       text="nataliachies@gmail.com"
       tooltipText="Copy"
     />
     <div id="header_text">
-      <h3>Welcome to my portfolio!</h3>
+      <p>Welcome to my portfolio!</p>
     </div>
     <div id="nav">
       <Button url="#projects" text="✖ My Projects ✖" id="project-section" />
@@ -32,12 +33,17 @@ import CopiableText from "./CopyAndTooltip.astro";
     justify-content: center;
     align-items: center;
     margin: auto;
-    border: 3px solid var(--black);
+    border: 2px solid var(--black);
     background-color: var(--white);
     box-sizing: border-box;
     width: 95%;
     height: 97vh;
     overflow-y: hidden;
+  }
+
+  h3 {
+    margin: 0 15%;
+    border-top: 2px solid var(--accent_four);
   }
 
   #header_text {
