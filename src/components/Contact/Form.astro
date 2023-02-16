@@ -3,28 +3,38 @@
 
 <form
   id="contact_form"
+  class="flex flex-col items-center justify-center w-auto mx-8 p-4 border border-black"
   class="folded border"
   action="https://api.web3forms.com/submit"
   method="POST"
   onsubmit="document.getElementById('submit').disabled=true;"
 >
-  <p id="contact_title">Contact me</p>
+  <p id="contact_title" class="uppercase font-bold text-3xl py-4">Contact me</p>
   <input
     type="hidden"
     name="access_key"
     value="b51ada5e-fbde-44c6-9349-44a02eba5240"
   />
 
-  <input class="border" type="text" placeholder="Name" name="name" required />
   <input
-    class="border"
+    class="w-11/12 text-base my-4 border border-black"
+    type="text"
+    placeholder="Name"
+    name="name"
+    required
+  />
+  <input
+    class="w-11/12 text-base my-4 border border-black"
     type="email"
     placeholder="Email"
     name="email"
     required
   />
-  <textarea class="border" placeholder="Message" name="message" required
-  ></textarea>
+  <textarea
+    class="w-11/12 text-base my-4 border border-black"
+    placeholder="Message"
+    name="message"
+    required></textarea>
   <input
     type="hidden"
     name="redirect"
@@ -58,49 +68,20 @@
 </script>
 
 <style>
-  #contact_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--accent_four);
-    padding: 4%;
-    width: 80%;
-  }
-
-  #contact_form input,
-  #contact_form textarea {
-    width: 90%;
-    font-size: 14px;
-    padding: var(--space);
-    margin: 2% auto;
-    letter-spacing: 0.1em;
-  }
-
-  #contact_form h1 {
-    padding: 0;
-  }
-
   #contact_title {
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    font-weight: 600;
-    font-size: larger;
+    letter-spacing: 4px;
+  }
+
+  #contact_form {
+    background-color: var(--accent_one);
   }
 
   #submit {
     background-color: var(--accent_two);
   }
 
-  form {
-    width: 95%;
-    margin: auto;
-  }
-
   input,
   textarea {
-    max-width: 80%;
     font-family: var(--font);
-    color: var(--black);
   }
 </style>

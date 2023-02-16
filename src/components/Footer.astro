@@ -3,32 +3,16 @@ import ContactBoard from "./Contact/Board.astro";
 import ContactForm from "./Contact/Form.astro";
 ---
 
-<footer class="border offWhiteBg">
+<footer class="border w-full bg-white mt-0 mx-auto mb-4 relative box-border">
   <div id="contact_area">
     <ContactBoard />
     <ContactForm />
   </div>
-  <p>Copyright Natália Chies 2022</p>
+  <p class="p-4">Copyright Natália Chies 2022</p>
 </footer>
 
 <style>
-  footer {
-    width: 95%;
-    color: var(--black);
-    margin: 0 auto var(--space) auto;
-    padding: 2vh 0;
-    position: relative;
-    box-sizing: border-box;
-  }
-
-  footer h1 {
-    padding: 5px;
-    font-size: 1.8rem;
-  }
-
   footer p {
-    font-size: 1rem;
-    padding-top: 2vh;
     letter-spacing: 0.2rem;
   }
 </style>

@@ -1,0 +1,32 @@
+---
+const { title } = Astro.props;
+---
+
+<h1
+  class="text-center uppercase text-3xl overflow-y-hidden p-4 grid gap-5 mt-4"
+>
+  {title}
+</h1>
+
+<style>
+  h1 {
+    font-family: var(--section-font);
+    letter-spacing: 2px;
+  }
+
+  /* lines around text */
+
+  h1 {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 15px 0;
+  }
+
+  h1:after,
+  h1:before {
+    content: " ";
+    display: block;
+    border-bottom: 5px solid var(--accent_four);
+  }
+
+  /* end */
+</style>

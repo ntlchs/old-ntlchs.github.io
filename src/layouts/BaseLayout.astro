@@ -2,7 +2,10 @@
 import "../styles/global.css";
 ---
 
-<html lang="en" class="ofWhiteBg">
+<html
+  lang="en"
+  class="justify-center scroll-smooth box-border bg-repeat bg-center bg-fixed"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +14,22 @@ import "../styles/global.css";
     <link rel="icon" href="assets/favicon.svg" />
   </head>
 
-  <body>
+  <body
+    class="flex flex-col justify-center text-center overflow-x-hidden pt-4 text-base"
+  >
     <div class="wrapper">
       <slot />
     </div>
   </body>
 </html>
+
+<style>
+  html {
+    background-image: url("/assets/bg.svg");
+    background-size: 0.5em;
+  }
+
+  body {
+    font-family: var(--font);
+  }
+</style>

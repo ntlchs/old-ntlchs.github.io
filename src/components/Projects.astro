@@ -4,7 +4,10 @@ import Section from "../components/Section.astro";
 ---
 
 <Section title="Projects" id="projects">
-  <div id="card_section">
+  <div
+    id="card_section"
+    class="overflow-auto items-center whitespace-nowrap w-full m-2"
+  >
     <ProjectCard projectName="silviasDesign" />
     <ProjectCard projectName="ticTacToe" />
     <ProjectCard projectName="gameOfLife" />
@@ -14,42 +17,8 @@ import Section from "../components/Section.astro";
 </Section>
 
 <style>
-  img {
-    width: 70%;
-  }
-  #projects h2,
-  #projects a {
-    font-family: "Patrick Hand", sans-serif;
-  }
-
-  #card_section {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, 100%);
-    align-items: center;
-    justify-items: center;
-    padding: 0;
-  }
-
-  #card_section h1,
-  #card_section h2,
-  #card_section a {
-    padding: 0;
-    margin: 0;
-  }
-
   #card_section h1 {
-    font-size: 20px;
     letter-spacing: 5px;
-  }
-
-  #card_section h2,
-  #card_section a {
-    font-size: 18px;
-  }
-
-  #card_section a {
-    text-decoration: underline;
   }
 
   #card_section a:visited {

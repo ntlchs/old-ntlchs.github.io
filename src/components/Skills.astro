@@ -4,7 +4,7 @@ import SkillCard from "./SkillCard.astro";
 ---
 
 <Section title="Skills" id="skills">
-  <div id="skill_names">
+  <div id="skill_names" class="grid grid-cols-3 justify-evenly w-11/12 mx-auto">
     <SkillCard id="html" name="HTML" src="assets/html.svg" />
     <SkillCard id="css" name="CSS" src="assets/css.svg" />
     <SkillCard id="js" name="JavaScript" src="assets/js.svg" />
@@ -21,15 +21,7 @@ import SkillCard from "./SkillCard.astro";
     font-family: var(--font);
   }
 
-  #skill_names {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-
   #skills {
-    max-width: 600px;
-    width: 98vw;
-    margin: 0 auto;
     background-size: cover;
   }
 </style>

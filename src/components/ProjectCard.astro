@@ -37,35 +37,52 @@ const projects = {
 const projectInfo = projects[projectName];
 ---
 
-<div id={projectName} class="card border">
-  <div class="cardOverlay"></div>
-  <div class="cardInfo border accentBg">
-    <h2>{projectInfo.title}</h2>
-    <h3>{projectInfo.description}</h3>
+<div
+  id={projectName}
+  class="card relative border-black border my-2 inline-block mx-4 w-10/12 snap-mandatory"
+>
+  <div class="cardOverlay absolute top-0"></div>
+  <div class="cardInfo border absolute w-8/12">
+    <h2 class="text-lg">{projectInfo.title}</h2>
+    <h2 class="">{projectInfo.description}</h2>
     <div class="links">
-      <a href={projectInfo.demo} target="_blank">link</a>
-      <span>l</span>
-      <a href={projectInfo.github} target="_blank">Github</a>
+      <a
+        href={projectInfo.demo}
+        target="_blank"
+        class="p-0 m-0 text-lg font-bold underline">link</a
+      >
+      <span>|</span>
+      <a
+        href={projectInfo.github}
+        target="_blank"
+        class="p-0 m-0 text-lg font-bold underline">Github</a
+      >
     </div>
   </div>
 </div>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+  .cardInfo,
+  .card {
+    box-shadow: 5px 5px var(--black);
+  }
+
+  .cardInfo {
+    bottom: 1rem;
+    left: 50%;
+    translate: -50% 0;
+    background-color: var(--accent_two);
+  }
 
   .card {
-    position: relative;
-    box-shadow: 5px 5px var(--black);
-    width: 95%;
-    border-radius: 0.1rem;
-    min-height: 15em;
-    margin: 3% 0;
+    scroll-snap-type: block;
+    min-height: 320px;
   }
+
+  /* overlay */
 
   .cardOverlay {
     background-color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
   }
@@ -74,15 +91,9 @@ const projectInfo = projects[projectName];
     mix-blend-mode: overlay;
   }
 
-  .cardInfo {
-    position: absolute;
-    bottom: 1rem;
-    width: 50%;
-    margin: 0 25%;
-    color: var(--black);
-    background-color: var(--accent_two);
-    box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
-  }
+  /* end */
+
+  /* backgrounds */
 
   #gameOfLife {
     background-image: url("/assets/projects/gol.png");
@@ -109,11 +120,5 @@ const projectInfo = projects[projectName];
     background-size: 100%;
   }
 
-  .cardInfo h2,
-  .cardInfo h3,
-  .links a {
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-  }
+  /* end */
 </style>

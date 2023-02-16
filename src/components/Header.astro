@@ -1,78 +1,47 @@
 ---
 import Button from "./Button.astro";
 import CopiableText from "./CopyAndTooltip.astro";
+import TitleAndSubtitle from "./TitleAndSubtitle.astro";
 ---
 
-<header id="header">
-  <div id="header_card">
-    <div id="title">
-      <h1 class="title">Natalia Chies</h1>
-      <h2>Front End Developer</h2>
-    </div>
-    <h3></h3>
-    <CopiableText
-      id="copy_email"
-      text="nataliachies@gmail.com"
-      tooltipText="Copy"
+<header
+  id="header"
+  class="h-screen overflow-y-hidden w-full box-border flex flex-col justify-center items-center m-auto border-2 bg-white border-black"
+>
+  <div id="header_text" class="text-center px-1 py-0">
+    <p class="text-lg">Welcome to the portfolio of</p>
+  </div>
+  <TitleAndSubtitle title="Natalia Chies" substitle="Front End Developer" />
+  <h3 class="my-0 mx-20 w-9/12 border-t border-t-black border-solid"></h3>
+  <CopiableText
+    id="copy_email"
+    text="nataliachies@gmail.com"
+    tooltipText="Copy"
+  />
+  <div id="nav" class="w-9/12 inline-block">
+    <Button
+      url="#projects"
+      text="✖ My Projects ✖"
+      listOfClasses={["nav-bar text-lg w-full"]}
+      id="nav-bar"
     />
-    <div id="header_text">
-      <p>Welcome to my portfolio!</p>
-    </div>
-    <div id="nav">
-      <Button url="#projects" text="✖ My Projects ✖" id="project-section" />
-      <Button url="#about" text="✖ About Me ✖" id="about-section" />
-      <Button url="#contact_form" text="✖ Contact ✖" id="contact" />
-    </div>
+    <Button
+      url="#about"
+      text="✖ About Me ✖"
+      listOfClasses={["nav-bar text-lg w-full "]}
+      id="nav-bar"
+    />
+    <Button
+      url="#contact_form"
+      text="✖ Contact ✖"
+      listOfClasses={["nav-bar text-lg"]}
+      id="nav-bar"
+    />
   </div>
 </header>
 
 <style>
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border: 2px solid var(--black);
-    background-color: var(--white);
-    box-sizing: border-box;
-    width: 95%;
-    height: 97vh;
-    overflow-y: hidden;
-  }
-
-  h3 {
-    margin: 0 15%;
-    border-top: 2px solid var(--accent_four);
-  }
-
-  #header_text {
-    text-align: center;
-    padding: 0 0.5em;
-    line-height: 30px;
-  }
-
-  #nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #title {
-    margin: 0.5em 0;
-  }
-
-  p {
-    font-size: 18px;
-  }
-
   .title {
-    font-display: swap;
-    text-transform: capitalize;
-    font-size: 5rem;
-    color: var(--black);
     font-family: var(--title-font);
-    position: relative;
-    top: 30%;
-    text-shadow: 1px 1px 1px var(--black);
   }
 </style>

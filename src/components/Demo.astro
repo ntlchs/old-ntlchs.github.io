@@ -1,38 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TitleWithLineAround from "./TitleWithLineAround.astro";
 const { title, id } = Astro.props;
 ---
 
 <BaseLayout>
-  <div id="demo-body">
-    <h1>{title}</h1>
-    <div id={id} class="demo"></div>
+  <div
+    id="demo-body"
+    class="w-auto max-w-screen-xl h-5/6 overflow-x-hidden bg-white"
+  >
+    <TitleWithLineAround title={title} />
+    <div
+      id={id}
+      class="demo m-auto h-5/6 max-h-11 w-10/12 max-w-fit overscroll-x-contain block"
+    >
+    </div>
     <slot />
   </div>
 </BaseLayout>
 
 <style>
-  h1 {
-    background-color: var(--white);
-    font-family: var(--title-font);
-    font-weight: bold;
-    font-size: 32px;
-  }
-  #demo-body {
-    width: auto;
-    max-width: 600px;
-    height: 90%;
-    overflow-x: hidden;
-  }
-
   .demo {
-    margin: 0 auto;
-    min-height: 400px;
-    height: 90vh;
-    max-height: 600px;
-    width: 95vw;
-    max-width: 95%;
-    display: block;
-    overscroll-behavior-x: contain;
+    min-height: 90vh;
+    min-width: 90vw;
   }
 </style>

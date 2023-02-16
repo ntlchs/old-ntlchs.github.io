@@ -1,19 +1,13 @@
-<style>
-  .closebtn {
-    display: flex;
-  }
-  .alert {
-    position: absolute;
-    top: 20%;
-    align-self: center;
-    max-width: 600px;
-    box-sizing: border-box;
-    padding: 20px;
-  }
-</style>
-<div class="alert offWhiteBg">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';"
+<div class="alert absolute self-center box-border p-4">
+  <span class="flex" onclick="this.parentElement.style.display='none';"
     >&times;</span
   >
   <slot />
 </div>
+
+<style>
+  .alert {
+    top: 20%;
+    max-width: 600px;
+  }
+</style>

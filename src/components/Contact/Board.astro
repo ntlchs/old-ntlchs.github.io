@@ -1,34 +1,23 @@
 ---
-import ContactIcon from "../LinkIcon.astro";
 ---
 
-<div id="contact_icons">
-  <ContactIcon
-    name="gitHub"
-    link="https://github.com/ntlchs"
-    img="assets/github.svg"
-  />
-  <ContactIcon
-    name="linkedin"
-    link="https://www.linkedin.com/in/nataliachies/"
-    img="assets/linkedin.svg"
-  />
-  <ContactIcon
-    name="email"
-    link="mailto:nataliachies@gmail.com"
-    img="assets/email.svg"
-  />
+<div
+  id="contact_icons"
+  class="grid grid-cols-3 p-0 mx-auto my-0 box-border items-center px-4 w-20 min-w-full"
+>
+  <a id="github" href="https://github.com/ntlchs" target="_blank">
+    <img src="/assets/github.svg" alt="GitHub" class="footer_icon" />
+  </a>
+  <a
+    id="linkedin"
+    href="https://www.linkedin.com/in/nataliachies/"
+    target="_blank"
+  >
+    <img src="/assets/linkedin.svg" alt="LinkedIn" class="footer_icon" />
+  </a>
+  <a id="email" href="mailto:nataliachies@gmail.com" target="_blank">
+    <img src="/assets/email.svg" alt="E-mail" class="footer_icon" />
+  </a>
 </div>
 
-<style>
-  #contact_icons {
-    /* height: 4em; */
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 0;
-    align-items: center;
-    margin: 0 auto;
-    width: 97%;
-    box-sizing: border-box;
-  }
-</style>
+<style></style>

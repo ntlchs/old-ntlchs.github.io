@@ -4,12 +4,15 @@ import About from "./About.astro";
 import Skills from "./Skills.astro";
 ---
 
-<main id="pages">
-  <div id="window">
+<main id="pages" class="items-center">
+  <div
+    id="window"
+    class="w-full p-0 mx-auto mt-4 grid h-5 border-b-0 border-2 border-solid border-black bg-black"
+  >
     <div id="bar" class=""></div>
-    <div id="close" class="offWhiteBg">✖</div>
+    <div id="close" class="justify-center border-2 border-black text-sm">✖</div>
   </div>
-  <div class="wrapper_text border">
+  <div class="wrapper_text border w-full">
     <div class="typing_card">console.log('Hello World!');</div>
   </div>
   <Projects />
@@ -18,44 +21,18 @@ import Skills from "./Skills.astro";
 </main>
 
 <style>
-  main {
-    align-items: center;
-    background-color: var(--white);
-  }
-
-  .bar {
-    /* background-color: var(--accent_three); */
-  }
+  /* styling of console.log animated window */
 
   #window {
-    width: 95%;
-    padding: 0;
-    margin: var(--space) auto 0 auto;
-    display: grid;
     grid-template-columns: 95% 5%;
-    height: 1rem;
-    background-color: var(--black);
-    border-top: 2px solid var(--black);
-    border-left: 2px solid var(--black);
-    border-right: 2px solid var(--black);
   }
 
   #close {
-    justify-items: center;
-    border-left: 2px solid var(--black);
     background-color: var(--accent_two);
-    font-size: 11px;
-  }
-  #pages h1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
   }
 
   .wrapper_text {
     height: 40%;
-    width: 95%;
     margin: 0 auto var(--space) auto;
     background-color: var(--white);
     /*This part is important for centering*/

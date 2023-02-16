@@ -1,9 +1,9 @@
 ---
-const { id, url, text, type } = Astro.props;
+const { id, url, type, listOfClasses, text } = Astro.props;
 ---
 
-<button class="btn border" id={id}>
-  <a class={id} href={url} target="_blank" type={type}>
+<button class="btn border font-bold w-2/6" id={id}>
+  <a class:list={listOfClasses} href={url} target="_blank" type={type}>
     {text}
   </a>
 </button>
@@ -18,24 +18,17 @@ const { id, url, text, type } = Astro.props;
 </script>
 
 <style>
-  #cv,
-  #contact,
-  #project-section,
-  #about-section {
+  #nav-bar {
     background-color: var(--accent_one);
-    font-size: 22px;
-    min-width: 80%;
+    width: 90%;
   }
 
-  #contact,
-  #project-section,
-  #about-section {
+  #copy_btn,
+  #cv {
+    background-color: var(--accent_two);
   }
 
   #copy_btn {
-    background-color: var(--accent_two);
-    max-width: 100px;
-    font-size: small;
-    font-weight: bolder;
+    width: 90%;
   }
 </style>
