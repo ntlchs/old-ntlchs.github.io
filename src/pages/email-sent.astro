@@ -6,10 +6,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="flex flex-col h-screen justify-center">
     <div
       id="sent-div"
-      class="border border-black bg-white overscroll-x-contain w-11/12 h-5/6 flex flex-col m-auto"
+      class="border border-black bg-white flex flex-col justify-center overscroll-x-contain w-11/12 h-5/6 m-auto"
     >
-      <img src="/assets/sent.svg" alt="email sent" class="w-8/12 m-auto p-10" />
-      <h1>E-mail sent!</h1>
+      <img
+        src="/assets/sent.svg"
+        alt="email sent"
+        class="w-8/12 mx-auto p-10"
+      />
+      <h1 class="font-bold">E-mail sent!</h1>
       <p>Thank you for contacting me.</p>
       <p>I will return your e-mail asap.</p>
       <button class="btn border-black border">

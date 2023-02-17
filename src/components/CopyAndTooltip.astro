@@ -3,15 +3,15 @@ import Button from "./Button.astro";
 const { id, text } = Astro.props;
 ---
 
-<div id="copy_area" class="inline-block items-center my-4 mx-auto w-3/4">
-  <p id={id} class="copiable font-bold" id={text}>
+<div
+  id="copy_area"
+  class="flex w-11/12 p-4 my-4 mx-auto items-center justify-center"
+>
+  <p id={id} class="copiable font-bold font-lg w-7/12" id={text}>
     {text}
   </p>
   <Button id="copy_btn" text="Copy" listOfClasses={["text-sm"]} />
-  <p
-    id="copy_toast"
-    class="hidden border accentBg w-auto m-auto text-lg p-4 bg-white absolute"
-  >
+  <p id="copy_toast" class="hidden border m-auto text-lg p-4 bg-white">
     copied to clipboard
   </p>
 </div>
@@ -26,12 +26,5 @@ const { id, text } = Astro.props;
 
   /* center toast */
 
-  p#copy_toast {
-    letter-spacing: 2px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-  }
   /* end */
 </style>
