@@ -3,7 +3,10 @@ import TitleWithLineAround from "./TitleWithLineAround.astro";
 const { id, title } = Astro.props;
 ---
 
-<div id={id} class="grid page items-center mb-4 pb-4 bg-white">
+<div
+  id={id}
+  class="grid page items-center mb-4 pb-4 bg-n-white border border-n-black"
+>
   <TitleWithLineAround title={title} />
 
   <slot />

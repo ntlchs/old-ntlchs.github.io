@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@900&display=swap");
 
 :root {
   /* fonts */
   --font: sans-serif;
   --title-font: Arvo;
-  --section-font: Lalezar;
+  --section-font: Tourney;
 
   /* colors */
   --black: #000;
   --white: #fffffc;
-  --accent_one: lime;
-  --accent_two: #ff00f5;
-  --accent_three: cyan;
-  --accent_four: #6600ff;
-  --accent_five: #ffff00;
-
-  /* spacing */
-  --space: 1rem;
+  --accent_one: #ff2f00;
+  --accent_two: #1fa95b;
+  --accent_three: #fdc62e;
+  --accent_four: #a39df7;
+  --accent_five: #e339fc;
+  --accent_six: #b1ebd3;
 }
 
 * {

@@ -7,12 +7,12 @@ import Skills from "./Skills.astro";
 <main id="pages" class="items-center">
   <div
     id="window"
-    class="w-full p-0 mx-auto mt-4 grid h-5 border-b-0 border-2 border-solid border-black bg-black"
+    class="w-full p-0 mx-auto mt-4 grid grid-cols-10 h-6 border border-solid border-black bg-n-black"
   >
-    <div id="bar" class=""></div>
-    <div id="close" class="justify-center border-2 border-black text-sm">✖</div>
+    <div id="bar" class="col-span-1"></div>
+    <div id="close" class="justify-center text-sm w-full col-span-1">✖</div>
   </div>
-  <div class="wrapper_text border w-full">
+  <div class="wrapper_text border w-full mb-4">
     <div class="typing_card">console.log('Hello World!');</div>
   </div>
   <Projects />
@@ -28,7 +28,7 @@ import Skills from "./Skills.astro";
   }
 
   #close {
-    background-color: var(--accent_two);
+    background-color: var(--accent_one);
   }
 
   .wrapper_text {

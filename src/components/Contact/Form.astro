@@ -3,13 +3,13 @@
 
 <form
   id="contact_form"
-  class="flex flex-col items-center justify-center w-auto mx-8 p-4 border border-black"
+  class="flex flex-col items-center justify-center w-auto mx-8 p-4 border border-black bg-n-lightgreen"
   class="folded border"
   action="https://api.web3forms.com/submit"
   method="POST"
   onsubmit="document.getElementById('submit').disabled=true;"
 >
-  <p id="contact_title" class="uppercase font-bold text-3xl py-4">Contact me</p>
+  <p id="contact_title" class="uppercase font-bold text-xl py-4">Contact me</p>
   <input
     type="hidden"
     name="access_key"
@@ -17,21 +17,21 @@
   />
 
   <input
-    class="w-11/12 text-base my-4 border border-black"
+    class="w-11/12 text-base my-4 border border-black bg-n-white to-n-pink"
     type="text"
     placeholder="Name"
     name="name"
     required
   />
   <input
-    class="w-11/12 text-base my-4 border border-black"
+    class="w-11/12 text-base my-4 border border-black bg-n-white to-n-pink"
     type="email"
     placeholder="Email"
     name="email"
     required
   />
   <textarea
-    class="w-11/12 text-base my-4 border border-black"
+    class="w-11/12 text-base my-4 border border-black bg-n-white to-n-pink"
     placeholder="Message"
     name="message"
     required></textarea>
@@ -73,11 +73,11 @@
   }
 
   #contact_form {
-    background-color: var(--accent_one);
+    background-color: var(--accent_four);
   }
 
   #submit {
-    background-color: var(--accent_two);
+    background-color: var(--accent_three);
   }
 
   input,
