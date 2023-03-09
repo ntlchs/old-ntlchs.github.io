@@ -13,7 +13,7 @@ import Skills from "./Skills.astro";
     <div id="close" class="justify-center text-sm w-full col-span-1">✖</div>
   </div>
   <div class="wrapper_text border w-full mb-4">
-    <div class="typing_card">console.log('Hello World!');</div>
+    <div class="typing_card">console.log("Hello World") </div>
   </div>
   <Projects />
   <About />
@@ -42,15 +42,15 @@ import Skills from "./Skills.astro";
   }
 
   .typing_card {
-    width: 20rem;
-    animation: typing 4s steps(28) infinite,
+    width: 27ch;
+    animation: typing 4s steps(27) infinite,
       blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.12rem solid;
-    font-family: monospace;
+    border-right: 1px solid;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
-    letter-spacing: 0.74px;
+    box-sizing: border-box;
   }
 
   @keyframes typing {
