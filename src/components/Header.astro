@@ -1,7 +1,9 @@
 ---
 import Button from "./Button.astro";
 import CopiableText from "./CopyAndTooltip.astro";
+import Nav from "./Nav";
 import TitleAndSubtitle from "./TitleAndSubtitle.astro";
+
 ---
 
 <header
@@ -14,30 +16,12 @@ import TitleAndSubtitle from "./TitleAndSubtitle.astro";
   <TitleAndSubtitle title="Natalia Chies" substitle="Front End Developer" />
   <h3 class="my-0 mx-20 w-9/12 border-t border-t-black border-solid"></h3>
   <CopiableText
-    id="copy_email"
-    text="nataliachies@gmail.com"
-    tooltipText="Copy"
+  id="copy_email"
+  text="nataliachies@gmail.com"
+  tooltipText="Copy"
   />
-  <div id="nav" class="w-10/12 inline-block">
-    <Button
-      url="#projects"
-      text="✖ My Projects ✖"
-      listOfClasses={["nav-bar text-lg w-full project-section"]}
-      id="nav-bar"
-    />
-    <Button
-      url="#about"
-      text="✖ About Me ✖"
-      listOfClasses={["nav-bar text-lg w-full about-section"]}
-      id="nav-bar"
-    />
-    <Button
-      url="#contact_form"
-      text="✖ Contact ✖"
-      listOfClasses={["nav-bar text-lg contact"]}
-      id="nav-bar"
-    />
-  </div>
+  
+  <Nav client:load/>
 </header>
 
 <style>

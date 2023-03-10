@@ -102,3 +102,19 @@ a {
 .btn a {
   text-decoration: none;
 }
+
+.nav {
+  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+  letter-spacing: 5px;
+  padding: 5px;
+  background-color: var(--accent_six);
+  overscroll-behavior: none;
+  height: auto;
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px auto;
+  text-align: center;
+  color: var(--black);
+  font-family: var(--font);
+}
