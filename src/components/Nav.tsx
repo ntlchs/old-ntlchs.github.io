@@ -13,13 +13,13 @@ export default function Nav() {
         translateX: 0,
       }}
     >
-      <a href="#projects" className="text-lg w-full border nav">
+      <a href="#projects" className="text-lg w-11/12 border nav">
         ✖ My Projects ✖
       </a>
-      <a href="#about" className="text-lg w-full border nav">
+      <a href="#about" className="text-lg w-11/12 border nav">
         ✖ About Me ✖
       </a>
-      <a href="#contact_form" className="text-lg w-full border nav">
+      <a href="#contact_form" className="text-lg w-11/12 border nav">
         ✖ Contact ✖{" "}
       </a>
     </motion.div>
