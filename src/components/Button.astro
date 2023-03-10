@@ -2,7 +2,7 @@
 const { id, url, type, listOfClasses, text } = Astro.props;
 ---
 
-<button class="btn border font-bold w-2/6" id={id}>
+<button class="btn border font-bold w-2/6 hover:scale-105" id={id}>
   <a class:list={listOfClasses} href={url} target="_blank" type={type}>
     {text}
   </a>

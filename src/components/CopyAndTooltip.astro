@@ -5,13 +5,13 @@ const { id, text } = Astro.props;
 
 <div
   id="copy_area"
-  class="flex w-11/12 p-4 my-4 mx-auto items-center justify-center"
+  class="flex w-9/12 gap-4 my-4 mx-auto items-center justify-around"
 >
-  <p id={id} class="copiable font-bold font-lg w-7/12" id={text}>
+  <p id={id} class="copiable font-bold text-lg w-7/12 hover:scale-105" id={text}>
     {text}
   </p>
   <Button id="copy_btn" text="Copy" listOfClasses={["text-sm"]} />
-  <p id="copy_toast" class="hidden border m-auto text-lg p-4 bg-white">
+  <p id="copy_toast" class="hidden border m-auto text-lg py-4 bg-white">
     copied to clipboard
   </p>
 </div>

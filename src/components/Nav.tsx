@@ -13,14 +13,23 @@ export default function Nav() {
         translateX: 0,
       }}
     >
-      <a href="#projects" className="text-lg w-11/12 border nav">
-        ✖ My Projects ✖
+      <a
+        href="#projects"
+        className="text-lg w-9/12 font-bold border nav hover:scale-105"
+      >
+        My Projects
       </a>
-      <a href="#about" className="text-lg w-11/12 border nav">
-        ✖ About Me ✖
+      <a
+        href="#about"
+        className="text-lg w-9/12 font-bold border nav hover:scale-105"
+      >
+        About Me
       </a>
-      <a href="#contact_form" className="text-lg w-11/12 border nav">
-        ✖ Contact ✖{" "}
+      <a
+        href="#contact_form"
+        className="text-lg w-9/12 font-bold border nav hover:scale-105"
+      >
+        Contact{" "}
       </a>
     </motion.div>
   );
