@@ -10,7 +10,7 @@ export default function Test() {
         scale: 1,
       }}
     >
-      <html>
+      <html></html>
     </motion.div>
   );
 }
