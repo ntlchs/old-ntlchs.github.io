@@ -39,12 +39,12 @@ const projectInfo = projects[projectName];
 
 <div
   id={projectName}
-  class="card relative border-black border my-2 inline-block gap-0 mx-4 w-9/12 snap-mandatory"
+  class="card relative border-black border-2 my-2 inline-block gap-0 mx-4 w-9/12 snap-mandatory"
 >
   <div class="cardOverlay absolute top-0 w-full h-full"></div>
-  <div class="cardInfo border absolute w-8/12 hover:scale-105">
-    <h2 class="text-lg">{projectInfo.title}</h2>
-    <h2 class="">{projectInfo.description}</h2>
+  <div class="cardInfo left-1/2 -translate-x-1/2 border-2 border-black absolute w-8/12 transform-gpu transition-transform duration-200 bg-n-lightgreen hover:scale-105">
+    <h2 class="text-lg uppercase">{projectInfo.title}</h2>
+    <h2 class="uppercase">{projectInfo.description}</h2>
     <div class="links">
       <a
         href={projectInfo.demo}
@@ -69,9 +69,7 @@ const projectInfo = projects[projectName];
 
   .cardInfo {
     bottom: 1rem;
-    left: 50%;
-    translate: -50% 0;
-    background-color: var(--accent_four);
+    background-color: var(--n-purple);
   }
 
   .card {
@@ -89,7 +87,6 @@ const projectInfo = projects[projectName];
     mix-blend-mode: overlay;
   }
 
-  /* end */
 
   /* backgrounds */
 
@@ -112,11 +109,9 @@ const projectInfo = projects[projectName];
     background: url("/assets/projects/silvias_design.png") center no-repeat;
     background-size: 100%;
   }
-
   #ticTacToe {
     background: url("/assets/projects/tic_tac_toe.png") center no-repeat;
     background-size: 100%;
   }
 
-  /* end */
 </style>

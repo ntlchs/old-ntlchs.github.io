@@ -7,13 +7,13 @@ import Skills from "./Skills.astro";
 <main id="pages" class="items-center">
   <div
     id="window"
-    class="w-full p-0 mx-auto mt-4 grid grid-cols-10 h-6 border border-solid border-black bg-n-black"
+    class="w-full p-0 mx-auto mt-4 grid grid-cols-10 h-6 border-2 border-black border-solid bg-n-black"
   >
-    <div id="bar" class="col-span-1"></div>
-    <div id="close" class="justify-center text-sm w-full col-span-1">✖</div>
+    <div id="bar" class="col-span-9"></div>
+    <div id="close" class="justify-center text-sm w-full col-span-1 text-n-red">✖</div>
   </div>
-  <div class="wrapper_text border w-full mb-4">
-    <div class="typing_card">console.log("Hello World") </div>
+  <div class="wrapper_text border-2 border-black w-full mb-4 bg-n-white">
+    <div class="typing_card my-2">console.log("Hello World")</div>
   </div>
   <Projects />
   <About />
@@ -21,26 +21,6 @@ import Skills from "./Skills.astro";
 </main>
 
 <style>
-  /* styling of console.log animated window */
-
-  #window {
-    grid-template-columns: 95% 5%;
-  }
-
-  #close {
-    background-color: var(--accent_one);
-  }
-
-  .wrapper_text {
-    height: 40%;
-    margin: 0 auto var(--space) auto;
-    background-color: var(--white);
-    /*This part is important for centering*/
-    display: grid;
-    place-items: center;
-    padding: 1rem 0;
-  }
-
   .typing_card {
     width: 27ch;
     animation: typing 4s steps(27) infinite,
@@ -65,3 +45,4 @@ import Skills from "./Skills.astro";
     }
   }
 </style>
+

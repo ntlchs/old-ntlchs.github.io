@@ -3,7 +3,7 @@
 
 <form
   id="contact_form"
-  class="flex flex-col items-center justify-center w-auto mx-8 p-4 border border-black bg-n-lightgreen"
+  class="flex flex-col items-center justify-center w-auto mx-8 p-4 border-2 border-black border-black bg-n-lightgreen"
   class="folded border"
   action="https://api.web3forms.com/submit"
   method="POST"
@@ -17,21 +17,21 @@
   />
 
   <input
-    class="w-11/12 text-base my-4 border border-black bg-n-white to-n-pink"
+    class="w-11/12 text-base my-4 border-2 border-black border-black bg-n-white to-n-pink"
     type="text"
     placeholder="Name"
     name="name"
     required
   />
   <input
-    class="w-11/12 text-base my-4 border border-black bg-n-white to-n-pink"
+    class="w-11/12 text-base my-4 border-2 border-black border-black bg-n-white to-n-pink"
     type="email"
     placeholder="Email"
     name="email"
     required
   />
   <textarea
-    class="w-11/12 text-base my-4 border border-black bg-n-white to-n-pink"
+    class="w-11/12 text-base my-4 border-2 border-black border-black bg-n-white to-n-pink"
     placeholder="Message"
     name="message"
     required></textarea>
@@ -40,7 +40,7 @@
     name="redirect"
     value="https://ntlchs.github.io/email-sent"
   />
-  <button type="submit" id="submit" class="btn border">Send Email</button>
+  <button type="submit" id="submit" class="btn uppercase border">Send Email</button>
 </form>
 <p id="toast" class="hidden">Sending email...</p>
 

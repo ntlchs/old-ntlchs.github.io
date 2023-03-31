@@ -10,8 +10,8 @@ const { id, text } = Astro.props;
   <p id={id} class="copiable font-bold text-lg w-7/12 hover:scale-105" id={text}>
     {text}
   </p>
-  <Button id="copy_btn" text="Copy" listOfClasses={["text-sm"]} />
-  <p id="copy_toast" class="hidden border m-auto text-lg py-4 bg-white">
+  <Button id="copy_btn" text="Copy" listOfClasses={["text-sm text-n-black no-underline cursor-pointer"]} />
+  <p id="copy_toast" class="hidden border-2 border-black m-auto text-lg py-4 bg-white">
     copied to clipboard
   </p>
 </div>

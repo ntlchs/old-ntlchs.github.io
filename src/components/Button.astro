@@ -2,10 +2,12 @@
 const { id, url, type, listOfClasses, text } = Astro.props;
 ---
 
-<button class="btn border font-bold w-2/6 hover:scale-105" id={id}>
+<button class="relative px-2 py-2 mx-auto my-2 text-center font-nunito text-n-black text-base shadow-5xl border-2 border-black font-bold w-2/6 hover:scale-105 uppercase active:top-1 active:left-1 active:shadow-none" id={id}>
   <a class:list={listOfClasses} href={url} target="_blank" type={type}>
     {text}
   </a>
+  <span class="absolute inset-0 z-[-1] transition-all duration-200"></span>
+
 </button>
 
 <script>
